@@ -6,18 +6,31 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class FrontLoginTest {
-
     DataTest data = new DataTest();
 
     // open page autorizacion
     @Test
     void openPageAutorization() {
-        Assertions.assertTrue(Configuration.holdBrowserOpen = true);
+        Configuration.holdBrowserOpen = true;
+        Configuration.baseUrl = data.getUrlStand();
 
         // открытие страницы авторизации
-        Selenide.open(data.getUrlStand());
+        Selenide.open("/");
         //проверка надписи "Вход в учетную запись"на странице авторизации
         Selenide.$("#kc-page-title").shouldHave(Condition.text("Вход в учетную запись"));
+    }
+
+    //autorizacion invalid manager
+    @Test
+    void invalidLoginManagerWFM() {
+        //ввод в инпут username невалидного логина менеджера
+        Selenide.$("[name=username]").setValue("invalid" + data.getLogin());
+        //ввод в инпут password невалидного пароля менеджера
+        Selenide.$("[name=password]").setValue("invalid" + data.getPassword());
+        //нажатие на иконку "Вход"
+        Selenide.$("[name=login]").click();
+        //проверка на предупреждение о невалидном логине или пароле
+        Selenide.$("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
 
     //autorizacion manager
@@ -35,17 +48,5 @@ class FrontLoginTest {
         // проверка разлогина
         Selenide.$("[title=Выйти]").click();
 
-    }
-    //autorizacion invalid manager
-    @Test
-    void invalidLoginManagerWFM() {
-        //ввод в инпут username невалидного логина менеджера
-        Selenide.$("[name=username]").setValue("invalid" + data.getLogin());
-        //ввод в инпут password невалидного пароля менеджера
-        Selenide.$("[name=password]").setValue(data.getPassword());
-        //нажатие на иконку "Вход"
-        Selenide.$("[name=login]").click();
-        //проверка на предупреждение о невалидном логине или пароле
-        Selenide.$("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
 }
