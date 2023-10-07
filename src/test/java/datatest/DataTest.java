@@ -1,7 +1,7 @@
 package datatest;
 
 public class DataTest {
-    public String urlStand = "https://";
+    public String urlStand = "";
     public  String loginManager = "manager";
     public String passManager = "manager";
     public  String loginOperator = "operator";
