@@ -3,15 +3,13 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.*;
 import datatest.DataTest;
 import org.junit.jupiter.api.Test;
-
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 class FrontLoginTest {
     DataTest data = new DataTest();
 
-    // open page autorizacion
-    @Test
+    @Test  // open page autorizacion
     void openPageAutorization() {
         Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = data.getUrlStand();
@@ -23,10 +21,10 @@ class FrontLoginTest {
         closeWindow();
     }
 
-    //autorizacion invalid manager
-    @Test
+    @Test // autorizacion invalid manager
     void InvalidLoginManager() {
         Configuration.baseUrl = data.getUrlStand();
+        // открытие страницы авторизации
         open("/");
         //ввод в инпут username невалидного логина менеджера
         element("[name=username]").setValue("invalid" + data.getLoginManager());
@@ -37,13 +35,12 @@ class FrontLoginTest {
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
         closeWindow();
-
     }
 
-    //autorizacion manager
-    @Test
+    @Test  // autorizacion manager
     void loginAndLoguotManager() {
         Configuration.baseUrl = data.getUrlStand();
+        // открытие страницы авторизации
         open("/");
         //ввод в инпут username логина менеджера
         element("[name=username]").setValue(data.getLoginManager());
@@ -60,8 +57,7 @@ class FrontLoginTest {
         closeWindow();
     }
 
-    //autorizacion invalid operator
-    @Test
+    @Test // autorizacion invalid operator
     void InvalidLoginOperator() {
         Configuration.baseUrl = data.getUrlStand();
         open("/");
@@ -74,11 +70,9 @@ class FrontLoginTest {
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
         closeWindow();
-
     }
 
-    //autorizacion operator
-    @Test
+    @Test // autorizacion operator
     void loginAndLoguotOperator() {
         Configuration.baseUrl = data.getUrlStand();
         open("/");
@@ -95,7 +89,5 @@ class FrontLoginTest {
         clearBrowserCache();
         clearBrowserCookies();
         closeWindow();
-
     }
-
 }
