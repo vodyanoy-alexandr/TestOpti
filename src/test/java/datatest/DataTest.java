@@ -2,26 +2,50 @@ package datatest;
 
 public class DataTest {
     public String urlStand = "https://master.dc.oswfm.ru";
-    public  String login = "manager";
-    public String password = "manager";
+    public  String loginManager = "manager";
+    public String passManager = "manager";
+    public  String loginOperator = "operator";
+    public String passOperator = "operator";
+
 
     public String getUrlStand() {
         return urlStand;
     }
+
     public void setUrlStand(String urlStand) {
         this.urlStand = urlStand;
     }
-    public String getLogin() {
-        return login;
+
+    public String getLoginManager() {
+        return loginManager;
     }
-    public void setLogin(String login) {
-        this.login = login;
+
+    public void setLoginManager(String loginManager) {
+        this.loginManager = loginManager;
     }
-    public String getPassword() {
-        return password;
+
+    public String getPassManager() {
+        return passManager;
     }
-    public void setPassword(String password) {
-        this.password = password;
+
+    public void setPassManager(String passManager) {
+        this.passManager = passManager;
+    }
+
+    public String getLoginOperator() {
+        return loginOperator;
+    }
+
+    public void setLoginOperator(String loginOperator) {
+        this.loginOperator = loginOperator;
+    }
+
+    public String getPassOperator() {
+        return passOperator;
+    }
+
+    public void setPassOperator(String passOperator) {
+        this.passOperator = passOperator;
     }
 
 
