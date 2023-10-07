@@ -2,12 +2,22 @@ package frontend.manager.settings;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import datatest.DataTest;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class OfficesTest {
    DataTest data = new DataTest();
+
+    @AfterEach
+    void closeWindowAfterTest(){
+        clearBrowserCache();
+        clearBrowserCookies();
+        clearBrowserLocalStorage();
+        closeWindow();
+    }
 
     @Test
         // open page Offices

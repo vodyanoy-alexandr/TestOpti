@@ -2,12 +2,22 @@ package frontend.login;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.*;
 import datatest.DataTest;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 class FrontLoginTest {
     DataTest data = new DataTest();
+
+    @AfterEach
+    void closeWindowAfterTest(){
+        clearBrowserCache();
+        clearBrowserCookies();
+        clearBrowserLocalStorage();
+        closeWindow();
+    }
 
     @Test  // open page autorizacion
     void openPageAutorization() {
@@ -18,7 +28,6 @@ class FrontLoginTest {
         open("/");
         //проверка надписи "Вход в учетную запись"на странице авторизации
         element("#kc-page-title").shouldHave(Condition.text("Вход в учетную запись"));
-        closeWindow();
     }
 
     @Test // autorizacion invalid manager
@@ -34,7 +43,6 @@ class FrontLoginTest {
         element("[name=login]").click();
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
-        closeWindow();
     }
 
     @Test  // autorizacion manager
@@ -52,9 +60,6 @@ class FrontLoginTest {
         element(".admin-menu").shouldHave(Condition.text("Расписание"));
         // проверка разлогина менеджера
         element("[title=Выйти]").click();
-        clearBrowserCache();
-        clearBrowserCookies();
-        closeWindow();
     }
 
     @Test // autorizacion invalid operator
@@ -69,7 +74,6 @@ class FrontLoginTest {
         element("[name=login]").click();
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
-        closeWindow();
     }
 
     @Test // autorizacion operator
@@ -86,8 +90,5 @@ class FrontLoginTest {
         element(".main-menu").shouldHave(Condition.text("Рабочие смены"));
         // проверка разлогина operator
         element("[title=Выйти]").click();
-        clearBrowserCache();
-        clearBrowserCookies();
-        closeWindow();
     }
 }
