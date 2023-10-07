@@ -9,8 +9,15 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class OfficesTest {
-   DataTest data = new DataTest();
+  static public DataTest data = new DataTest();
 
+    public static void main(String[] args) {
+        Configuration.browserSize = "1920x1080"; // размер окна браузера
+        Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
+        Configuration.baseUrl = data.getUrlStand(); // задать базовый url
+        System.out.println("Start tests");
+    }
+   
     @AfterEach
     void closeWindowAfterTest(){
         clearBrowserCache();

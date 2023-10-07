@@ -2,15 +2,20 @@ package frontend.login;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.*;
 import datatest.DataTest;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 class FrontLoginTest {
-    DataTest data = new DataTest();
+    static DataTest data = new DataTest();
 
+    public static void main(String[] args) {
+        Configuration.browserSize = "1920x1080"; // размер окна браузера
+        Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
+        Configuration.baseUrl = data.getUrlStand(); // задать базовый url
+        System.out.println("Start tests");
+    }
     @AfterEach
     void closeWindowAfterTest(){
         clearBrowserCache();
@@ -21,8 +26,6 @@ class FrontLoginTest {
 
     @Test  // open page autorizacion
     void openPageAutorization() {
-        Configuration.holdBrowserOpen = true;
-        Configuration.baseUrl = data.getUrlStand();
 
         // открытие страницы авторизации
         open("/");
@@ -32,7 +35,6 @@ class FrontLoginTest {
 
     @Test // autorizacion invalid manager
     void InvalidLoginManager() {
-        Configuration.baseUrl = data.getUrlStand();
         // открытие страницы авторизации
         open("/");
         //ввод в инпут username невалидного логина менеджера
@@ -47,7 +49,6 @@ class FrontLoginTest {
 
     @Test  // autorizacion manager
     void loginAndLoguotManager() {
-        Configuration.baseUrl = data.getUrlStand();
         // открытие страницы авторизации
         open("/");
         //ввод в инпут username логина менеджера
@@ -64,7 +65,7 @@ class FrontLoginTest {
 
     @Test // autorizacion invalid operator
     void InvalidLoginOperator() {
-        Configuration.baseUrl = data.getUrlStand();
+        // открытие страницы авторизации
         open("/");
         //ввод в инпут username невалидного логина менеджера
         element("[name=username]").setValue("invalid" + data.getLoginOperator());
@@ -78,7 +79,6 @@ class FrontLoginTest {
 
     @Test // autorizacion operator
     void loginAndLoguotOperator() {
-        Configuration.baseUrl = data.getUrlStand();
         open("/");
         //ввод в инпут username логина менеджера
         element("[name=username]").setValue(data.getLoginOperator());
