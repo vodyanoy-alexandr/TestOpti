@@ -17,7 +17,7 @@ public class OfficesTest {
         Configuration.baseUrl = data.getUrlStand(); // задать базовый url
         System.out.println("Start tests");
     }
-   
+
     @AfterEach
     void closeWindowAfterTest(){
         clearBrowserCache();
