@@ -26,7 +26,6 @@ class FrontLoginTest {
 
     @Test  // open page autorizacion
     void openPageAutorization() {
-
         // открытие страницы авторизации
         open("/");
         //проверка надписи "Вход в учетную запись"на странице авторизации
