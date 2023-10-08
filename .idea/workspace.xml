@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="add test OfficesTest">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment=" improved code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" afterDir="false" />
@@ -72,8 +70,8 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.FrontLoginTest">
-    <configuration name="FrontLoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager">
+    <configuration name="FrontLoginTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +167,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="OfficesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OfficesTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -195,8 +193,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.FrontLoginTest" />
-        <item itemvalue="Gradle.OfficesTest" />
+        <item itemvalue="Gradle.FrontLoginTest (1)" />
+        <item itemvalue="Gradle.OfficesTest (1)" />
         <item itemvalue="Gradle.FrontLoginTest.loginManagerWFM" />
         <item itemvalue="Gradle.FrontLoginTest.invalidLoginManagerWFM" />
         <item itemvalue="Gradle.FrontLoginTest.openPageAutorization" />
@@ -222,7 +220,7 @@
       <workItem from="1695793790546" duration="14091000" />
       <workItem from="1696492096111" duration="9055000" />
       <workItem from="1696578565351" duration="16507000" />
-      <workItem from="1696709409950" duration="1222000" />
+      <workItem from="1696709409950" duration="6755000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -280,7 +278,47 @@
       <option name="project" value="LOCAL" />
       <updated>1696698718656</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=" add metod @AfterEach closeWindowAfterTest">
+      <option name="closed" value="true" />
+      <created>1696711027658</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696711027658</updated>
+    </task>
+    <task id="LOCAL-00009" summary=" add metod @AfterEach closeWindowAfterTest">
+      <option name="closed" value="true" />
+      <created>1696711067535</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696711067535</updated>
+    </task>
+    <task id="LOCAL-00010" summary=" add method main with config">
+      <option name="closed" value="true" />
+      <created>1696714710753</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696714710753</updated>
+    </task>
+    <task id="LOCAL-00011" summary=" add method main with config">
+      <option name="closed" value="true" />
+      <created>1696714766164</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696714766164</updated>
+    </task>
+    <task id="LOCAL-00012" summary=" improved code">
+      <option name="closed" value="true" />
+      <created>1696714933190</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696714933191</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +354,10 @@
     <MESSAGE value="delete url in DataTest" />
     <MESSAGE value="add comment in FrontLoginTest" />
     <MESSAGE value="add test OfficesTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test OfficesTest" />
+    <MESSAGE value=" add metod @AfterEach closeWindowAfterTest" />
+    <MESSAGE value=" add method main with config" />
+    <MESSAGE value=" improved code" />
+    <option name="LAST_COMMIT_MESSAGE" value=" improved code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

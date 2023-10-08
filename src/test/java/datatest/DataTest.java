@@ -1,7 +1,7 @@
 package datatest;
 
 public class DataTest {
-    public String urlStand = "https://.dc.oswfm.ru/";
+    public String urlStand = "https://.dc.oswfm.ru";
     public  String loginManager = "manager";
     public String passManager = "manager";
     public  String loginOperator = "operator";

@@ -3,6 +3,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.*;
 import datatest.DataTest;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
@@ -10,12 +11,14 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 class FrontLoginTest {
     static DataTest data = new DataTest();
 
-    public static void main(String[] args) {
+    @BeforeAll
+    public static void beforeAllConfig() {
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
-        Configuration.baseUrl = data.getUrlStand(); // задать базовый url
+        Configuration.baseUrl = data.getUrlStand(); // базовый url
         System.out.println("Start tests");
     }
+
     @AfterEach
     void closeWindowAfterTest(){
         clearBrowserCache();

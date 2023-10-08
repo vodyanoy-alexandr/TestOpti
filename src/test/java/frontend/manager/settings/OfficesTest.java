@@ -11,7 +11,8 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 public class OfficesTest {
   static public DataTest data = new DataTest();
 
-    public static void main(String[] args) {
+  @BeforeAll
+    public static void beforeAllConfig() {
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
         Configuration.baseUrl = data.getUrlStand(); // задать базовый url
@@ -29,9 +30,6 @@ public class OfficesTest {
     @Test
         // open page Offices
     void openPageSetOffies() {
-        //Configuration.holdBrowserOpen = true; // включить для визуализации происходящего в браузере
-        Configuration.baseUrl = data.getUrlStand();
-
         // открытие страницы настроек офиса
         open("/settings/offices");
         //ввод в инпут username логина менеджера
