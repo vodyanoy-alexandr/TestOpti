@@ -10,7 +10,7 @@ class FrontLoginTest {
     static DataTest data = new DataTest();
 
     @BeforeAll
-    public static void beforeAllConfig() {
+    static void beforeAll() {
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
         Configuration.baseUrl = data.getUrlStand(); // базовый url
@@ -18,7 +18,7 @@ class FrontLoginTest {
     }
 
     @AfterEach
-    void closeWindowAfterTest(){
+    void afterEach(){
         clearBrowserCache();
         clearBrowserCookies();
         clearBrowserLocalStorage();
