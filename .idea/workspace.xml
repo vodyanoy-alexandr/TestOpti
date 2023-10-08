@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment=" improved code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/OfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/OfficesTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="change config" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +215,7 @@
       <workItem from="1695793790546" duration="14091000" />
       <workItem from="1696492096111" duration="9055000" />
       <workItem from="1696578565351" duration="16507000" />
-      <workItem from="1696709409950" duration="6755000" />
+      <workItem from="1696709409950" duration="8112000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -318,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696714933191</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change config">
+      <option name="closed" value="true" />
+      <created>1696754584922</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696754584922</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +360,8 @@
     <MESSAGE value=" add metod @AfterEach closeWindowAfterTest" />
     <MESSAGE value=" add method main with config" />
     <MESSAGE value=" improved code" />
-    <option name="LAST_COMMIT_MESSAGE" value=" improved code" />
+    <MESSAGE value="change config" />
+    <option name="LAST_COMMIT_MESSAGE" value="change config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
