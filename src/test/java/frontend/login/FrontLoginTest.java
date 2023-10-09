@@ -11,9 +11,9 @@ class FrontLoginTest {
 
     @BeforeAll
     static void beforeAll() {
+        Configuration.baseUrl = data.getUrlStand(); // базовый url
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
-        Configuration.baseUrl = data.getUrlStand(); // базовый url
         System.out.println("Start tests");
     }
 

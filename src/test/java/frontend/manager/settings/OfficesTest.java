@@ -6,14 +6,14 @@ import org.junit.jupiter.api.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
-public class OfficesTest {
-  static public DataTest data = new DataTest();
+class OfficesTest {
+    static DataTest data = new DataTest();
 
-  @BeforeAll
-  static void beforeAll() {
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.baseUrl = data.getUrlStand(); // задать базовый url
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
-        Configuration.baseUrl = data.getUrlStand(); // задать базовый url
         System.out.println("Start tests");
     }
 
