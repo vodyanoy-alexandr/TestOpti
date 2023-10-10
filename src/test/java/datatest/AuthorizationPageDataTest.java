@@ -5,11 +5,12 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.element;
 
 public class AuthorizationPageDataTest {
-    private String urlStand = "https://?.dc.oswfm.ru";
-    private String loginManager = "manager";
-    private String passManager = "manager";
-    private String loginOperator = "operator";
-    private String passOperator = "operator";
+    private String
+            urlStand = "https://?.dc.oswfm.ru",
+            loginManager = "manager",
+            passManager = "manager",
+            loginOperator = "operator",
+            passOperator = "operator";
 
     private SelenideElement
             userNameInput = element("[name=username]"),
