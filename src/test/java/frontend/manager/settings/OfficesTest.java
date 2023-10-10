@@ -1,13 +1,16 @@
 package frontend.manager.settings;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import datatest.DataTest;
+import com.codeborne.selenide.SelenideElement;
+import datatest.AuthorizationPageDataTest;
 import org.junit.jupiter.api.*;
+
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 class OfficesTest {
-    static DataTest data = new DataTest();
+    static AuthorizationPageDataTest data = new AuthorizationPageDataTest();
 
     @BeforeAll
     static void beforeAll() {
@@ -18,23 +21,24 @@ class OfficesTest {
     }
 
     @AfterEach
-    void afterEach(){
+    void afterEach() {
         clearBrowserCache();
         clearBrowserCookies();
         clearBrowserLocalStorage();
         closeWindow();
     }
 
-    @Test // open page Offices
+    @Test
+        // open page Offices
     void openPageSetOffies() {
         // открытие страницы настроек офиса
         open("/settings/offices");
         //ввод в инпут username логина менеджера
-        element("[name=username]").setValue(data.getLoginManager());
+        data.getUserNameInput().setValue(data.getLoginManager());
         //ввод в инпут password пароля менеджера
-        element("[name=password]").setValue(data.getPassManager());
+        data.getPasswordInput().setValue(data.getPassManager());
         //нажатие на иконку "Вход"
-        element("[name=login]").click();
+        data.getLoginButton().click();
         // проверка открытия страницы "Настройка офисов"
         element(".offices").shouldHave(Condition.text("Настройка офисов"));
 
