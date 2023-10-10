@@ -2,18 +2,18 @@ package frontend.login;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.*;
-import datatest.AuthorizationPageDataTest;
+import datatest.AuthPageData;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 class FrontLoginTest {
-    static AuthorizationPageDataTest data = new AuthorizationPageDataTest();
+    static AuthPageData authPageData = new AuthPageData();
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = data.getUrlStand(); // базовый url
+        Configuration.baseUrl = authPageData.getUrlStand(); // базовый url
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
         System.out.println("Start tests");
@@ -41,12 +41,8 @@ class FrontLoginTest {
     void InvalidLoginManager() {
         // открытие страницы авторизации
         open("/");
-        //ввод в инпут username невалидного логина менеджера
-        data.getUserNameInput().setValue("invalid" + data.getLoginManager());
-        //ввод в инпут password невалидного пароля менеджера
-        data.getPasswordInput().setValue("invalid" + data.getPassManager());
-        //нажатие на иконку "Вход"
-        data.getLoginButton().click();
+        // вызов метода авторизации
+        authPageData.loginManagerInPageAuth(authPageData.getLoginManager() + "invalid", authPageData.getPassManager() + "invalid");
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
@@ -56,12 +52,8 @@ class FrontLoginTest {
     void loginAndLoguotManager() {
         // открытие страницы авторизации
         open("/");
-        //ввод в инпут username логина менеджера
-        data.getUserNameInput().setValue(data.getLoginManager());
-        //ввод в инпут password пароля менеджера
-        data.getPasswordInput().setValue(data.getPassManager());
-        //нажатие на иконку "Вход"
-        data.getLoginButton().click();
+        // вызов метода авторизации менеджера
+        authPageData.loginManagerInPageAuth(authPageData.getLoginManager(), authPageData.getPassManager());
         //проверка на открытой странице расписания раздела "Расписание" после авторизации
         element(".admin-menu").shouldHave(Condition.text("Расписание"));
         // проверка разлогина менеджера
@@ -73,12 +65,8 @@ class FrontLoginTest {
     void InvalidLoginOperator() {
         // открытие страницы авторизации
         open("/");
-        //ввод в инпут username невалидного логина менеджера
-        data.getUserNameInput().setValue("invalid" + data.getLoginOperator());
-        //ввод в инпут password невалидного пароля менеджера
-        data.getPasswordInput().setValue("invalid" + data.getPassOperator());
-        //нажатие на иконку "Вход"
-        data.getLoginButton().click();
+        // вызов метода авторизации оператора
+        authPageData.loginOperatorInPageAuth(authPageData.getLoginOperator() + "invalid", authPageData.getPassOperator() + "invalid");
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
@@ -87,12 +75,8 @@ class FrontLoginTest {
         // autorizacion operator
     void loginAndLoguotOperator() {
         open("/");
-        //ввод в инпут username логина менеджера
-        data.getUserNameInput().setValue(data.getLoginOperator());
-        //ввод в инпут password пароля менеджера
-        data.getPasswordInput().setValue(data.getPassOperator());
-        //нажатие на иконку "Вход"
-        data.getLoginButton().click();
+        // вызов метода авторизации оператора
+        authPageData.loginOperatorInPageAuth(authPageData.getLoginOperator(), authPageData.getPassOperator());
         //проверка на открытой странице расписания раздела "Рабочие смены" после авторизации оператора
         element(".main-menu").shouldHave(Condition.text("Рабочие смены"));
         // проверка разлогина operator
