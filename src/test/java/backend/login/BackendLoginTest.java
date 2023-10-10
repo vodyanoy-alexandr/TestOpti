@@ -1,6 +1,6 @@
 package backend.login;
 
-import datatest.AuthorizationPageDataTest;
+import datatest.AuthPageData;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.is;
 public class BackendLoginTest {
     @Test
     void authTokenTest() {
-        AuthorizationPageDataTest data = new AuthorizationPageDataTest();
+        AuthPageData data = new AuthPageData();
         String body = "username=manager&password=manager&grant_type=password&client_id=wfm";
 
         given()
