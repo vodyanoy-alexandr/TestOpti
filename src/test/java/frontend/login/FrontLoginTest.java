@@ -1,31 +1,13 @@
 package frontend.login;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.*;
-import datatest.AuthPageData;
-import org.junit.jupiter.api.*;
+import datatest.TestBase;
+import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
+import static com.codeborne.selenide.Selenide.element;
+import static com.codeborne.selenide.Selenide.open;
 
-class FrontLoginTest {
-    static AuthPageData authPageData = new AuthPageData();
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = authPageData.getUrlStand(); // базовый url
-        Configuration.browserSize = "1920x1080"; // размер окна браузера
-        Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
-        System.out.println("Start tests");
-    }
-
-    @AfterEach
-    void afterEach() {
-        clearBrowserCache();
-        clearBrowserCookies();
-        clearBrowserLocalStorage();
-        closeWindow();
-    }
+class FrontLoginTest extends TestBase {
 
     @Test
         // open page autorizacion
@@ -42,7 +24,7 @@ class FrontLoginTest {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации
-        authPageData.loginManagerInPageAuth(authPageData.getLoginManager() + "invalid", authPageData.getPassManager() + "invalid");
+        authPage.loginManagerInPageAuth(authPage.getLoginManager() + "invalid", authPage.getPassManager() + "invalid");
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
@@ -53,7 +35,7 @@ class FrontLoginTest {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации менеджера
-        authPageData.loginManagerInPageAuth(authPageData.getLoginManager(), authPageData.getPassManager());
+        authPage.loginManagerInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
         //проверка на открытой странице расписания раздела "Расписание" после авторизации
         element(".admin-menu").shouldHave(Condition.text("Расписание"));
         // проверка разлогина менеджера
@@ -66,7 +48,7 @@ class FrontLoginTest {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации оператора
-        authPageData.loginOperatorInPageAuth(authPageData.getLoginOperator() + "invalid", authPageData.getPassOperator() + "invalid");
+        authPage.loginOperatorInPageAuth(authPage.getLoginOperator() + "invalid", authPage.getPassOperator() + "invalid");
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
@@ -76,7 +58,7 @@ class FrontLoginTest {
     void loginAndLoguotOperator() {
         open("/");
         // вызов метода авторизации оператора
-        authPageData.loginOperatorInPageAuth(authPageData.getLoginOperator(), authPageData.getPassOperator());
+        authPage.loginOperatorInPageAuth(authPage.getLoginOperator(), authPage.getPassOperator());
         //проверка на открытой странице расписания раздела "Рабочие смены" после авторизации оператора
         element(".main-menu").shouldHave(Condition.text("Рабочие смены"));
         // проверка разлогина operator
