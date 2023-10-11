@@ -10,7 +10,7 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 // класс с базовыми тестами
 public class TestBase {
-    private static String urlStand = "https://master.dc.oswfm.ru"; // базовый url
+    private static String urlStand = "https://.dc.oswfm.ru"; // базовый url
 
     public String getUrlStand() {
         return urlStand;
