@@ -1,13 +1,15 @@
 package frontend.login;
 
 import com.codeborne.selenide.Condition;
-import datatest.TestBase;
+import frontend.BaseTest;
 import org.junit.jupiter.api.Test;
+import pages.AuthPage;
 
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
-class FrontLoginTest extends TestBase {
+class FrontLoginTest extends BaseTest {
+    AuthPage authPage = new AuthPage();
 
     @Test
         // open page autorizacion

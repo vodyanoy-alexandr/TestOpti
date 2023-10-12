@@ -1,47 +1,34 @@
 package frontend.manager.settings;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import datatest.TestBase;
+import frontend.BaseTest;
 import org.junit.jupiter.api.Test;
+import pages.AuthPage;
+import pages.SetOfficePage;
 
-import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-class OfficesTest extends TestBase {
+class SetOfficesTest extends BaseTest {
+    SetOfficePage setOfficePage = new SetOfficePage();
 
     @Test
-        // open page Offices
-    void openPageSetOffies() {
-        // открытие страницы настроек офиса
-        open("/settings/offices");
-        // вызов метода авторизации на странице из класс AuthPageDataTest
-        authPage.loginManagerInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
-        // проверка открытия страницы "Настройка офисов"
-        element(".offices").shouldHave(text("Настройка офисов"));
+        // Проверка открытия страницы настроек "Офисы"
+    void openPageSetOffice() {
+        setOfficePage.openPage();
     }
 
     @Test
         // Добавление нового офиса
-    void addNewOffies() {
-        // открытие страницы настроек офиса
-        open("/settings/offices");
-        // вызов метода авторизации на странице из класс AuthPageDataTest
-        authPage.loginManagerInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
+    void addNewOffice() {
+        String nameOffice = "Новый офис";
 
-        // нажатие на кнопку "Добавить офис"
-        element(".button-transparent-wrap")
-                .$(byText("Добавить офис"))
-                .click();
-        // проверка что открылась шторка "Добавление офиса"
-        element("div.header-drawer")
-                .shouldHave(text("Добавление офиса"));
+        // открытие страницы настроек офиса через вызов метода из класса SetOfficePage
+        setOfficePage.openPage();
+        // открытие шторки добавления нового офиса
+        setOfficePage.addNewOffice();
         // ввод в инпут "Название" имя офиса
-        element(".form-table-row", 0)
-                .$("[type = text]")
-                .setValue("testOffice");
+        setOfficePage.setNameOffice(nameOffice);
         // клик на инпут "Часовой пояс"
         element(".form-table-row", 1)
                 .$("[type = text]")
@@ -80,7 +67,7 @@ class OfficesTest extends TestBase {
         // ввод в инпут "Комментарий" комментарий
         element(".form-table-row", 3)
                 .$("[type = text]")
-                .setValue("Комментарий для newOffice");
+                .setValue("Офис создан в рамках автотеста на Selenide");
         // ввод в инпут "Рабочих мест" колличество рабочих мест
         element(".form-table-row", 4)
                 .$("[type = text]")
@@ -89,10 +76,6 @@ class OfficesTest extends TestBase {
         element(".button.button-stripped")
                 .click();
         //Проверка что в таблице появился офис с названием
-        element(".offices__table-wrap").shouldHave(text("testOffice"));
-
-        sleep(5000);
-
-
+        element(".offices__table-wrap").shouldHave(text(nameOffice));
     }
 }
