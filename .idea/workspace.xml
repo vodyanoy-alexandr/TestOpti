@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="обновил AuthorizationPageDataTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/datatest/AuthPageData.java" afterDir="false" />
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="update TestBase">
+      <change afterPath="$PROJECT_DIR$/src/test/java/frontend/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/SetOfficePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/300d63f445f08ea083841da28801d856e8060b57" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/300d63f445f08ea083841da28801d856e8060b57" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4cc317a89e9a15cab7ccc421e51de2f8a651eb63" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b0b6b60d75e030a741023927ff5674ff15b6bd4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b0b6b60d75e030a741023927ff5674ff15b6bd4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/c/4cc317a89e9a15cab7ccc421e51de2f8a651eb63" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/datatest/AuthorizationPageDataTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/datatest/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/OfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/OfficesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/OfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SetOfficesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +84,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.OfficesTest (1)">
+  <component name="RunManager" selected="Gradle.FrontLoginTest.loginAndLoguotOperator">
     <configuration name="FrontLoginTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -126,7 +133,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="FrontLoginTest.loginManagerWFM" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FrontLoginTest.loginAndLoguotOperator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -139,7 +146,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.login.FrontLoginTest.loginManagerWFM&quot;" />
+            <option value="&quot;frontend.login.FrontLoginTest.loginAndLoguotOperator&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -174,7 +181,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="OfficesTest.openPageSetOffies" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OfficesTest.addNewOffies" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -187,7 +194,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.manager.settings.OfficesTest.openPageSetOffies&quot;" />
+            <option value="&quot;frontend.manager.settings.OfficesTest.addNewOffies&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -200,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OfficesTest (1)" />
+        <item itemvalue="Gradle.FrontLoginTest.loginAndLoguotOperator" />
         <item itemvalue="Gradle.FrontLoginTest (1)" />
         <item itemvalue="Gradle.FrontLoginTest.InvalidLoginOperator" />
-        <item itemvalue="Gradle.OfficesTest.openPageSetOffies" />
-        <item itemvalue="Gradle.FrontLoginTest.loginManagerWFM" />
+        <item itemvalue="Gradle.OfficesTest (1)" />
+        <item itemvalue="Gradle.OfficesTest.addNewOffies" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +234,8 @@
       <workItem from="1695793790546" duration="14091000" />
       <workItem from="1696492096111" duration="9055000" />
       <workItem from="1696578565351" duration="16507000" />
-      <workItem from="1696709409950" duration="32670000" />
+      <workItem from="1696709409950" duration="57974000" />
+      <workItem from="1697091741535" duration="7842000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -389,7 +397,31 @@
       <option name="project" value="LOCAL" />
       <updated>1696924706117</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Создал отдельные методы авторизации на странице менеджером и оператором, вынес их в отдельный класс AuthPageData, добавил эти методы в тесты">
+      <option name="closed" value="true" />
+      <created>1696946704816</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1696946704816</updated>
+    </task>
+    <task id="LOCAL-00022" summary="вывел в отдельный класс базовые тесты&#10;в классе OfficesTest добавил тест на создание нового офиса">
+      <option name="closed" value="true" />
+      <created>1697012594946</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697012594946</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update TestBase">
+      <option name="closed" value="true" />
+      <created>1697012685771</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1697012685772</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +468,10 @@
     <MESSAGE value="update @BeforeAll in class FrontLoginTest and OfficesTest" />
     <MESSAGE value="вынес в отдельный класс css локаторы элементов страницы авторизации, создал геттеры" />
     <MESSAGE value="обновил AuthorizationPageDataTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="обновил AuthorizationPageDataTest" />
+    <MESSAGE value="Создал отдельные методы авторизации на странице менеджером и оператором, вынес их в отдельный класс AuthPageData, добавил эти методы в тесты" />
+    <MESSAGE value="вывел в отдельный класс базовые тесты&#10;в классе OfficesTest добавил тест на создание нового офиса" />
+    <MESSAGE value="update TestBase" />
+    <option name="LAST_COMMIT_MESSAGE" value="update TestBase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -448,5 +483,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TestOpti$OfficesTest_addNewOffies.ic" NAME="OfficesTest.addNewOffies Coverage Results" MODIFIED="1696950799312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

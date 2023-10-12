@@ -1,12 +1,12 @@
-package datatest;
+package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.element;
 
-public class AuthPageData {
+public class AuthPage {
     private String
-            urlStand = "https://.dc.oswfm.ru", // базовый url
+
             loginManager = "manager", // логин менеджера
             passManager = "manager", // пароль менеджера
             loginOperator = "operator", // логин оператора
@@ -27,10 +27,6 @@ public class AuthPageData {
 
     public SelenideElement getLoginButton() {
         return loginButton;
-    }
-
-    public String getUrlStand() {
-        return urlStand;
     }
 
     public String getLoginManager() {
