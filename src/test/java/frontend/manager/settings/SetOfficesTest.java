@@ -1,6 +1,7 @@
 package frontend.manager.settings;
 
 import frontend.BaseTest;
+import frontend.componets.TimeZoneComponents;
 import org.junit.jupiter.api.Test;
 import pages.AuthPage;
 import pages.SetOfficePage;
@@ -11,7 +12,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 class SetOfficesTest extends BaseTest {
     SetOfficePage setOfficePage = new SetOfficePage();
-
     @Test
         // Проверка открытия страницы настроек "Офисы"
     void openPageSetOffice() {
@@ -29,15 +29,8 @@ class SetOfficesTest extends BaseTest {
         setOfficePage.addNewOffice();
         // ввод в инпут "Название" имя офиса
         setOfficePage.setNameOffice(nameOffice);
-        // клик на инпут "Часовой пояс"
-        element(".form-table-row", 1)
-                .$("[type = text]")
-                .click();
-        // выбор екб
-        elements(".auto-complete__item")
-                .filterBy(text("+05:00 (Asia/Yekaterinburg)"))
-                .first()
-                .click();
+        // добавление тайм зоны
+        setOfficePage.setTimeZone("+04:00 (Europe/Samara)");
         // ставим чекбокс выходной на понедельник
         element(".form-table-row", 2)
                 .$(byText("Пн."))
