@@ -45,7 +45,7 @@ public class SetOfficePage {
         element(".form-table-row", 1)
                 .$("[type = text]")
                 .click();
-        // выбор часового пояса
+        // выбор часового пояса в выпадашке
         timeZoneComponents.selectTimeZone(timeZone);
     }
 }
