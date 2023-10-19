@@ -20,7 +20,7 @@ class SetOfficesTest extends BaseTest {
     @Test
         // Добавление нового офиса
     void addNewOffice() {
-        String nameOffice = "Новый офис";
+        String nameOffice = "Новый офис 888";
 
         // открытие страницы настроек офиса через вызов метода из класса SetOfficePage
         setOfficePage.openPage();
@@ -69,5 +69,8 @@ class SetOfficesTest extends BaseTest {
                 .click();
         //Проверка что в таблице появился офис с названием
         element(".offices__table-wrap").shouldHave(text(nameOffice));
+        // удаление офиса
+       setOfficePage.delOffice(nameOffice);
+        sleep(1000);
     }
 }

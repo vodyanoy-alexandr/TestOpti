@@ -32,7 +32,7 @@ public class SetOfficePage {
                 .shouldHave(text("Добавление офиса"));
     }
 
-    //метод вводит название нового офиса (в параметрах передать название)
+    // метод вводит название нового офиса (в параметрах передать название)
     public void setNameOffice(String var) {
         element(".form-table-row", 0)
                 .$("[type = text]")
@@ -48,4 +48,19 @@ public class SetOfficePage {
         // выбор часового пояса в выпадашке
         timeZoneComponents.selectTimeZone(timeZone);
     }
+    // метод удаляет офис из таблицы (в параметрах передать название офиса)
+    public void delOffice(String nameOffice) {
+        element(".offices__table-wrap")
+                .$$(".enable-transition, .virtualized-table__cell")
+                .filterBy(text(nameOffice))
+                .first()
+                .$(".svg-icon ")
+                .click();
+        // подтверждение удаления офиса
+        element(".button.button--confirm-buttons")
+                .click();
+        //проверка что офиса больше нет
+        element(".offices__table-wrap").shouldNotHave(text(nameOffice));
+    }
+
 }
