@@ -22,7 +22,7 @@ public class SetOfficePage {
     }
 
     // метод открывает шторку добавления нового офиса
-    public void addNewOffice() {
+    public void openModalAddNewOffice() {
         // нажатие на кнопку "Добавить офис"
         element(".button-transparent-wrap")
                 .$(byText("Добавить офис"))
@@ -48,6 +48,13 @@ public class SetOfficePage {
         // выбор часового пояса в выпадашке
         timeZoneComponents.selectTimeZone(timeZone);
     }
+
+    // метод нажимает кнопку "Сохранить изменения"/ "Добавить офис" в шторке редактирования/добавления офиса
+    public void clickButtonAddOffice() {
+        element(".button.button-stripped")
+                .click();
+    }
+
     // метод удаляет офис из таблицы (в параметрах передать название офиса)
     public void delOffice(String nameOffice) {
         element(".offices__table-wrap")

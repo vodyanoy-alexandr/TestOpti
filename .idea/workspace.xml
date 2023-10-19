@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="добавил общий компонент выбор таймзоны в выпадашке">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/300d63f445f08ea083841da28801d856e8060b57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf63e816524b737bdfb2849157fcc5788e89afdd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/0/300d63f445f08ea083841da28801d856e8060b57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/f/cf63e816524b737bdfb2849157fcc5788e89afdd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/componets/TimeZoneComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/componets/TimeZoneComponents.java" afterDir="false" />
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="Добавил метод удаления офиса в класс SetOfficePage&#10;Добавил вызов метода удаления офиса в тест создания офиса">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/componets/Notifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SetOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SetOfficesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/SetOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SetOfficePage.java" afterDir="false" />
     </list>
@@ -80,7 +77,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.SetOfficesTest">
+  <component name="RunManager" selected="Gradle.SetOfficesTest.addNewOfficeWithInvalidName">
     <configuration name="FrontLoginTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -95,54 +92,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;frontend.login.FrontLoginTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="FrontLoginTest.invalidLoginManagerWFM" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;frontend.login.FrontLoginTest.invalidLoginManagerWFM&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="FrontLoginTest.loginManagerWFM" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;frontend.login.FrontLoginTest.loginManagerWFM&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -201,13 +150,61 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="SetOfficesTest.addNewOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;frontend.manager.settings.SetOfficesTest.addNewOffice&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="SetOfficesTest.addNewOfficeWithInvalidName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;frontend.manager.settings.SetOfficesTest.addNewOfficeWithInvalidName&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SetOfficesTest.addNewOfficeWithInvalidName" />
+        <item itemvalue="Gradle.SetOfficesTest.addNewOffice" />
         <item itemvalue="Gradle.SetOfficesTest" />
         <item itemvalue="Gradle.OfficesTest (1)" />
         <item itemvalue="Gradle.FrontLoginTest (1)" />
-        <item itemvalue="Gradle.FrontLoginTest.loginManagerWFM" />
-        <item itemvalue="Gradle.FrontLoginTest.invalidLoginManagerWFM" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +228,7 @@
       <workItem from="1696492096111" duration="9055000" />
       <workItem from="1696578565351" duration="16507000" />
       <workItem from="1696709409950" duration="23683000" />
-      <workItem from="1697733826043" duration="402000" />
+      <workItem from="1697733826043" duration="7392000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -385,7 +382,47 @@
       <option name="project" value="LOCAL" />
       <updated>1697120598950</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update BaseTest">
+      <option name="closed" value="true" />
+      <created>1697734291277</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1697734291277</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update all">
+      <option name="closed" value="true" />
+      <created>1697734355915</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1697734355915</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update SetOfficePage">
+      <option name="closed" value="true" />
+      <created>1697734476576</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697734476576</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Добавил метод удаления офиса в класс SetOfficePage&#10;Добавил вызов метода удаления офиса в тест создания офиса">
+      <option name="closed" value="true" />
+      <created>1697737119071</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1697737119071</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Добавил метод удаления офиса в класс SetOfficePage&#10;Добавил вызов метода удаления офиса в тест создания офиса">
+      <option name="closed" value="true" />
+      <created>1697737204460</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1697737204460</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +498,11 @@
     <MESSAGE value="update build.gradle.kts" />
     <MESSAGE value="update @BeforeAll in class FrontLoginTest and OfficesTest" />
     <MESSAGE value="добавил общий компонент выбор таймзоны в выпадашке" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил общий компонент выбор таймзоны в выпадашке" />
+    <MESSAGE value="update BaseTest" />
+    <MESSAGE value="update all" />
+    <MESSAGE value="update SetOfficePage" />
+    <MESSAGE value="Добавил метод удаления офиса в класс SetOfficePage&#10;Добавил вызов метода удаления офиса в тест создания офиса" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил метод удаления офиса в класс SetOfficePage&#10;Добавил вызов метода удаления офиса в тест создания офиса" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

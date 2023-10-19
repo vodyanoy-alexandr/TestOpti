@@ -3,6 +3,7 @@ package frontend.manager.settings;
 import frontend.BaseTest;
 import org.junit.jupiter.api.Test;
 import pages.SetOfficePage;
+import pages.componets.Notifications;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 class SetOfficesTest extends BaseTest {
     SetOfficePage setOfficePage = new SetOfficePage();
+    Notifications notifications = new Notifications();
 
     @Test
         // Проверка открытия страницы настроек "Офисы"
@@ -18,14 +20,14 @@ class SetOfficesTest extends BaseTest {
     }
 
     @Test
-        // Добавление нового офиса
+        // Добавление нового офиса и удаление
     void addNewOffice() {
         String nameOffice = "Новый офис 888";
 
         // открытие страницы настроек офиса через вызов метода из класса SetOfficePage
         setOfficePage.openPage();
         // открытие шторки добавления нового офиса
-        setOfficePage.addNewOffice();
+        setOfficePage.openModalAddNewOffice();
         // ввод в инпут "Название" имя офиса
         setOfficePage.setNameOffice(nameOffice);
         // добавление тайм зоны
@@ -64,13 +66,40 @@ class SetOfficesTest extends BaseTest {
         element(".form-table-row", 4)
                 .$("[type = text]")
                 .setValue("777");
-        // нажатие кнопки "Сохранить изменения"
-        element(".button.button-stripped")
-                .click();
+        // нажатие кнопки "Добавить офис"
+        setOfficePage.clickButtonAddOffice();
         //Проверка что в таблице появился офис с названием
         element(".offices__table-wrap").shouldHave(text(nameOffice));
         // удаление офиса
-       setOfficePage.delOffice(nameOffice);
-        sleep(1000);
+        setOfficePage.delOffice(nameOffice);
+
+    }
+
+    @Test
+        // Создание офиса с неуникальным именем
+    void addNewOfficeWithInvalidName() {
+        String nameOffice = "Новый офис 7777";
+        // открытие страницы настроек офиса через вызов метода из класса SetOfficePage
+        setOfficePage.openPage();
+        // открытие шторки добавления нового офиса
+        setOfficePage.openModalAddNewOffice();
+        // ввод в инпут "Название" имя офиса
+        setOfficePage.setNameOffice(nameOffice);
+        // добавление тайм зоны
+        setOfficePage.setTimeZone("+03:00 (Europe/Moscow)");
+        // нажатие кнопки добавления офиса
+        setOfficePage.clickButtonAddOffice();
+        // повторное открытие шторки добавления офиса
+        setOfficePage.openModalAddNewOffice();
+        // ввод в инпут "Название" имя уже существуещего офиса
+        setOfficePage.setNameOffice(nameOffice);
+        // добавление тайм зоны
+        setOfficePage.setTimeZone("+03:00 (Europe/Moscow)");
+        // нажатие кнопки добавления офиса
+        setOfficePage.clickButtonAddOffice();
+        // проверка уведомления что офис не уникальный
+        notifications.shouldHaveNotifications("Не уникально");
+        // удаление офиса todo переделать на апишку удаление тестовых данных (офиса)
+        setOfficePage.delOffice(nameOffice);
     }
 }

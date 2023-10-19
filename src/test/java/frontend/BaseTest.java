@@ -13,6 +13,7 @@ public class BaseTest {
 
     @BeforeAll
     static void beforeAll() {
+
         Configuration.baseUrl = dataTest.getUrlStand(); // базовый url
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
