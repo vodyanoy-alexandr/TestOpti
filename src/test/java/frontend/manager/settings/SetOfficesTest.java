@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 class SetOfficesTest extends BaseTest {
     SetOfficePage setOfficePage = new SetOfficePage();
+
     @Test
         // Проверка открытия страницы настроек "Офисы"
     void openPageSetOffice() {
