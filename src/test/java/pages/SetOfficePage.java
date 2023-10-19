@@ -1,5 +1,7 @@
 package pages;
 
+import frontend.componets.TimeZoneComponents;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.element;
@@ -7,6 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SetOfficePage {
     AuthPage authPage = new AuthPage();
+    TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
 
     // метод открывает страницу настроек офисов
     public void openPage() {
@@ -34,5 +37,15 @@ public class SetOfficePage {
         element(".form-table-row", 0)
                 .$("[type = text]")
                 .setValue(var);
+    }
+
+    // метод выбирает тайм зону в шторке создания нового офиса (передать в параметрах тайм зону)
+    public void setTimeZone(String timeZone) {
+        // клик на инпут "Часовой пояс"
+        element(".form-table-row", 1)
+                .$("[type = text]")
+                .click();
+        // выбор часового пояса
+        timeZoneComponents.selectTimeZone(timeZone);
     }
 }

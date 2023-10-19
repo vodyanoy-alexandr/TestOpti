@@ -8,7 +8,7 @@ import pages.AuthPage;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
-// класс с базовыми тестами
+// класс с базовыми данными
 public class DataTest {
     private static String urlStand = "https://.dc.oswfm.ru"; // базовый url
 
