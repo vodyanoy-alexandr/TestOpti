@@ -1,9 +1,7 @@
 package frontend.manager.settings;
 
 import frontend.BaseTest;
-import frontend.componets.TimeZoneComponents;
 import org.junit.jupiter.api.Test;
-import pages.AuthPage;
 import pages.SetOfficePage;
 
 import static com.codeborne.selenide.Condition.text;

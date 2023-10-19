@@ -38,8 +38,6 @@ Q.idea/sonarlint/securityhotspotstore/7/4/749edfcc96398253e5b3416184e95c46621da8
 w
 G.idea/sonarlint/issuestore/7/4/749edfcc96398253e5b3416184e95c46621da850,d/4/d4115e7e13112fe372c450a6354345d7e7531a57
 Å
-Q.idea/sonarlint/securityhotspotstore/4/c/4cc317a89e9a15cab7ccc421e51de2f8a651eb63,c/f/cf63e816524b737bdfb2849157fcc5788e89afdd
-Å
 Q.idea/sonarlint/securityhotspotstore/8/b/8b0b6b60d75e030a741023927ff5674ff15b6bd4,0/f/0f1d3232ad1466250c18fe877c918e7b1e47ff20
 Å
 Q.idea/sonarlint/securityhotspotstore/1/6/16607a987a4063f0891bdd1b6ccb1ea8d7ca5f73,f/a/fa07f4929e7b96b6cfc28c2dde10cd452bb21ae0
@@ -122,8 +120,6 @@ w
 G.idea/sonarlint/issuestore/a/2/a23c5826b9e43ac800045078039410ea3817eb39,1/f/1fc2365362cbeadb3ad840f6fbe13e7904d7d679
 w
 G.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,e/d/ed67eb178d523a4b3f117dcbe0eda5196367ceec
-h
-8src/test/java/frontend/manager/settings/OfficesTest.java,3/0/300d63f445f08ea083841da28801d856e8060b57
 Å
 Q.idea/sonarlint/securityhotspotstore/f/9/f95039afb0541acdce88b3eb8e6b54a3101c33ee,6/0/609c9e44ff6df61271f7b144a126b126cfbf9421
 Å
@@ -274,5 +270,3 @@ Q.idea/sonarlint/securityhotspotstore/e/4/e4af526f20f94ad04e01a98bebf5ccc65f3297
 ,.idea/inspectionProfiles/Project_Default.xml,4/9/496a238a6afa168dbaf6efd37bb459331589579c
 Q
 !src/test/java/pages/AuthPage.java,8/2/8283949d0f2391ed5133b3d773bd3acab673577c
-T
-$src/test/java/datatest/TestBase.java,9/6/964ee89fed0df8daaa999dd4d56f00fb171a1a3f

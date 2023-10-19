@@ -1,6 +1,6 @@
 package pages;
 
-import frontend.componets.TimeZoneComponents;
+import pages.componets.TimeZoneComponents;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
