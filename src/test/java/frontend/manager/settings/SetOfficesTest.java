@@ -11,7 +11,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 class SetOfficesTest extends BaseTest {
     SetOfficePage setOfficePage = new SetOfficePage();
-    Notifications notifications = new Notifications();
 
     @Test
         // Проверка открытия страницы настроек "Офисы"
@@ -69,7 +68,7 @@ class SetOfficesTest extends BaseTest {
         // нажатие кнопки "Добавить офис"
         setOfficePage.clickButtonAddOffice();
         // проверка уведомления что офис создан
-        notifications.shouldHaveNotifications("Добавлен новый офис");
+        setOfficePage.shouldHaveNotification("Добавлен новый офис");
         //Проверка что в таблице появился офис с названием
         element(".offices__table-wrap").shouldHave(text(nameOffice));
         // удаление офиса
@@ -92,7 +91,7 @@ class SetOfficesTest extends BaseTest {
         // нажатие кнопки добавления офиса
         setOfficePage.clickButtonAddOffice();
         // проверка уведомления что офис создан
-        notifications.shouldHaveNotifications("Добавлен новый офис");
+        setOfficePage.shouldHaveNotification("Добавлен новый офис");
         // повторное открытие шторки добавления офиса
         setOfficePage.openModalAddNewOffice();
         // ввод в инпут "Название" имя уже существуещего офиса
@@ -102,7 +101,7 @@ class SetOfficesTest extends BaseTest {
         // нажатие кнопки добавления офиса
         setOfficePage.clickButtonAddOffice();
         // проверка уведомления что офис не уникальный
-        notifications.shouldHaveNotifications("Не уникально");
+        setOfficePage.shouldHaveNotification("Не уникально");
         // удаление офиса todo переделать на апишку удаление тестовых данных (офиса)
         setOfficePage.delOffice(nameOffice);
     }

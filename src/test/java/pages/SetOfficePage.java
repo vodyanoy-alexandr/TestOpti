@@ -1,5 +1,6 @@
 package pages;
 
+import pages.componets.Notifications;
 import pages.componets.TimeZoneComponents;
 
 import static com.codeborne.selenide.Condition.text;
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SetOfficePage {
     AuthPage authPage = new AuthPage();
     TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
+    Notifications notifications = new Notifications();
 
     // метод открывает страницу настроек офисов
     public void openPage() {
@@ -68,6 +70,11 @@ public class SetOfficePage {
                 .click();
         //проверка что офиса больше нет
         element(".offices__table-wrap").shouldNotHave(text(nameOffice));
+    }
+
+    // метод вызывает метод из класса Notification (проверка на текст уведомления)
+    public void shouldHaveNotification(String text) {
+        notifications.shouldHaveNotification(text);
     }
 
 }
