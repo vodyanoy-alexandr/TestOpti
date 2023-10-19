@@ -68,6 +68,8 @@ class SetOfficesTest extends BaseTest {
                 .setValue("777");
         // нажатие кнопки "Добавить офис"
         setOfficePage.clickButtonAddOffice();
+        // проверка уведомления что офис создан
+        notifications.shouldHaveNotifications("Добавлен новый офис");
         //Проверка что в таблице появился офис с названием
         element(".offices__table-wrap").shouldHave(text(nameOffice));
         // удаление офиса
@@ -89,6 +91,8 @@ class SetOfficesTest extends BaseTest {
         setOfficePage.setTimeZone("+03:00 (Europe/Moscow)");
         // нажатие кнопки добавления офиса
         setOfficePage.clickButtonAddOffice();
+        // проверка уведомления что офис создан
+        notifications.shouldHaveNotifications("Добавлен новый офис");
         // повторное открытие шторки добавления офиса
         setOfficePage.openModalAddNewOffice();
         // ввод в инпут "Название" имя уже существуещего офиса
