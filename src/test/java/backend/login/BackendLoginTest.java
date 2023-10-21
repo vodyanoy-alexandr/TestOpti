@@ -1,6 +1,5 @@
 package backend.login;
 
-import pages.AuthPage;
 import datatest.DataTest;
 import org.junit.jupiter.api.Test;
 

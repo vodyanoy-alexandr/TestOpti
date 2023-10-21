@@ -2,20 +2,18 @@ package frontend.manager.settings;
 
 import frontend.BaseTest;
 import org.junit.jupiter.api.Test;
-import pages.SetOfficePage;
-import pages.componets.Notifications;
+import pages.settings.SettingOfficePage;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-class SetOfficesTest extends BaseTest {
-    SetOfficePage setOfficePage = new SetOfficePage();
+class SettingOfficesTest extends BaseTest {
+    SettingOfficePage settingOfficePage = new SettingOfficePage();
 
     @Test
         // Проверка открытия страницы настроек "Офисы"
-    void openPageSetOffice() {
-        setOfficePage.openPage();
+     void openPageSetOffice() {
+        settingOfficePage.openPage();
     }
 
     @Test
@@ -24,55 +22,33 @@ class SetOfficesTest extends BaseTest {
         String nameOffice = "Новый офис 888";
 
         // открытие страницы настроек офиса через вызов метода из класса SetOfficePage
-        setOfficePage.openPage();
+        settingOfficePage.openPage();
         // открытие шторки добавления нового офиса
-        setOfficePage.openModalAddNewOffice();
+        settingOfficePage.openModalAddNewOffice();
         // ввод в инпут "Название" имя офиса
-        setOfficePage.setNameOffice(nameOffice);
+        settingOfficePage.setNameOffice(nameOffice);
         // добавление тайм зоны
-        setOfficePage.setTimeZone("+04:00 (Europe/Samara)");
+        settingOfficePage.setTimeZone("+04:00 (Europe/Samara)");
         // ставим чекбокс выходной на понедельник
-        element(".form-table-row", 2)
-                .$(byText("Пн."))
-                .parent()
-                .$(".checkbox__input")
-                .click();
+        settingOfficePage.checkboxWeekend("Пн.");
         // выставляем время начала работы офиса во вторник с 12:00
-        element(".form-table-row", 2)
-                .$(byText("Вт."))
-                .parent()
-                .$("[type=text]", 0)
-                .doubleClick()
-                .sendKeys("1200");
+       settingOfficePage.setStartWork("Вт.", "1200");
         // выставляем время окончания работы офиса во вторник с 22:30
-        element(".form-table-row", 2)
-                .$(byText("Вт."))
-                .parent()
-                .$("[type=text]", 1)
-                .doubleClick()
-                .sendKeys("2230");
+        settingOfficePage.setEndWork("Вт.", "2230");
         // снимаем чекбокс выходной с субботы
-        element(".form-table-row", 2)
-                .$(byText("Сб."))
-                .parent()
-                .$(".checkbox__input")
-                .click();
+       settingOfficePage.checkboxWeekend("Сб.");
         // ввод в инпут "Комментарий" комментарий
-        element(".form-table-row", 3)
-                .$("[type = text]")
-                .setValue("Офис создан в рамках автотеста на Selenide");
+        settingOfficePage.setComment("Офис создан в рамках автотеста на Selenide");
         // ввод в инпут "Рабочих мест" колличество рабочих мест
-        element(".form-table-row", 4)
-                .$("[type = text]")
-                .setValue("777");
+        settingOfficePage.setWorkplaces(666);
         // нажатие кнопки "Добавить офис"
-        setOfficePage.clickButtonAddOffice();
+        settingOfficePage.clickButtonAddOffice();
         // проверка уведомления что офис создан
-        setOfficePage.shouldHaveNotification("Добавлен новый офис");
+        settingOfficePage.shouldHaveNotification("Добавлен новый офис");
         //Проверка что в таблице появился офис с названием
         element(".offices__table-wrap").shouldHave(text(nameOffice));
         // удаление офиса
-        setOfficePage.delOffice(nameOffice);
+        settingOfficePage.delOffice(nameOffice);
 
     }
 
@@ -81,28 +57,28 @@ class SetOfficesTest extends BaseTest {
     void addNewOfficeWithInvalidName() {
         String nameOffice = "Новый офис 7777";
         // открытие страницы настроек офиса через вызов метода из класса SetOfficePage
-        setOfficePage.openPage();
+        settingOfficePage.openPage();
         // открытие шторки добавления нового офиса
-        setOfficePage.openModalAddNewOffice();
+        settingOfficePage.openModalAddNewOffice();
         // ввод в инпут "Название" имя офиса
-        setOfficePage.setNameOffice(nameOffice);
+        settingOfficePage.setNameOffice(nameOffice);
         // добавление тайм зоны
-        setOfficePage.setTimeZone("+03:00 (Europe/Moscow)");
+        settingOfficePage.setTimeZone("+03:00 (Europe/Moscow)");
         // нажатие кнопки добавления офиса
-        setOfficePage.clickButtonAddOffice();
+        settingOfficePage.clickButtonAddOffice();
         // проверка уведомления что офис создан
-        setOfficePage.shouldHaveNotification("Добавлен новый офис");
+        settingOfficePage.shouldHaveNotification("Добавлен новый офис");
         // повторное открытие шторки добавления офиса
-        setOfficePage.openModalAddNewOffice();
+        settingOfficePage.openModalAddNewOffice();
         // ввод в инпут "Название" имя уже существуещего офиса
-        setOfficePage.setNameOffice(nameOffice);
+        settingOfficePage.setNameOffice(nameOffice);
         // добавление тайм зоны
-        setOfficePage.setTimeZone("+03:00 (Europe/Moscow)");
+        settingOfficePage.setTimeZone("+03:00 (Europe/Moscow)");
         // нажатие кнопки добавления офиса
-        setOfficePage.clickButtonAddOffice();
+        settingOfficePage.clickButtonAddOffice();
         // проверка уведомления что офис не уникальный
-        setOfficePage.shouldHaveNotification("Не уникально");
+        settingOfficePage.shouldHaveNotification("Не уникально");
         // удаление офиса todo переделать на апишку удаление тестовых данных (офиса)
-        setOfficePage.delOffice(nameOffice);
+        settingOfficePage.delOffice(nameOffice);
     }
 }

@@ -3,7 +3,7 @@ package frontend.login;
 import com.codeborne.selenide.Condition;
 import frontend.BaseTest;
 import org.junit.jupiter.api.Test;
-import pages.AuthPage;
+import pages.autorization.AuthPage;
 
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;

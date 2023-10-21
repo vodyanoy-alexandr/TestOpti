@@ -1,4 +1,4 @@
-package pages;
+package pages.autorization;
 
 import com.codeborne.selenide.SelenideElement;
 
