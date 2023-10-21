@@ -15,6 +15,44 @@ public class SettingOfficePage {
     TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
     Notifications notifications = new Notifications();
 
+    private String
+            monday = "Пн.",
+            tuesday = "Вт.",
+            wednesday = "Ср.",
+            thursday = "Чт.",
+            friday = "Пт.",
+            saturday = "Сб.",
+            sunday = "Вс.";
+
+    public String getMonday() {
+        return monday;
+    }
+
+    public String getTuesday() {
+        return tuesday;
+    }
+
+    public String getWednesday() {
+        return wednesday;
+    }
+
+    public String getThursday() {
+        return thursday;
+    }
+
+    public String getFriday() {
+        return friday;
+    }
+
+    public String getSaturday() {
+        return saturday;
+    }
+
+    public String getSunday() {
+        return sunday;
+    }
+
+
     // метод открывает страницу настроек офисов
     public void openPage() {
         // открытие страницы настроек офиса
@@ -120,6 +158,11 @@ public class SettingOfficePage {
     // метод вызывает метод из класса Notification (проверка на текст уведомления)
     public void shouldHaveNotification(String text) {
         notifications.shouldHaveNotification(text);
+    }
+
+    // метод проверяет что офис с введеным названием есть в таблице
+    public void shouldHaveOffice(String nameOffice) {
+        element(".offices__table-wrap").shouldHave(text(nameOffice));
     }
 
     // приватный метод выбирает элемент (поле с параметрами) по переданному индексу (порядок  расположения полей) в шторке создания/редактирования офиса

@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="доработка тестов на странице настроек метода">
-      <change afterPath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOrganizationStructureTest.java" afterDir="false" />
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="переименовал пакеты, добавил новые пакеты&#10;переименовал классы с page Object&#10;добавил приватные классы в page Object SettingOfficePage&#10;перевел все шаги в тестах офисов в вызов методов из page Object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SetOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOfficesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/autorization/AuthPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SetOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/componets/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/componets/Notifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/componets/TimeZoneComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/componets/TimeZoneComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOfficesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/autorization/AuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/autorization/AuthPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +228,7 @@
       <workItem from="1696492096111" duration="9055000" />
       <workItem from="1696578565351" duration="16507000" />
       <workItem from="1696709409950" duration="23683000" />
-      <workItem from="1697733826043" duration="23400000" />
+      <workItem from="1697733826043" duration="28303000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -451,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697743750737</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="переименовал пакеты, добавил новые пакеты&#10;переименовал классы с page Object&#10;добавил приватные классы в page Object SettingOfficePage&#10;перевел все шаги в тестах офисов в вызов методов из page Object">
+      <option name="closed" value="true" />
+      <created>1697885235106</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1697885235106</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +537,8 @@
     <MESSAGE value="Добавления общего класса Notifications с медом проверки уведомлений&#10;Добавил тест на создание офиса с неуникальным именем" />
     <MESSAGE value="добавлена в тесты проверка на появление уведомления &quot;Добавлен новый офис&quot;" />
     <MESSAGE value="доработка тестов на странице настроек метода" />
-    <option name="LAST_COMMIT_MESSAGE" value="доработка тестов на странице настроек метода" />
+    <MESSAGE value="переименовал пакеты, добавил новые пакеты&#10;переименовал классы с page Object&#10;добавил приватные классы в page Object SettingOfficePage&#10;перевел все шаги в тестах офисов в вызов методов из page Object" />
+    <option name="LAST_COMMIT_MESSAGE" value="переименовал пакеты, добавил новые пакеты&#10;переименовал классы с page Object&#10;добавил приватные классы в page Object SettingOfficePage&#10;перевел все шаги в тестах офисов в вызов методов из page Object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

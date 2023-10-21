@@ -5,14 +5,14 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.element;
 
 public class AuthPage {
-    private String
+    private final String
 
             loginManager = "manager", // логин менеджера
             passManager = "manager", // пароль менеджера
             loginOperator = "operator", // логин оператора
             passOperator = "operator"; // пароль оператора
 
-    private SelenideElement
+    private final SelenideElement
             userNameInput = element("[name=username]"), // инпут логина
             passwordInput = element("[name=password]"), // инпут пароля
             loginButton = element("[name=login]"); // кнопка входа
