@@ -1,6 +1,7 @@
 package frontend.manager.settings;
 
 import frontend.BaseTest;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.settings.SettingOfficePage;
 
@@ -10,14 +11,14 @@ import pages.settings.SettingOfficePage;
 class SettingOfficesTest extends BaseTest {
     SettingOfficePage settingOfficePage = new SettingOfficePage();
 
+    @DisplayName("Проверка открытия страницы настроек 'Офисы'")
     @Test
-        // Проверка открытия страницы настроек "Офисы"
      void openPageSetOffice() {
         settingOfficePage.openPage();
     }
 
+    @DisplayName("Добавление нового офиса и удаление")
     @Test
-        // Добавление нового офиса и удаление
     void addNewOffice() {
         String nameOffice = "Новый офис 888";
         String comment = "Офис создан в рамках автотеста на Selenide";
@@ -53,8 +54,8 @@ class SettingOfficesTest extends BaseTest {
 
     }
 
+    @DisplayName("Создание офиса с неуникальным именем")
     @Test
-        // Создание офиса с неуникальным именем
     void addNewOfficeWithInvalidName() {
         String nameOffice = "Новый офис 7777";
 

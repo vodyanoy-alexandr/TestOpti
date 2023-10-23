@@ -2,6 +2,7 @@ package frontend.login;
 
 import com.codeborne.selenide.Condition;
 import frontend.BaseTest;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.autorization.AuthPage;
 
@@ -11,8 +12,8 @@ import static com.codeborne.selenide.Selenide.open;
 class FrontLoginTest extends BaseTest {
     AuthPage authPage = new AuthPage();
 
+    @DisplayName("Открытие страницы авторизации")
     @Test
-        // open page autorizacion
     void openPageAutorization() {
         // открытие страницы авторизации
         open("/");
@@ -20,8 +21,8 @@ class FrontLoginTest extends BaseTest {
         element("#kc-page-title").shouldHave(Condition.text("Вход в учетную запись"));
     }
 
+    @DisplayName("Авторизация невалидного менеджера")
     @Test
-        // autorizacion invalid manager
     void InvalidLoginManager() {
         // открытие страницы авторизации
         open("/");
@@ -31,8 +32,8 @@ class FrontLoginTest extends BaseTest {
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
 
+    @DisplayName("Авторизация менеджера")
     @Test
-        // autorizacion manager
     void loginAndLoguotManager() {
         // открытие страницы авторизации
         open("/");
@@ -44,8 +45,8 @@ class FrontLoginTest extends BaseTest {
         element("[title=Выйти]").click();
     }
 
+    @DisplayName("Авторизация невалидного оператора")
     @Test
-        // autorizacion invalid operator
     void InvalidLoginOperator() {
         // открытие страницы авторизации
         open("/");
@@ -55,8 +56,8 @@ class FrontLoginTest extends BaseTest {
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
 
+    @DisplayName("Авторизация оператора")
     @Test
-        // autorizacion operator
     void loginAndLoguotOperator() {
         open("/");
         // вызов метода авторизации оператора
