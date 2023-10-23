@@ -1,4 +1,4 @@
-package frontend.manager.settings;
+package uiTests.manager.settings;
 
 public class SettingOrganizationStructureTest {
 }

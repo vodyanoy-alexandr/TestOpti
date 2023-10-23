@@ -1,7 +1,7 @@
-package frontend.login;
+package uiTests.login;
 
 import com.codeborne.selenide.Condition;
-import frontend.BaseTest;
+import uiTests.BaseTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.autorization.AuthPage;
@@ -27,7 +27,7 @@ class FrontLoginTest extends BaseTest {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации
-        authPage.loginManagerInPageAuth(authPage.getLoginManager() + "invalid", authPage.getPassManager() + "invalid");
+        authPage.loginInPageAuth(authPage.getLoginManager() + "invalid", authPage.getPassManager() + "invalid");
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
@@ -38,7 +38,7 @@ class FrontLoginTest extends BaseTest {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации менеджера
-        authPage.loginManagerInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
+        authPage.loginInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
         //проверка на открытой странице расписания раздела "Расписание" после авторизации
         element(".admin-menu").shouldHave(Condition.text("Расписание"));
         // проверка разлогина менеджера
@@ -51,7 +51,7 @@ class FrontLoginTest extends BaseTest {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации оператора
-        authPage.loginOperatorInPageAuth(authPage.getLoginOperator() + "invalid", authPage.getPassOperator() + "invalid");
+        authPage.loginInPageAuth(authPage.getLoginOperator() + "invalid", authPage.getPassOperator() + "invalid");
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
@@ -61,7 +61,7 @@ class FrontLoginTest extends BaseTest {
     void loginAndLoguotOperator() {
         open("/");
         // вызов метода авторизации оператора
-        authPage.loginOperatorInPageAuth(authPage.getLoginOperator(), authPage.getPassOperator());
+        authPage.loginInPageAuth(authPage.getLoginOperator(), authPage.getPassOperator());
         //проверка на открытой странице расписания раздела "Рабочие смены" после авторизации оператора
         element(".main-menu").shouldHave(Condition.text("Рабочие смены"));
         // проверка разлогина operator

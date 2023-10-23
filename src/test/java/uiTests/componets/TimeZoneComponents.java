@@ -1,4 +1,4 @@
-package frontend.componets;
+package uiTests.componets;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;

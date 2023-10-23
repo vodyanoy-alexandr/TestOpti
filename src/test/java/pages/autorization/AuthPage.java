@@ -5,17 +5,14 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.element;
 
 public class AuthPage {
-    private final String
+    private static final String LOGIN_MANAGER = "manager";
+    private static final String PASS_MANAGER = "manager";
+    private static final String LOGIN_OPERATOR = "operator";
+    private static final String PASS_OPERATOR = "operator";
 
-            loginManager = "manager", // логин менеджера
-            passManager = "manager", // пароль менеджера
-            loginOperator = "operator", // логин оператора
-            passOperator = "operator"; // пароль оператора
-
-    private final SelenideElement
-            userNameInput = element("[name=username]"), // инпут логина
-            passwordInput = element("[name=password]"), // инпут пароля
-            loginButton = element("[name=login]"); // кнопка входа
+    private final SelenideElement userNameInput = element("[name=username]");
+    private final SelenideElement passwordInput = element("[name=password]");
+    private final SelenideElement loginButton = element("[name=login]");
 
     public SelenideElement getUserNameInput() {
         return userNameInput;
@@ -30,33 +27,23 @@ public class AuthPage {
     }
 
     public String getLoginManager() {
-        return loginManager;
+        return LOGIN_MANAGER;
     }
 
     public String getPassManager() {
-        return passManager;
+        return PASS_MANAGER;
     }
 
     public String getLoginOperator() {
-        return loginOperator;
+        return LOGIN_OPERATOR;
     }
 
     public String getPassOperator() {
-        return passOperator;
+        return PASS_OPERATOR;
     }
 
-    // метод ввода логина и пароля менеджера для авторизации
-    public void loginManagerInPageAuth(String login, String pass) {
-        //ввод в инпут username логина менеджера
-        getUserNameInput().setValue(login);
-        //ввод в инпут password пароля менеджера
-        getPasswordInput().setValue(pass);
-        //нажатие на иконку "Вход"
-        getLoginButton().click();
-    }
-
-    // метод ввода логина и пароля оператора для авторизации
-    public void loginOperatorInPageAuth(String login, String pass) {
+    // метод ввода логина и пароля
+    public void loginInPageAuth(String login, String pass) {
         //ввод в инпут username логина менеджера
         getUserNameInput().setValue(login);
         //ввод в инпут password пароля менеджера

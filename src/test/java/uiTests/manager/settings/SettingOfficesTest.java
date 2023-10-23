@@ -1,6 +1,6 @@
-package frontend.manager.settings;
+package uiTests.manager.settings;
 
-import frontend.BaseTest;
+import uiTests.BaseTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.settings.SettingOfficePage;
@@ -13,7 +13,7 @@ class SettingOfficesTest extends BaseTest {
 
     @DisplayName("Проверка открытия страницы настроек 'Офисы'")
     @Test
-     void openPageSetOffice() {
+    void openPageSetOffice() {
         settingOfficePage.openPage();
     }
 
@@ -34,11 +34,11 @@ class SettingOfficesTest extends BaseTest {
         // ставим чекбокс выходной на понедельник
         settingOfficePage.checkboxWeekend(settingOfficePage.getMonday());
         // выставляем время начала работы офиса во вторник с 12:00
-       settingOfficePage.setStartWork(settingOfficePage.getTuesday(), "1200");
+        settingOfficePage.setStartWork(settingOfficePage.getTuesday(), "1200");
         // выставляем время окончания работы офиса во вторник с 22:30
         settingOfficePage.setEndWork(settingOfficePage.getTuesday(), "2230");
         // снимаем чекбокс выходной с субботы
-       settingOfficePage.checkboxWeekend(settingOfficePage.getSaturday());
+        settingOfficePage.checkboxWeekend(settingOfficePage.getSaturday());
         // ввод в инпут "Комментарий" комментарий
         settingOfficePage.setComment(comment);
         // ввод в инпут "Рабочих мест" колличество рабочих мест

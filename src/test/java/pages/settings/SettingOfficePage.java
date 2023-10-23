@@ -1,8 +1,8 @@
 package pages.settings;
 
 import com.codeborne.selenide.SelenideElement;
-import frontend.componets.Notifications;
-import frontend.componets.TimeZoneComponents;
+import uiTests.componets.Notifications;
+import uiTests.componets.TimeZoneComponents;
 import pages.autorization.AuthPage;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,45 +11,43 @@ import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SettingOfficePage {
+    public static final String MONDAY = "Пн.";
+    public static final String TUESDAY = "Вт.";
+    public static final String WEDNESDAY = "Ср.";
+    public static final String THURSDAY = "Чт.";
+    public static final String FRIDAY = "Пт.";
+    public static final String SATURDAY = "Сб.";
+    public static final String SUNDAY = "Вс.";
     AuthPage authPage = new AuthPage();
     TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
     Notifications notifications = new Notifications();
 
-    private String
-            monday = "Пн.",
-            tuesday = "Вт.",
-            wednesday = "Ср.",
-            thursday = "Чт.",
-            friday = "Пт.",
-            saturday = "Сб.",
-            sunday = "Вс.";
-
     public String getMonday() {
-        return monday;
+        return MONDAY;
     }
 
     public String getTuesday() {
-        return tuesday;
+        return TUESDAY;
     }
 
     public String getWednesday() {
-        return wednesday;
+        return WEDNESDAY;
     }
 
     public String getThursday() {
-        return thursday;
+        return THURSDAY;
     }
 
     public String getFriday() {
-        return friday;
+        return FRIDAY;
     }
 
     public String getSaturday() {
-        return saturday;
+        return SATURDAY;
     }
 
     public String getSunday() {
-        return sunday;
+        return SUNDAY;
     }
 
 
@@ -58,7 +56,7 @@ public class SettingOfficePage {
         // открытие страницы настроек офиса
         open("/settings/offices");
         // вызов метода авторизации на странице из класс AuthPage
-        authPage.loginManagerInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
+        authPage.loginInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
         // проверка открытия страницы "Настройка офисов"
         element(".offices").shouldHave(text("Настройка офисов"));
     }

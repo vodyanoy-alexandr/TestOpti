@@ -1,4 +1,4 @@
-package frontend;
+package uiTests;
 
 import com.codeborne.selenide.Configuration;
 import datatest.DataTest;

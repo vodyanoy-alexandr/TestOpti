@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="переименовал пакеты, добавил новые пакеты&#10;переименовал классы с page Object&#10;добавил приватные классы в page Object SettingOfficePage&#10;перевел все шаги в тестах офисов в вызов методов из page Object">
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="add @DisplayName in tests class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOfficesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/componets/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/componets/Notifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/componets/TimeZoneComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/componets/TimeZoneComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/login/FrontLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOrganizationStructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOrganizationStructureTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/autorization/AuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/autorization/AuthPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" afterDir="false" />
     </list>
@@ -28,7 +33,17 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TestOpti" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -228,7 +243,7 @@
       <workItem from="1696492096111" duration="9055000" />
       <workItem from="1696578565351" duration="16507000" />
       <workItem from="1696709409950" duration="23683000" />
-      <workItem from="1697733826043" duration="28303000" />
+      <workItem from="1697733826043" duration="34625000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -454,7 +469,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697885235106</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="update">
+      <option name="closed" value="true" />
+      <created>1697891015833</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1697891015833</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add @DisplayName in tests class">
+      <option name="closed" value="true" />
+      <created>1698040236678</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1698040236678</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="добавил отдельный класс с данными" />
     <MESSAGE value="изменил порядок проверки валидного и невалидного менеджера" />
     <MESSAGE value="Добавил тест на логин валидного и невалидного оператора" />
     <MESSAGE value="delete url in DataTest" />
@@ -538,7 +568,9 @@
     <MESSAGE value="добавлена в тесты проверка на появление уведомления &quot;Добавлен новый офис&quot;" />
     <MESSAGE value="доработка тестов на странице настроек метода" />
     <MESSAGE value="переименовал пакеты, добавил новые пакеты&#10;переименовал классы с page Object&#10;добавил приватные классы в page Object SettingOfficePage&#10;перевел все шаги в тестах офисов в вызов методов из page Object" />
-    <option name="LAST_COMMIT_MESSAGE" value="переименовал пакеты, добавил новые пакеты&#10;переименовал классы с page Object&#10;добавил приватные классы в page Object SettingOfficePage&#10;перевел все шаги в тестах офисов в вызов методов из page Object" />
+    <MESSAGE value="update" />
+    <MESSAGE value="add @DisplayName in tests class" />
+    <option name="LAST_COMMIT_MESSAGE" value="add @DisplayName in tests class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
