@@ -1,16 +1,36 @@
 package uiTests.login;
 
 import com.codeborne.selenide.Condition;
-import uiTests.BaseTest;
+import com.codeborne.selenide.Configuration;
+import datatest.DataTest;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.autorization.AuthPage;
 
-import static com.codeborne.selenide.Selenide.element;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
-class FrontLoginTest extends BaseTest {
+class FrontLoginTest {
     AuthPage authPage = new AuthPage();
+    static DataTest dataTest = new DataTest();
+
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.baseUrl = dataTest.getUrlStand(); // базовый url
+        Configuration.browserSize = "1920x1080"; // размер окна браузера
+        Configuration.holdBrowserOpen = false; // оставлять окно браузера открытым
+        System.out.println("Start tests");
+    }
+
+    @AfterEach
+    void afterEach() {
+        clearBrowserCache();
+        clearBrowserCookies();
+        clearBrowserLocalStorage();
+        closeWindow();
+    }
 
     @DisplayName("Открытие страницы авторизации")
     @Test

@@ -19,8 +19,6 @@ public class SettingOfficePage {
     public static final String SATURDAY = "Сб.";
     public static final String SUNDAY = "Вс.";
     AuthPage authPage = new AuthPage();
-    TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
-    Notifications notifications = new Notifications();
 
     public String getMonday() {
         return MONDAY;
@@ -50,6 +48,8 @@ public class SettingOfficePage {
         return SUNDAY;
     }
 
+    TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
+    Notifications notifications = new Notifications();
 
     // метод открывает страницу настроек офисов
     public void openPage() {
@@ -57,8 +57,6 @@ public class SettingOfficePage {
         open("/settings/offices");
         // вызов метода авторизации на странице из класс AuthPage
         authPage.loginInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
-        // проверка открытия страницы "Настройка офисов"
-        element(".offices").shouldHave(text("Настройка офисов"));
     }
 
     // метод открывает шторку добавления нового офиса
@@ -133,7 +131,7 @@ public class SettingOfficePage {
     }
 
     // метод нажимает кнопку "Сохранить изменения"/"Добавить офис" в шторке редактирования/добавления офиса
-    public void clickButtonAddOffice() {
+    public void clickButtonAddEditOffice() {
         element(".button.button-stripped")
                 .click();
     }
@@ -142,8 +140,7 @@ public class SettingOfficePage {
     public void delOffice(String nameOffice) {
         element(".offices__table-wrap")
                 .$$(".enable-transition, .virtualized-table__cell")
-                .filterBy(text(nameOffice))
-                .first()
+                .find(text(nameOffice))
                 .$(".svg-icon ")
                 .click();
         // подтверждение удаления офиса
@@ -151,6 +148,14 @@ public class SettingOfficePage {
                 .click();
         //проверка что офиса больше нет
         element(".offices__table-wrap").shouldNotHave(text(nameOffice));
+    }
+
+    // метод открывает офис из таблицы (в параметрах передать название офиса)
+    public void openOffice(String nameOffice) {
+        element(".offices__table-wrap")
+                .$$(".enable-transition, .virtualized-table__cell")
+                .find(text(nameOffice))
+                .click();
     }
 
     // метод вызывает метод из класса Notification (проверка на текст уведомления)
