@@ -1,19 +1,21 @@
 package uiTests.manager.settings;
 
 import com.codeborne.selenide.Configuration;
+import com.github.javafaker.Faker;
 import datatest.DataTest;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import pages.settings.SettingOfficePage;
+import utils.RandomUtils;
+
+import java.io.File;
+import java.util.Locale;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.closeWindow;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
-
-import com.github.javafaker.Faker;
-import utils.RandomUtils;
-
-import java.util.Locale;
 
 class SettingOfficesTest {
     static Faker faker = new Faker(new Locale("ru"));
@@ -26,7 +28,6 @@ class SettingOfficesTest {
         Configuration.baseUrl = dataTest.getUrlStand(); // базовый url
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = false; // оставлять окно браузера открытым
-        System.out.println("Start tests");
     }
 
     @AfterEach
@@ -143,7 +144,7 @@ class SettingOfficesTest {
         // повторное открытие офиса для редактирования полей
         settingOfficePage.openOffice(nameOffice);
         // ввод в инпут "Название" новое имя офиса
-        settingOfficePage.setNameOffice(nameOffice + "edit");
+        settingOfficePage.setNameOffice(nameOffice + " edit");
         // изменение тайм зоны
         settingOfficePage.setTimeZone("+03:00 (Europe/Moscow)");
         // снимаем чекбокс выходной с понедельника
@@ -169,15 +170,26 @@ class SettingOfficesTest {
         // проверка уведомления что офис изменен
         settingOfficePage.shouldHaveNotification("Операция успешно завершена.");
         //Проверка что в таблице появился офис с названием
-        settingOfficePage.shouldHaveOffice(nameOffice + "edit");
+        settingOfficePage.shouldHaveOffice(nameOffice + " edit");
         // удаление офиса todo перенести удаление тестовых данных на апи
-        settingOfficePage.delOffice(nameOffice + "edit");
+        settingOfficePage.delOffice(nameOffice + " edit");
 
     }
 
-    @Disabled("ещё не готов")
-    @DisplayName("Импорт офиса через файл excel")
+
+    //@Disabled("ещё не готов")
+    @DisplayName("Импорт офиса через файл Excel")
     @Test
     void importOffice() {
+        // открытие страницы настроек офиса через вызов метода из класса SetOfficePage
+        settingOfficePage.openPage();
+        //нажатие кнопки "Импортировать" и загрузка файла импорта
+        settingOfficePage.importOffice("src/test/resources/import/importOffices.xlsx");
+        // проверка уведомления что офис импортирован
+        settingOfficePage.shouldHaveNotification("Офисы импортированы");
+        //Проверка что в таблице появился офис с названием
+        settingOfficePage.shouldHaveOffice("TestImportInSelenide");
+        //// удаление импортированного офиса todo перенести удаление тестовых данных на апи
+        settingOfficePage.delOffice("TestImportInSelenide");
     }
 }

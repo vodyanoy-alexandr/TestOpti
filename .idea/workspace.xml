@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="add @DisplayName in tests class">
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="Add constant in class ...Page">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/import/importOffices.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/componets/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/componets/Notifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/componets/TimeZoneComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/componets/TimeZoneComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/login/FrontLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SettingOrganizationStructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOrganizationStructureTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/autorization/AuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/autorization/AuthPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,19 +77,31 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/Alexander/IdeaProjects/TestOpti/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.SettingOfficesTest">
-    <configuration name="OfficesTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/import" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.SettingOfficesTest.editOffice">
+    <configuration name="SettingOfficesTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -106,7 +114,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.manager.settings.OfficesTest&quot;" />
+            <option value="&quot;uiTests.manager.settings.SettingOfficesTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -117,7 +125,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SetOfficesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOfficesTest.addNewOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -130,7 +138,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.manager.settings.SetOfficesTest&quot;" />
+            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.addNewOffice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -141,7 +149,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SetOfficesTest.addNewOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOfficesTest.addNewOfficeWithInvalidName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -154,7 +162,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.manager.settings.SetOfficesTest.addNewOffice&quot;" />
+            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.addNewOfficeWithInvalidName&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -165,7 +173,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SetOfficesTest.addNewOfficeWithInvalidName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOfficesTest.editOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -178,7 +186,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.manager.settings.SetOfficesTest.addNewOfficeWithInvalidName&quot;" />
+            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.editOffice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -189,7 +197,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOfficesTest.importOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -202,7 +210,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.manager.settings.SettingOfficesTest&quot;" />
+            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.importOffice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -215,16 +223,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SettingOfficesTest" />
-        <item itemvalue="Gradle.SetOfficesTest" />
-        <item itemvalue="Gradle.SetOfficesTest.addNewOfficeWithInvalidName" />
-        <item itemvalue="Gradle.SetOfficesTest.addNewOffice" />
-        <item itemvalue="Gradle.OfficesTest (1)" />
+        <item itemvalue="Gradle.SettingOfficesTest.editOffice" />
+        <item itemvalue="Gradle.SettingOfficesTest (1)" />
+        <item itemvalue="Gradle.SettingOfficesTest.importOffice" />
+        <item itemvalue="Gradle.SettingOfficesTest.addNewOfficeWithInvalidName" />
+        <item itemvalue="Gradle.SettingOfficesTest.addNewOffice" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
-    <option name="lastFrameworkName" value="FluentLenium" />
+    <option name="lastFrameworkName" value="Selenide" />
     <option name="lastLanguageId" value="JAVA" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -243,7 +251,7 @@
       <workItem from="1696492096111" duration="9055000" />
       <workItem from="1696578565351" duration="16507000" />
       <workItem from="1696709409950" duration="23683000" />
-      <workItem from="1697733826043" duration="34625000" />
+      <workItem from="1697733826043" duration="72518000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -485,7 +493,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698040236678</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Add constant in class ...Page">
+      <option name="closed" value="true" />
+      <created>1698046707668</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1698046707668</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Add constant in class ...Page">
+      <option name="closed" value="true" />
+      <created>1698413111642</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1698413111642</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="изменил порядок проверки валидного и невалидного менеджера" />
     <MESSAGE value="Добавил тест на логин валидного и невалидного оператора" />
     <MESSAGE value="delete url in DataTest" />
     <MESSAGE value="add comment in FrontLoginTest" />
@@ -570,7 +593,8 @@
     <MESSAGE value="переименовал пакеты, добавил новые пакеты&#10;переименовал классы с page Object&#10;добавил приватные классы в page Object SettingOfficePage&#10;перевел все шаги в тестах офисов в вызов методов из page Object" />
     <MESSAGE value="update" />
     <MESSAGE value="add @DisplayName in tests class" />
-    <option name="LAST_COMMIT_MESSAGE" value="add @DisplayName in tests class" />
+    <MESSAGE value="Add constant in class ...Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add constant in class ...Page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

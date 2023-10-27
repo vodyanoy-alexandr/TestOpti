@@ -5,10 +5,11 @@ import uiTests.componets.Notifications;
 import uiTests.componets.TimeZoneComponents;
 import pages.autorization.AuthPage;
 
+import java.io.File;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.element;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class SettingOfficePage {
     public static final String MONDAY = "Пн.";
@@ -156,6 +157,12 @@ public class SettingOfficePage {
                 .$$(".enable-transition, .virtualized-table__cell")
                 .find(text(nameOffice))
                 .click();
+    }
+
+    // метод нажимает на кнопку "Импортировать" и загружает файл из resources (в параметрах передать путь к файлу)
+    public void importOffice (String file) {
+        // нажатие на кнопку "Импортировать" и загрузка файла
+        $("[type=file]").uploadFile(new File(file));
     }
 
     // метод вызывает метод из класса Notification (проверка на текст уведомления)
