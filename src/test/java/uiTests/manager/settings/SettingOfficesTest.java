@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import pages.settings.SettingOfficePage;
 import utils.RandomUtils;
 
-import java.io.File;
 import java.util.Locale;
 
 import static com.codeborne.selenide.Condition.text;
@@ -43,7 +42,7 @@ class SettingOfficesTest {
     void openPageSetOffice() {
         settingOfficePage.openPage();
         // проверка открытия страницы "Настройка офисов"
-        element(".offices").shouldHave(text("Настройка офисов"));
+        $(".offices").shouldHave(text("Настройка офисов"));
     }
 
     @DisplayName("Добавление нового офиса и удаление")
@@ -71,7 +70,7 @@ class SettingOfficesTest {
         // ввод в инпут "Комментарий" комментарий
         settingOfficePage.setComment(comment);
         // ввод в инпут "Рабочих мест" колличество рабочих мест
-        settingOfficePage.setWorkplaces(666);
+        settingOfficePage.setWorkplaces(RandomUtils.generateRandomInteger(4));
         // нажатие кнопки "Добавить офис"
         settingOfficePage.clickButtonAddEditOffice();
         // проверка уведомления что офис создан

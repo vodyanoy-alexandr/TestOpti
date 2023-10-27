@@ -63,11 +63,11 @@ public class SettingOfficePage {
     // метод открывает шторку добавления нового офиса
     public void openModalAddNewOffice() {
         // нажатие на кнопку "Добавить офис"
-        element(".button-transparent-wrap")
+        $(".button-transparent-wrap")
                 .$(byText("Добавить офис"))
                 .click();
         // проверка что открылась шторка "Добавление офиса"
-        element("div.header-drawer")
+        $("div.header-drawer")
                 .shouldHave(text("Добавление офиса"));
     }
 
@@ -133,34 +133,34 @@ public class SettingOfficePage {
 
     // метод нажимает кнопку "Сохранить изменения"/"Добавить офис" в шторке редактирования/добавления офиса
     public void clickButtonAddEditOffice() {
-        element(".button.button-stripped")
+        $(".button.button-stripped")
                 .click();
     }
 
     // метод удаляет офис из таблицы (в параметрах передать название офиса)
     public void delOffice(String nameOffice) {
-        element(".offices__table-wrap")
+        $(".offices__table-wrap")
                 .$$(".enable-transition, .virtualized-table__cell")
                 .find(text(nameOffice))
                 .$(".svg-icon ")
                 .click();
         // подтверждение удаления офиса
-        element(".button.button--confirm-buttons")
+        $(".button.button--confirm-buttons")
                 .click();
         //проверка что офиса больше нет
-        element(".offices__table-wrap").shouldNotHave(text(nameOffice));
+        $(".offices__table-wrap").shouldNotHave(text(nameOffice));
     }
 
     // метод открывает офис из таблицы (в параметрах передать название офиса)
     public void openOffice(String nameOffice) {
-        element(".offices__table-wrap")
+        $(".offices__table-wrap")
                 .$$(".enable-transition, .virtualized-table__cell")
                 .find(text(nameOffice))
                 .click();
     }
 
     // метод нажимает на кнопку "Импортировать" и загружает файл из resources (в параметрах передать путь к файлу)
-    public void importOffice (String file) {
+    public void importOffice(String file) {
         // нажатие на кнопку "Импортировать" и загрузка файла
         $("[type=file]").uploadFile(new File(file));
     }
@@ -172,12 +172,12 @@ public class SettingOfficePage {
 
     // метод проверяет что офис с введеным названием есть в таблице
     public void shouldHaveOffice(String nameOffice) {
-        element(".offices__table-wrap").shouldHave(text(nameOffice));
+        $(".offices__table-wrap").shouldHave(text(nameOffice));
     }
 
     // приватный метод выбирает элемент (поле с параметрами) по переданному индексу (порядок  расположения полей) в шторке создания/редактирования офиса
     private SelenideElement setField(int index) {
-        return element(".form-table-row", index);
+        return $(".form-table-row", index);
     }
 
 }

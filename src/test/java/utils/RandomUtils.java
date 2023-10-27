@@ -16,7 +16,6 @@ public class RandomUtils {
             char randomChar = LETTERS.charAt(randomIndex);
             nameBuilder.append(randomChar);
         }
-
         return nameBuilder.toString();
     }
 
@@ -29,7 +28,6 @@ public class RandomUtils {
             char randomChar = NUMBERS.charAt(randomIndex);
             numberBuilder.append(randomChar);
         }
-
         return Integer.parseInt(numberBuilder.toString());
     }
 }
