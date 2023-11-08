@@ -19,7 +19,6 @@ public class SettingOfficePage {
     public static final String FRIDAY = "Пт.";
     public static final String SATURDAY = "Сб.";
     public static final String SUNDAY = "Вс.";
-    AuthPage authPage = new AuthPage();
 
     public String getMonday() {
         return MONDAY;
@@ -48,6 +47,8 @@ public class SettingOfficePage {
     public String getSunday() {
         return SUNDAY;
     }
+
+    AuthPage authPage = new AuthPage();
 
     TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
     Notifications notifications = new Notifications();

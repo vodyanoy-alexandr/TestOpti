@@ -34,7 +34,7 @@ class FrontLoginTest {
 
     @DisplayName("Открытие страницы авторизации")
     @Test
-    void openPageAutorization() {
+    void openPageAuthorization() {
         // открытие страницы авторизации
         open("/");
         //проверка надписи "Вход в учетную запись"на странице авторизации
@@ -54,7 +54,7 @@ class FrontLoginTest {
 
     @DisplayName("Авторизация менеджера")
     @Test
-    void loginAndLoguotManager() {
+    void loginAndLogoutManager() {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации менеджера
@@ -78,7 +78,7 @@ class FrontLoginTest {
 
     @DisplayName("Авторизация оператора")
     @Test
-    void loginAndLoguotOperator() {
+    void loginAndLogoutOperator() {
         open("/");
         // вызов метода авторизации оператора
         authPage.loginInPageAuth(authPage.getLoginOperator(), authPage.getPassOperator());

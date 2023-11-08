@@ -4,13 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="Add constant in class ...Page">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/import/importOffices.xlsx" afterDir="false" />
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="добавлен новый тест на импорт офиса">
+      <change afterPath="$PROJECT_DIR$/src/test/java/backend/login/YourApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/backend/settings/BackendSettingOffices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOrganizationStructurePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0ba1b9c7a4878802f938e331cc2d8a042087ec6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16607a987a4063f0891bdd1b6ccb1ea8d7ca5f73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/388527bfa46071d4e2c351fac6e0d689a58faff0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39e5f9483763e4bdea4279c2c3417712d4f6d4ef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5ddb7dea5d0cb4626a9b152b343b16b44f627116" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b0b6b60d75e030a741023927ff5674ff15b6bd4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b0b6b60d75e030a741023927ff5674ff15b6bd4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/abe25e851ee828e40a94fcb1c1be6f78ff7a04cf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa07f4929e7b96b6cfc28c2dde10cd452bb21ae0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fdf818fb9a5362495b87d39f90f1c1ca5c215796" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/b/0ba1b9c7a4878802f938e331cc2d8a042087ec6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/6/16607a987a4063f0891bdd1b6ccb1ea8d7ca5f73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/8/388527bfa46071d4e2c351fac6e0d689a58faff0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/9/39e5f9483763e4bdea4279c2c3417712d4f6d4ef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/d/5ddb7dea5d0cb4626a9b152b343b16b44f627116" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/b/abe25e851ee828e40a94fcb1c1be6f78ff7a04cf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/a/fa07f4929e7b96b6cfc28c2dde10cd452bb21ae0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/d/fdf818fb9a5362495b87d39f90f1c1ca5c215796" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/login/FrontLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOrganizationStructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOrganizationStructureTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +81,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -70,25 +96,25 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/Alexander/IdeaProjects/TestOpti/src/test/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/Alexander/IdeaProjects/TestOpti/src/test/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="utils" />
@@ -100,8 +126,8 @@
       <recent name="$PROJECT_DIR$/src/test/resources/import" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SettingOfficesTest.editOffice">
-    <configuration name="SettingOfficesTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.BackendLoginTest.authToken">
+    <configuration name="BackendLoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -114,7 +140,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;uiTests.manager.settings.SettingOfficesTest&quot;" />
+            <option value="&quot;backend.login.BackendLoginTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -125,7 +151,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesTest.addNewOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BackendLoginTest.authToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -138,7 +164,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.addNewOffice&quot;" />
+            <option value="&quot;backend.login.BackendLoginTest.authToken&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -149,7 +175,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesTest.addNewOfficeWithInvalidName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BackendLoginTest.authTokenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -162,7 +188,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.addNewOfficeWithInvalidName&quot;" />
+            <option value="&quot;backend.login.BackendLoginTest.authTokenTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -173,7 +199,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesTest.editOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="YourApiTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -186,7 +212,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.editOffice&quot;" />
+            <option value="&quot;backend.login.YourApiTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -197,7 +223,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesTest.importOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="YourApiTest.testPostRequest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -210,7 +236,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.importOffice&quot;" />
+            <option value="&quot;backend.login.YourApiTest.testPostRequest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -223,11 +249,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SettingOfficesTest.editOffice" />
-        <item itemvalue="Gradle.SettingOfficesTest (1)" />
-        <item itemvalue="Gradle.SettingOfficesTest.importOffice" />
-        <item itemvalue="Gradle.SettingOfficesTest.addNewOfficeWithInvalidName" />
-        <item itemvalue="Gradle.SettingOfficesTest.addNewOffice" />
+        <item itemvalue="Gradle.BackendLoginTest.authToken" />
+        <item itemvalue="Gradle.BackendLoginTest" />
+        <item itemvalue="Gradle.YourApiTest.testPostRequest" />
+        <item itemvalue="Gradle.YourApiTest" />
+        <item itemvalue="Gradle.BackendLoginTest.authTokenTest" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +277,9 @@
       <workItem from="1696492096111" duration="9055000" />
       <workItem from="1696578565351" duration="16507000" />
       <workItem from="1696709409950" duration="23683000" />
-      <workItem from="1697733826043" duration="72518000" />
+      <workItem from="1697733826043" duration="82840000" />
+      <workItem from="1698991870033" duration="1097000" />
+      <workItem from="1698995070797" duration="4488000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -509,7 +537,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698413111642</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="добавлен новый тест на редактирование офиса">
+      <option name="closed" value="true" />
+      <created>1698433362215</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1698433362215</updated>
+    </task>
+    <task id="LOCAL-00034" summary="добавлен новый тест на импорт офиса">
+      <option name="closed" value="true" />
+      <created>1698435097135</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1698435097135</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,8 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавил тест на логин валидного и невалидного оператора" />
-    <MESSAGE value="delete url in DataTest" />
     <MESSAGE value="add comment in FrontLoginTest" />
     <MESSAGE value="add test OfficesTest" />
     <MESSAGE value=" add metod @AfterEach closeWindowAfterTest" />
@@ -594,7 +636,9 @@
     <MESSAGE value="update" />
     <MESSAGE value="add @DisplayName in tests class" />
     <MESSAGE value="Add constant in class ...Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add constant in class ...Page" />
+    <MESSAGE value="добавлен новый тест на редактирование офиса" />
+    <MESSAGE value="добавлен новый тест на импорт офиса" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлен новый тест на импорт офиса" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
