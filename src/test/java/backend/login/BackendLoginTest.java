@@ -18,7 +18,7 @@ public class BackendLoginTest {
     @DisplayName("Тест на ручку авторизации для стенда без кк")
     @Test
     void authToken() {
-        baseURI = dataTest.getUrlStand();
+        baseURI = "https://36.dc.oswfm.ru";
         String body = "username=manager&password=manager&grant_type=password&client_id=wfm";
 
         given()
@@ -49,7 +49,7 @@ public class BackendLoginTest {
                 .header("Content-Type", "application/x-www-form-urlencoded")  // Установка типа контента, взято из постмана в хедерах
                 .body(body)
                 .when()
-                .post("https://release36.dc.oswfm.ru" + "/api/oauth/token") // todo
+                .post("/api/oauth/token")
                 .then()
                 .log().all()
                 .body("success", is(true)) // проверка тела ответа
