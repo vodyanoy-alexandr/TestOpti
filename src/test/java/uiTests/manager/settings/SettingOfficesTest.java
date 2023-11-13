@@ -19,8 +19,8 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 class SettingOfficesTest {
     static Faker faker = new Faker(new Locale("ru"));
     private final static String nameOffice = faker.address().cityName();
-    SettingOfficePage settingOfficePage = new SettingOfficePage();
     static DataTest dataTest = new DataTest();
+    SettingOfficePage settingOfficePage = new SettingOfficePage();
 
     @BeforeAll
     static void beforeAll() {
@@ -175,8 +175,6 @@ class SettingOfficesTest {
 
     }
 
-
-    //@Disabled("ещё не готов")
     @DisplayName("Импорт офиса через файл Excel")
     @Test
     void importOffice() {

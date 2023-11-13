@@ -1,22 +1,24 @@
 package backend.login;
 
 import datatest.DataTest;
-import io.restassured.RestAssured;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.baseURI;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 
 public class BackendLoginTest {
 
     DataTest dataTest = new DataTest();
+
     @DisplayName("Тест на ручку авторизации для стенда без кк")
     @Test
     void authToken() {
-        //DataTest dataTest = new DataTest();
-        baseURI = "https://release36.dc.oswfm.ru/api/oauth/token";
+        baseURI = dataTest.getUrlStand();
         String body = "username=manager&password=manager&grant_type=password&client_id=wfm";
 
         given()
@@ -26,7 +28,7 @@ public class BackendLoginTest {
                         "application/x-www-form-urlencoded")  // Установка типа контента, взято из постмана в хедерах
                 .body(body)
                 .when()
-                .post()
+                .post("/api/oauth/token")
                 .then()
                 .log().all()
                 .body("success", is(true)) // проверка тела ответа
@@ -34,9 +36,11 @@ public class BackendLoginTest {
                 .statusCode(200); // проверка статус кода ответа
     }
 
+    @Disabled("не готов")
     @DisplayName("Авторизация на стенде с кейклоком в режиме full")
     @Test
     void authTokenWithKeycloak() {
+        baseURI = dataTest.getUrlStand();
         String body = "username=manager&password=manager&grant_type=password&client_id=wfm";
 
         given()
