@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="добавил общий компонент выбор таймзоны в выпадашке">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/300d63f445f08ea083841da28801d856e8060b57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf63e816524b737bdfb2849157fcc5788e89afdd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/0/300d63f445f08ea083841da28801d856e8060b57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/f/cf63e816524b737bdfb2849157fcc5788e89afdd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/componets/TimeZoneComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/componets/TimeZoneComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SetOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frontend/manager/settings/SetOfficesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SetOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SetOfficePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +27,22 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TestOpti" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TestOpti" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -50,9 +61,17 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="groupByToolId" value="true" />
+    <option name="selectedTabId" value="CurrentFile" />
+    <option name="sortByName" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2ViJ05OmXeLiZ2kzzMlxT4IIfMs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -64,24 +83,33 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.BackendLoginTest.authToken.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FrontLoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.editOffice.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.openPageSetOffice.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;set-office-test&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;selenium.settings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.SetOfficesTest">
-    <configuration name="FrontLoginTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SettingOfficesTest">
+    <configuration name="BackendLoginTest.authToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -94,7 +122,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.login.FrontLoginTest&quot;" />
+            <option value="&quot;backend.login.BackendLoginTest.authToken&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -102,10 +130,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="FrontLoginTest.invalidLoginManagerWFM" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FrontLoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -118,7 +146,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.login.FrontLoginTest.invalidLoginManagerWFM&quot;" />
+            <option value="&quot;uiTests.login.FrontLoginTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -126,10 +154,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="FrontLoginTest.loginManagerWFM" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOfficesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,7 +170,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.login.FrontLoginTest.loginManagerWFM&quot;" />
+            <option value="&quot;uiTests.manager.settings.SettingOfficesTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -150,10 +178,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="OfficesTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOfficesTest.editOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -166,7 +194,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.manager.settings.OfficesTest&quot;" />
+            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.editOffice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -174,10 +202,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SetOfficesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOfficesTest.openPageSetOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -190,7 +218,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;frontend.manager.settings.SetOfficesTest&quot;" />
+            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.openPageSetOffice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -198,22 +226,23 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SetOfficesTest" />
-        <item itemvalue="Gradle.OfficesTest (1)" />
-        <item itemvalue="Gradle.FrontLoginTest (1)" />
-        <item itemvalue="Gradle.FrontLoginTest.loginManagerWFM" />
-        <item itemvalue="Gradle.FrontLoginTest.invalidLoginManagerWFM" />
+        <item itemvalue="Gradle.SettingOfficesTest" />
+        <item itemvalue="Gradle.SettingOfficesTest.openPageSetOffice" />
+        <item itemvalue="Gradle.FrontLoginTest" />
+        <item itemvalue="Gradle.BackendLoginTest.authToken" />
+        <item itemvalue="Gradle.SettingOfficesTest.editOffice" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
     <option name="lastFrameworkName" value="FluentLenium" />
     <option name="lastLanguageId" value="JAVA" />
+    <option name="lastUrl" value="https://master.dc.oswfm.ru/settings/offices" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -232,6 +261,8 @@
       <workItem from="1696578565351" duration="16507000" />
       <workItem from="1696709409950" duration="23683000" />
       <workItem from="1697733826043" duration="402000" />
+      <workItem from="1699509143695" duration="12000" />
+      <workItem from="1699521739313" duration="339000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -473,6 +504,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TestOpti$OfficesTest_addNewOffies.ic" NAME="OfficesTest.addNewOffies Coverage Results" MODIFIED="1696950799312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
