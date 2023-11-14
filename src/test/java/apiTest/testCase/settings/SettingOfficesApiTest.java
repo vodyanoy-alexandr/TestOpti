@@ -58,14 +58,14 @@ public class SettingOfficesApiTest {
     @Test
     public void deleteOfficeTest() {
         String
-                body = "{\"id\":\"fadc5c0d-d242-4838-bf84-7c06df467b59\"}", // id удаляемого офиса
+                requestBody = "{\"id\":\"fadc5c0d-d242-4838-bf84-7c06df467b59\"}", // id удаляемого офиса todo вынести в модель
                 token = ""; // todo  token
 
         Response response =
                 given()
                         .header("Authorization", "Bearer " + token)
                         .header("Content-Type", "application/json")
-                        .body(body)
+                        .body(requestBody)
                         .when()
                         .delete("/api/office/delete")
                         .then()
@@ -77,7 +77,7 @@ public class SettingOfficesApiTest {
 
         // Дополнительные проверки
         // Например, проверка содержимого ответа или других параметров
-        // response.then().body("some_key", equalTo("expected_value"));
+        // response.then().requestBody("some_key", equalTo("expected_value"));
     }
 }
 
