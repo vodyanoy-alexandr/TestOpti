@@ -88,42 +88,42 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.BackendLoginTest.authToken (1).executor": "Run",
-    "Gradle.BackendLoginTest.authToken.executor": "Run",
-    "Gradle.BackendSettingOffices.createNewOfficeTest.executor": "Run",
-    "Gradle.BackendSettingOffices.createOfficeTest.executor": "Run",
-    "Gradle.BackendSettingOffices.executor": "Run",
-    "Gradle.FrontLoginTest.executor": "Run",
-    "Gradle.LoginActionsTest.authenticateTest.executor": "Run",
-    "Gradle.LoginActionsTest.executor": "Run",
-    "Gradle.LoginApiTest.retrieveTokenTest.executor": "Run",
-    "Gradle.LoginKeycloakTest.authenticateTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.deleteOfficeTest.executor": "Run",
-    "Gradle.SettingOfficesTest.editOffice.executor": "Run",
-    "Gradle.SettingOfficesTest.executor": "Run",
-    "Gradle.SettingOfficesTest.openPageSetOffice.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "add-rest-api-test",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "selenium.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.BackendLoginTest.authToken (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendLoginTest.authToken.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendSettingOffices.createNewOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendSettingOffices.createOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendSettingOffices.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FrontLoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginActionsTest.authenticateTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginActionsTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginApiTest.retrieveTokenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakTest.authenticateTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.deleteOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.editOffice.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.openPageSetOffice.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;add-rest-api-test&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;selenium.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.LoginApiTest.retrieveTokenTest">
     <configuration name="LoginActionsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>

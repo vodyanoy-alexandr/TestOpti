@@ -73,8 +73,6 @@ public class SettingOfficesApiTest {
                         .statusCode(200) // Проверка кода состояния HTTP
                         .extract()
                         .response();
-        System.out.println(response);
-
         // Дополнительные проверки
         // Например, проверка содержимого ответа или других параметров
         // response.then().requestBody("some_key", equalTo("expected_value"));
