@@ -1,6 +1,6 @@
-package pages.settings;
+package uiTest.pages.settings;
 
-import pages.autorization.AuthPage;
+import uiTest.pages.autorization.AuthPage;
 
 import static com.codeborne.selenide.Selenide.open;
 

@@ -1,13 +1,13 @@
-package uiTests.login;
+package uiTest.testCase.login;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import datatest.DataTest;
+import dataTest.DataTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.autorization.AuthPage;
+import uiTest.pages.autorization.AuthPage;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;

@@ -1,6 +1,6 @@
-package backend.login;
+package apiTest.login;
 
-import datatest.DataTest;
+import dataTest.DataTest;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -17,8 +17,14 @@ public class BackendLoginTest {
     @DisplayName("Тест на ручку авторизации для стенда без кк")
     @Test
     void authToken() {
-        baseURI = "https://.dc.oswfm.ru";
+        baseURI = "https://release36.dc.oswfm.ru";
         String body = "username=manager&password=manager&grant_type=password&client_id=wfm";
+//        String body = "username:manager\n" +
+//                "password:manager\n" +
+//                "locale:ru\n" +
+//                "grant_type:password\n" +
+//                "client_id:wfm\n" +
+//                "device_id:46d0e3be-44cf-2e4b-edd2-fb64840600f4";
 
         given()
                 .log().uri()

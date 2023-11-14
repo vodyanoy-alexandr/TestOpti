@@ -1,15 +1,16 @@
-package pages.settings;
+package uiTest.pages.settings;
 
 import com.codeborne.selenide.SelenideElement;
-import uiTests.componets.Notifications;
-import uiTests.componets.TimeZoneComponents;
-import pages.autorization.AuthPage;
+import uiTest.componets.Notifications;
+import uiTest.componets.TimeZoneComponents;
+import uiTest.pages.autorization.AuthPage;
 
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class SettingOfficePage {
     public static final String MONDAY = "Пн.";
@@ -19,6 +20,9 @@ public class SettingOfficePage {
     public static final String FRIDAY = "Пт.";
     public static final String SATURDAY = "Сб.";
     public static final String SUNDAY = "Вс.";
+    AuthPage authPage = new AuthPage();
+    TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
+    Notifications notifications = new Notifications();
 
     public String getMonday() {
         return MONDAY;
@@ -47,11 +51,6 @@ public class SettingOfficePage {
     public String getSunday() {
         return SUNDAY;
     }
-
-    AuthPage authPage = new AuthPage();
-
-    TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
-    Notifications notifications = new Notifications();
 
     // метод открывает страницу настроек офисов
     public void openPage() {

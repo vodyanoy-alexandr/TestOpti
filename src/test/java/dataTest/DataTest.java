@@ -1,4 +1,4 @@
-package datatest;
+package dataTest;
 
 // класс с базовыми данными
 public class DataTest {

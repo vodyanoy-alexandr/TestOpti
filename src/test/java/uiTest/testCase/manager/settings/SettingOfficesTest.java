@@ -1,13 +1,13 @@
-package uiTests.manager.settings;
+package uiTest.testCase.manager.settings;
 
 import com.codeborne.selenide.Configuration;
 import com.github.javafaker.Faker;
-import datatest.DataTest;
+import dataTest.DataTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.settings.SettingOfficePage;
+import uiTest.pages.settings.SettingOfficePage;
 import utils.RandomUtils;
 
 import java.util.Locale;

@@ -1,12 +1,12 @@
-package uiTests.manager.settings;
+package uiTest.testCase.manager.settings;
 
 import com.codeborne.selenide.Configuration;
-import datatest.DataTest;
+import dataTest.DataTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.settings.SettingOrganizationStructurePage;
+import uiTest.pages.settings.SettingOrganizationStructurePage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;

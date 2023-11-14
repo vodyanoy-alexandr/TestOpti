@@ -4,18 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="добавил общий компонент выбор таймзоны в выпадашке">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="добавил проверку что возвращается токен в ответе на запрос в методе authToken">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/login/BackendLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/backend/login/YourApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/login/YourApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/backend/settings/BackendSettingOffices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/settings/BackendSettingOffices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/datatest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataTest/DataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/autorization/AuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/pages/autorization/AuthPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOfficePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/settings/SettingOrganizationStructurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOrganizationStructurePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/componets/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/componets/Notifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/componets/TimeZoneComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/componets/TimeZoneComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/login/FrontLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOfficesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOrganizationStructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOrganizationStructureTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" openResultsInEditor="true" userTempatePath="" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -64,6 +73,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="GradleRunConfiguration" name="Rerun Failed Tests" />
+      <run-configuration type="GradleRunConfiguration" name="BackendLoginTest.authToken" />
+    </enabled-run-configurations>
+  </component>
   <component name="ProblemsViewState">
     <option name="groupByToolId" value="true" />
     <option name="selectedTabId" value="CurrentFile" />
@@ -81,34 +96,34 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.BackendLoginTest.authToken.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.FrontLoginTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesTest.editOffice.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesTest.openPageSetOffice.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;set-office-test&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;selenium.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.BackendLoginTest.authToken.executor": "Run",
+    "Gradle.FrontLoginTest.executor": "Run",
+    "Gradle.SettingOfficesTest.editOffice.executor": "Run",
+    "Gradle.SettingOfficesTest.executor": "Run",
+    "Gradle.SettingOfficesTest.openPageSetOffice.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "add-rest-api-test",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "selenium.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.SettingOfficesTest">
+}]]></component>
+  <component name="RunManager" selected="Gradle.BackendLoginTest.authToken">
     <configuration name="BackendLoginTest.authToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -231,18 +246,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BackendLoginTest.authToken" />
         <item itemvalue="Gradle.SettingOfficesTest" />
         <item itemvalue="Gradle.SettingOfficesTest.openPageSetOffice" />
         <item itemvalue="Gradle.FrontLoginTest" />
-        <item itemvalue="Gradle.BackendLoginTest.authToken" />
         <item itemvalue="Gradle.SettingOfficesTest.editOffice" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
-    <option name="lastFrameworkName" value="FluentLenium" />
+    <option name="lastFrameworkName" value="Selenide" />
     <option name="lastLanguageId" value="JAVA" />
-    <option name="lastUrl" value="https://master.dc.oswfm.ru/settings/offices" />
+    <option name="lastUrl" value="https://release36.dc.oswfm.ru/login/" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -416,7 +431,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697120598950</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="добавил проверку что возвращается токен в ответе на запрос в методе authToken">
+      <option name="closed" value="true" />
+      <created>1699894604524</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699894604524</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +515,8 @@
     <MESSAGE value="update build.gradle.kts" />
     <MESSAGE value="update @BeforeAll in class FrontLoginTest and OfficesTest" />
     <MESSAGE value="добавил общий компонент выбор таймзоны в выпадашке" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил общий компонент выбор таймзоны в выпадашке" />
+    <MESSAGE value="добавил проверку что возвращается токен в ответе на запрос в методе authToken" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил проверку что возвращается токен в ответе на запрос в методе authToken" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

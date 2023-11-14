@@ -1,8 +1,9 @@
-package pages.autorization;
+package uiTest.pages.autorization;
 
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.element;
+
 
 public class AuthPage {
     private static final String LOGIN_MANAGER = "manager";

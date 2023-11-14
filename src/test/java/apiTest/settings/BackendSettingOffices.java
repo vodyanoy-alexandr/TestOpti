@@ -1,4 +1,4 @@
-package backend.settings;
+package apiTest.settings;
 
 public class BackendSettingOffices {
 }
