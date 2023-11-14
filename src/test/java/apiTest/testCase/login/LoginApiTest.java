@@ -1,4 +1,4 @@
-package apiTest.login;
+package apiTest.testCase.login;
 
 import dataTest.DataTest;
 import org.junit.jupiter.api.Disabled;
@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 
-public class BackendLoginTest {
+public class LoginApiTest {
 
     DataTest dataTest = new DataTest();
 
@@ -18,14 +18,7 @@ public class BackendLoginTest {
     @Test
     void authToken() {
         baseURI = "https://release36.dc.oswfm.ru";
-        String body = "username=manager&password=manager&grant_type=password&client_id=wfm";
-//        String body = "username:manager\n" +
-//                "password:manager\n" +
-//                "locale:ru\n" +
-//                "grant_type:password\n" +
-//                "client_id:wfm\n" +
-//                "device_id:46d0e3be-44cf-2e4b-edd2-fb64840600f4";
-
+        String body = "username=manager&password=manager&locale=ru&grant_type=password&client_id=wfm&device_id=46d0e3be-44cf-2e4b-edd2-fb64840600f4";
         given()
                 .log().uri()
                 .log().body()
