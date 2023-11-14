@@ -3,6 +3,7 @@ package apiTest.testCase.settings;
 import dataTest.DataTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -51,7 +52,32 @@ public class SettingOfficesApiTest {
                 .log().all()
                 .statusCode(200)
                 .body("id", notNullValue());
+    }
 
+    @DisplayName("Тест на удаление офиса по id через api")
+    @Test
+    public void deleteOfficeTest() {
+        String
+                body = "{\"id\":\"fadc5c0d-d242-4838-bf84-7c06df467b59\"}", // id удаляемого офиса
+                token = ""; // todo  token
+
+        Response response =
+                given()
+                        .header("Authorization", "Bearer " + token)
+                        .header("Content-Type", "application/json")
+                        .body(body)
+                        .when()
+                        .delete("/api/office/delete")
+                        .then()
+                        .log().all()
+                        .statusCode(200) // Проверка кода состояния HTTP
+                        .extract()
+                        .response();
+        System.out.println(response);
+
+        // Дополнительные проверки
+        // Например, проверка содержимого ответа или других параметров
+        // response.then().body("some_key", equalTo("expected_value"));
     }
 }
 
