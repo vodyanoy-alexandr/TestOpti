@@ -5,7 +5,7 @@ public class DataTest {
 
     public String getUrlStand() {
         // базовый url
-        return "https://master.dc.oswfm.ru";
+        return "https://.dc.oswfm.ru";
     }
 }
 
