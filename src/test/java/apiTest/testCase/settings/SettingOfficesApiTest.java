@@ -57,10 +57,10 @@ public class SettingOfficesApiTest {
         // Инициализация ObjectMapper (Jackson)
         ObjectMapper objectMapper = new ObjectMapper();
 
-        // Десериализация JSON в объект bodyModel
-        SettingOfficesBodyModel bodyModel = objectMapper.readValue(json, SettingOfficesBodyModel.class);
+        // Десериализация JSON в объект officeBody
+        SettingOfficesBodyModel officeBody = objectMapper.readValue(json, SettingOfficesBodyModel.class);
 
-        bodyModel.setName(nameOffice);
+        officeBody.setName(nameOffice);
 
         Response response =
                 given()
@@ -68,7 +68,7 @@ public class SettingOfficesApiTest {
                         .header("authorization", "Bearer " + token)
                         .header("cookie", cookie)
                         .header("Content-Type", "application/json")
-                        .body(bodyModel)
+                        .body(officeBody)
                         .when()
                         .post("/api/office/create")
                         .then()
@@ -77,7 +77,7 @@ public class SettingOfficesApiTest {
                         .body("response.id", notNullValue())
                         .extract().response();
 
-        String idValue = response.path("response.id");
+        String idValue = response.path("response.id"); // выдергиваем значение id из респонса
         System.out.println("Значение ID из респонса: " + idValue);
 
     }
@@ -85,8 +85,8 @@ public class SettingOfficesApiTest {
     @DisplayName("Тест на удаление офиса по id через api")
     @Test
     public void deleteOfficeTest() {
-        OfficeIdBodyModel bodyModel = new OfficeIdBodyModel();
-        bodyModel.setId("9a66c660-0df5-4b6d-b64e-c0f85b6e95a8");
+        OfficeIdBodyModel officeIdBody = new OfficeIdBodyModel();
+        officeIdBody.setId("9a66c660-0df5-4b6d-b64e-c0f85b6e95a8");
         String token = ""; // todo  token
         String cookie = ""; // todo сюда надо добавить cookie
 
@@ -96,7 +96,7 @@ public class SettingOfficesApiTest {
                         .header("Authorization", "Bearer " + token)
                         .header("cookie", cookie)
                         .header("Content-Type", "application/json")
-                        .body(bodyModel)
+                        .body(officeIdBody)
                         .when()
                         .post("/api/office/delete")
                         .then()
@@ -104,7 +104,6 @@ public class SettingOfficesApiTest {
                         .statusCode(200) // Проверка кода состояния HTTP
                         .extract()
                         .response();
-        // response.then().requestBody("some_key", equalTo("expected_value"));
     }
 }
 

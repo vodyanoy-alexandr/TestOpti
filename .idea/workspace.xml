@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="обновил тесты, дописал тудушки">
-      <change afterPath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/OfficeIdBodyModel.java" afterDir="false" />
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/SettingOfficesBodyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/SettingOfficesBodyModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/WorkTimeOffices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/WorkTimeOfficesBodyModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dataTest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataTest/DataTest.java" afterDir="false" />
     </list>
@@ -280,7 +277,7 @@
       <workItem from="1699509143695" duration="12000" />
       <workItem from="1699521739313" duration="339000" />
       <workItem from="1699972653555" duration="203000" />
-      <workItem from="1700028973978" duration="19821000" />
+      <workItem from="1700028973978" duration="22616000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -498,7 +495,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700132945148</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="добавил боди модель на id офиса и обновил тест">
+      <option name="closed" value="true" />
+      <created>1700137949526</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1700137949526</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update">
+      <option name="closed" value="true" />
+      <created>1700138020391</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1700138020391</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,11 +591,12 @@
     <MESSAGE value="переделал структуру проекта, переименовал папки" />
     <MESSAGE value="добавлены тесты api в настройки офисов" />
     <MESSAGE value="обновление тестов api в настройки офисов" />
-    <MESSAGE value="update" />
     <MESSAGE value="обновлены api тесты для настроек офиса, тело запроса на создание нового офиса вынесено в модель" />
     <MESSAGE value="вынес url логины и пароли в отдельный класс DataTest" />
     <MESSAGE value="обновил тесты, дописал тудушки" />
-    <option name="LAST_COMMIT_MESSAGE" value="обновил тесты, дописал тудушки" />
+    <MESSAGE value="добавил боди модель на id офиса и обновил тест" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
