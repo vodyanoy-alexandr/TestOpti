@@ -15,6 +15,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Locale;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class SettingOfficesApiTest {
@@ -79,7 +80,6 @@ public class SettingOfficesApiTest {
 
         String idValue = response.path("response.id"); // выдергиваем значение id из респонса
         System.out.println("Значение ID из респонса: " + idValue);
-
     }
 
     @DisplayName("Тест на удаление офиса по id через api")
@@ -90,20 +90,19 @@ public class SettingOfficesApiTest {
         String token = ""; // todo  token
         String cookie = ""; // todo сюда надо добавить cookie
 
-        Response response =
-                given()
-                        .log().all()
-                        .header("Authorization", "Bearer " + token)
-                        .header("cookie", cookie)
-                        .header("Content-Type", "application/json")
-                        .body(officeIdBody)
-                        .when()
-                        .post("/api/office/delete")
-                        .then()
-                        .log().all()
-                        .statusCode(200) // Проверка кода состояния HTTP
-                        .extract()
-                        .response();
+        given()
+                .log().all()
+                .header("Authorization", "Bearer " + token)
+                .header("cookie", cookie)
+                .header("Content-Type", "application/json")
+                .body(officeIdBody)
+                .when()
+                .post("/api/office/delete")
+                .then()
+                .log().all()
+                .statusCode(200)// Проверка кода состояния HTTP
+                .body("success", is(true)); // проверка тела ответа
+
     }
 }
 

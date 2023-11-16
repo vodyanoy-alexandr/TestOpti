@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dataTest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataTest/DataTest.java" afterDir="false" />
     </list>
@@ -277,7 +276,7 @@
       <workItem from="1699509143695" duration="12000" />
       <workItem from="1699521739313" duration="339000" />
       <workItem from="1699972653555" duration="203000" />
-      <workItem from="1700028973978" duration="22616000" />
+      <workItem from="1700028973978" duration="23063000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -511,7 +510,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700138020391</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update">
+      <option name="closed" value="true" />
+      <created>1700142798834</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1700142798835</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
