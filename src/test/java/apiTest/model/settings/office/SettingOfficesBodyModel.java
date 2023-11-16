@@ -51,17 +51,17 @@ public class SettingOfficesBodyModel {
 //    "comment": "comments",
 //    "maxSeats": 777
 //}
-    private WorkTimeOffices[] workTime;
+    private WorkTimeOfficesBodyModel[] workTime;
     private String name;
     private String timezone;
     private String comment;
     private int maxSeats;
 
-    public WorkTimeOffices[] getWorkTime() {
+    public WorkTimeOfficesBodyModel[] getWorkTime() {
         return workTime;
     }
 
-    public void setWorkTime(WorkTimeOffices[] workTime) {
+    public void setWorkTime(WorkTimeOfficesBodyModel[] workTime) {
         this.workTime = workTime;
     }
 

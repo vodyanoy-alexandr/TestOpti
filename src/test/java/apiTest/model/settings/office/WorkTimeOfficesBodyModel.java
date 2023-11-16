@@ -1,6 +1,6 @@
 package apiTest.model.settings.office;
 
-public class WorkTimeOffices {
+public class WorkTimeOfficesBodyModel {
     private int dayOfWeek;
     private String from;
     private String to;
