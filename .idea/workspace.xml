@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="добавлены тесты api в настройки офисов">
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/SettingOfficesBodyModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/WorkTimeOffices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/login/LoginApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/login/LoginApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/login/LoginKeycloakTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/login/LoginKeycloakTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dataTest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataTest/DataTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" openResultsInEditor="true" userTempatePath="" />
   <component name="ExternalProjectsData">
@@ -49,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package.json" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,12 +70,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="GradleRunConfiguration" name="Rerun Failed Tests" />
-      <run-configuration type="GradleRunConfiguration" name="BackendLoginTest.authToken" />
-    </enabled-run-configurations>
   </component>
   <component name="ProblemsViewState">
     <option name="groupByToolId" value="true" />
@@ -88,67 +88,44 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.BackendLoginTest.authToken (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BackendLoginTest.authToken.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BackendSettingOffices.createNewOfficeTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BackendSettingOffices.createOfficeTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BackendSettingOffices.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.FrontLoginTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginActionsTest.authenticateTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginActionsTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginApiTest.retrieveTokenTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginKeycloakTest.authenticateTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesApiTest.deleteOfficeTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesTest.editOffice.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesTest.openPageSetOffice.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;add-rest-api-test&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;selenium.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.BackendLoginTest.authToken (1).executor": "Run",
+    "Gradle.BackendLoginTest.authToken.executor": "Run",
+    "Gradle.BackendSettingOffices.createNewOfficeTest.executor": "Run",
+    "Gradle.BackendSettingOffices.createOfficeTest.executor": "Run",
+    "Gradle.BackendSettingOffices.executor": "Run",
+    "Gradle.FrontLoginTest.executor": "Run",
+    "Gradle.LoginActionsTest.authenticateTest.executor": "Run",
+    "Gradle.LoginActionsTest.executor": "Run",
+    "Gradle.LoginApiTest.retrieveTokenTest.executor": "Run",
+    "Gradle.LoginKeycloakTest.authenticateTest.executor": "Run",
+    "Gradle.SettingOfficesApiTest.createOfficeTest.executor": "Run",
+    "Gradle.SettingOfficesApiTest.deleteOfficeTest.executor": "Run",
+    "Gradle.SettingOfficesTest.editOffice.executor": "Run",
+    "Gradle.SettingOfficesTest.executor": "Run",
+    "Gradle.SettingOfficesTest.openPageSetOffice.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "add-rest-api-test",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "selenium.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.LoginApiTest.retrieveTokenTest">
-    <configuration name="LoginActionsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;apiTest.testCase.login.LoginActionsTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="Gradle.SettingOfficesApiTest.createOfficeTest">
     <configuration name="LoginActionsTest.authenticateTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -221,6 +198,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="SettingOfficesApiTest.createOfficeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;apiTest.testCase.settings.SettingOfficesApiTest.createOfficeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="SettingOfficesApiTest.deleteOfficeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -247,11 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginApiTest.retrieveTokenTest" />
+        <item itemvalue="Gradle.SettingOfficesApiTest.createOfficeTest" />
         <item itemvalue="Gradle.SettingOfficesApiTest.deleteOfficeTest" />
+        <item itemvalue="Gradle.LoginApiTest.retrieveTokenTest" />
         <item itemvalue="Gradle.LoginKeycloakTest.authenticateTest" />
         <item itemvalue="Gradle.LoginActionsTest.authenticateTest" />
-        <item itemvalue="Gradle.LoginActionsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -279,6 +280,8 @@
       <workItem from="1697733826043" duration="402000" />
       <workItem from="1699509143695" duration="12000" />
       <workItem from="1699521739313" duration="339000" />
+      <workItem from="1699972653555" duration="203000" />
+      <workItem from="1700028973978" duration="13949000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -456,7 +459,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699957472068</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="обновление тестов api в настройки офисов">
+      <option name="closed" value="true" />
+      <created>1699972729962</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699972729962</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update">
+      <option name="closed" value="true" />
+      <created>1699972830902</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699972830902</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +554,9 @@
     <MESSAGE value="добавил проверку что возвращается токен в ответе на запрос в методе authToken" />
     <MESSAGE value="переделал структуру проекта, переименовал папки" />
     <MESSAGE value="добавлены тесты api в настройки офисов" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлены тесты api в настройки офисов" />
+    <MESSAGE value="обновление тестов api в настройки офисов" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

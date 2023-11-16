@@ -23,8 +23,7 @@ public class LoginApiTest {
         given()
                 .log().uri()
                 .log().body()
-                .header("Content-Type",
-                        "application/x-www-form-urlencoded")  // Установка типа контента, взято из постмана в хедерах
+                .header("Content-Type", "application/x-www-form-urlencoded")  // Установка типа контента, взято из постмана в хедерах
                 .body(body)
                 .when()
                 .post("/api/oauth/token")
@@ -59,8 +58,6 @@ public class LoginApiTest {
                         .statusCode(200)
                         .extract().response();
 
-        // Здесь можно добавить проверки для ответа, например, проверку кода состояния и т.д.
-        // response.then().statusCode(200);
         // response.then().body("some_key", equalTo("expected_value"));
     }
 }
