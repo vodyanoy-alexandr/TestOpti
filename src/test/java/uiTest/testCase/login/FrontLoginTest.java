@@ -47,7 +47,7 @@ class FrontLoginTest {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации
-        authPage.loginInPageAuth(authPage.getLoginManager() + "invalid", authPage.getPassManager() + "invalid");
+        authPage.loginInPageAuth(dataTest.getLoginManager() + "invalid", dataTest.getPassManager() + "invalid");
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
@@ -58,7 +58,7 @@ class FrontLoginTest {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации менеджера
-        authPage.loginInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
+        authPage.loginInPageAuth(dataTest.getLoginManager(), dataTest.getPassManager());
         //проверка на открытой странице расписания раздела "Расписание" после авторизации
         element(".admin-menu").shouldHave(Condition.text("Расписание"));
         // проверка разлогина менеджера
@@ -71,7 +71,7 @@ class FrontLoginTest {
         // открытие страницы авторизации
         open("/");
         // вызов метода авторизации оператора
-        authPage.loginInPageAuth(authPage.getLoginOperator() + "invalid", authPage.getPassOperator() + "invalid");
+        authPage.loginInPageAuth(dataTest.getLoginOperator() + "invalid", dataTest.getPassOperator() + "invalid");
         //проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
@@ -81,7 +81,7 @@ class FrontLoginTest {
     void loginAndLogoutOperator() {
         open("/");
         // вызов метода авторизации оператора
-        authPage.loginInPageAuth(authPage.getLoginOperator(), authPage.getPassOperator());
+        authPage.loginInPageAuth(dataTest.getLoginOperator(), dataTest.getPassOperator());
         //проверка на открытой странице расписания раздела "Рабочие смены" после авторизации оператора
         element(".main-menu").shouldHave(Condition.text("Рабочие смены"));
         // проверка разлогина operator

@@ -1,6 +1,7 @@
 package uiTest.pages.settings;
 
 import com.codeborne.selenide.SelenideElement;
+import dataTest.DataTest;
 import uiTest.componets.Notifications;
 import uiTest.componets.TimeZoneComponents;
 import uiTest.pages.autorization.AuthPage;
@@ -21,6 +22,7 @@ public class SettingOfficePage {
     public static final String SATURDAY = "Сб.";
     public static final String SUNDAY = "Вс.";
     AuthPage authPage = new AuthPage();
+    static DataTest dataTest = new DataTest();
     TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
     Notifications notifications = new Notifications();
 
@@ -57,7 +59,7 @@ public class SettingOfficePage {
         // открытие страницы настроек офиса
         open("/settings/offices");
         // вызов метода авторизации на странице из класс AuthPage
-        authPage.loginInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
+        authPage.loginInPageAuth(dataTest.getLoginManager(), dataTest.getPassManager());
     }
 
     // метод открывает шторку добавления нового офиса
