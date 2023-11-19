@@ -26,6 +26,7 @@ public class SettingOfficesApiTest {
     @BeforeEach
     public void setup() {
         RestAssured.baseURI = dataTest.getUrlStand();
+        RestAssured.basePath = "/api";
         // todo добавить запрос на авторизацию и результат ложить в token, cookie
     }
 
@@ -41,7 +42,7 @@ public class SettingOfficesApiTest {
                 .header("cookie", cookie)
                 .header("Content-Type", "application/json")
                 .when()
-                .post("/api/office/read-all")
+                .post("/office/read-all")
                 .then()
                 .log().all()
                 .statusCode(200);
