@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="update">
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="вынес в отдельный класс с данными jason запроса на создание офиса">
+      <change afterPath="$PROJECT_DIR$/src/test/java/apiTest/specs/Spec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dataTest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataTest/DataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,6 +279,7 @@
       <workItem from="1699972653555" duration="203000" />
       <workItem from="1700028973978" duration="23958000" />
       <workItem from="1700211412256" duration="614000" />
+      <workItem from="1700391953892" duration="9000000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -527,7 +529,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700143525263</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add RestAssured.basePath = &quot;/api&quot;">
+      <option name="closed" value="true" />
+      <created>1700392249680</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1700392249680</updated>
+    </task>
+    <task id="LOCAL-00033" summary="вынес в отдельный класс с данными jason запроса на создание офиса">
+      <option name="closed" value="true" />
+      <created>1700466121301</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1700466121301</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,8 +605,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="добавил отдельный класс с данными" />
-    <MESSAGE value="изменил порядок проверки валидного и невалидного менеджера" />
     <MESSAGE value="Добавил тест на логин валидного и невалидного оператора" />
     <MESSAGE value="delete url in DataTest" />
     <MESSAGE value="add comment in FrontLoginTest" />
@@ -612,7 +628,9 @@
     <MESSAGE value="обновил тесты, дописал тудушки" />
     <MESSAGE value="добавил боди модель на id офиса и обновил тест" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="add RestAssured.basePath = &quot;/api&quot;" />
+    <MESSAGE value="вынес в отдельный класс с данными jason запроса на создание офиса" />
+    <option name="LAST_COMMIT_MESSAGE" value="вынес в отдельный класс с данными jason запроса на создание офиса" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
