@@ -10,6 +10,7 @@ import dataTest.office.OfficeDataTest;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -31,6 +32,7 @@ public class SettingOfficesApiTest {
     public static void setup() {
         RestAssured.baseURI = dataTest.getUrlStand();
         RestAssured.basePath = "/api";
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
     }
 
     @DisplayName("Тест на чтение всех офисов в системе через api ")
@@ -88,6 +90,29 @@ public class SettingOfficesApiTest {
                 .spec(responseSpec)
                 .body("success", is(true)); // проверка тела ответа
 
+    }
+
+    @Disabled("не готов")
+    @DisplayName("Tест на редактирование офиса через api")
+    @Test
+    public void updateOfficeTest() throws JsonProcessingException {
+        String json = OfficeDataTest.OFFICE_JASON;
+
+        // Инициализация ObjectMapper (Jackson)
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        // Десериализация JSON в объект officeRequestBody
+        SettingOfficesBodyModel officeRequestBody = objectMapper.readValue(json, SettingOfficesBodyModel.class);
+
+        officeRequestBody.setName(nameOffice);
+
+        given()
+                .spec(requestSpec)
+                .body(officeRequestBody)
+                .when()
+                .post("/api/office/update")
+                .then()
+                .spec(responseSpec);
     }
 }
 
