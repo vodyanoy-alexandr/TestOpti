@@ -6,6 +6,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import dataTest.DataTest;
+import dataTest.office.OfficeDataTest;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeEach;
@@ -54,15 +55,15 @@ public class SettingOfficesApiTest {
     public void createOfficeTest() throws JsonProcessingException {
         String token = ""; // todo сюда надо добавить Bearer токен
         String cookie = ""; // todo сюда надо добавить cookie
-        String json = "{\"name\":\"Тест111\",\"timezone\":\"Europe/Moscow\",\"comment\":\"TestApi\",\"maxSeats\":777,\"workTime\":[{\"dayOfWeek\":1,\"from\":\"08:00\",\"to\":\"20:00\",\"weekend\":false},{\"dayOfWeek\":2,\"from\":\"08:00\",\"to\":\"20:00\",\"weekend\":false},{\"dayOfWeek\":3,\"from\":\"08:00\",\"to\":\"20:00\",\"weekend\":false},{\"dayOfWeek\":4,\"from\":\"08:00\",\"to\":\"20:00\",\"weekend\":false},{\"dayOfWeek\":5,\"from\":\"08:00\",\"to\":\"20:00\",\"weekend\":false},{\"dayOfWeek\":6,\"from\":\"08:00\",\"to\":\"20:00\",\"weekend\":true},{\"dayOfWeek\":7,\"from\":\"08:00\",\"to\":\"20:00\",\"weekend\":true}]}";
+        String json = OfficeDataTest.OFFICE_JASON;
 
         // Инициализация ObjectMapper (Jackson)
         ObjectMapper objectMapper = new ObjectMapper();
 
-        // Десериализация JSON в объект officeBody
-        SettingOfficesBodyModel officeBody = objectMapper.readValue(json, SettingOfficesBodyModel.class);
+        // Десериализация JSON в объект officeRequestBody
+        SettingOfficesBodyModel officeRequestBody = objectMapper.readValue(json, SettingOfficesBodyModel.class);
 
-        officeBody.setName(nameOffice);
+        officeRequestBody.setName(nameOffice);
 
         Response response =
                 given()
@@ -70,9 +71,9 @@ public class SettingOfficesApiTest {
                         .header("authorization", "Bearer " + token)
                         .header("cookie", cookie)
                         .header("Content-Type", "application/json")
-                        .body(officeBody)
+                        .body(officeRequestBody)
                         .when()
-                        .post("/api/office/create")
+                        .post("/office/create")
                         .then()
                         .log().all()
                         .statusCode(200)
@@ -98,7 +99,7 @@ public class SettingOfficesApiTest {
                 .header("Content-Type", "application/json")
                 .body(officeIdBody)
                 .when()
-                .post("/api/office/delete")
+                .post("/office/delete")
                 .then()
                 .log().all()
                 .statusCode(200)// Проверка кода состояния HTTP
