@@ -24,17 +24,17 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class SettingOfficesApiTest {
     private static String token;
-    static BaseDataTest baseDataTest = new BaseDataTest();
+    static BaseDataTest baseData = new BaseDataTest();
     static Faker faker = new Faker(new Locale("ru"));
     private final static String nameOffice = faker.address().cityName();
 
 
     @BeforeAll
     public static void setup() {
-        RestAssured.baseURI = baseDataTest.getUrlStand();
+        RestAssured.baseURI = baseData.getUrlStand();
         RestAssured.basePath = "/api";
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
-        String body = "grant_type=password&username=" + baseDataTest.getLoginManager() + "&password=" + baseDataTest.getPassManager() + "&client_id=wfm-frontend";
+        String body = "grant_type=password&username=" + baseData.getLoginManager() + "&password=" + baseData.getPassManager() + "&client_id=wfm-frontend";
         //запрос на авторизацию менеджера
         Response response = given()
                 .header("Content-Type", "application/x-www-form-urlencoded")

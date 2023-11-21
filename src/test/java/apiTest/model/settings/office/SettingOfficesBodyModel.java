@@ -1,56 +1,7 @@
 package apiTest.model.settings.office;
 
 public class SettingOfficesBodyModel {
-    //{
-//    "workTime": [
-//        {
-//            "dayOfWeek": 1,
-//            "from": "08:00",
-//            "to": "20:00",
-//            "weekend": false
-//        },
-//        {
-//            "dayOfWeek": 2,
-//            "from": "08:00",
-//            "to": "20:00",
-//            "weekend": false
-//        },
-//        {
-//            "dayOfWeek": 3,
-//            "from": "08:00",
-//            "to": "20:00",
-//            "weekend": false
-//        },
-//        {
-//            "dayOfWeek": 4,
-//            "from": "08:00",
-//            "to": "20:00",
-//            "weekend": false
-//        },
-//        {
-//            "dayOfWeek": 5,
-//            "from": "08:00",
-//            "to": "20:00",
-//            "weekend": false
-//        },
-//        {
-//            "dayOfWeek": 6,
-//            "from": "08:00",
-//            "to": "20:00",
-//            "weekend": true
-//        },
-//        {
-//            "dayOfWeek": 7,
-//            "from": "08:00",
-//            "to": "20:00",
-//            "weekend": true
-//        }
-//    ],
-//    "name": "new office",
-//    "timezone": "Europe/Moscow",
-//    "comment": "comments",
-//    "maxSeats": 777
-//}
+    //
     private WorkTimeOfficesBodyModel[] workTime;
     private String name;
     private String timezone;
