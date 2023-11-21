@@ -24,6 +24,7 @@ import static org.hamcrest.Matchers.notNullValue;
 public class SettingOfficesApiTest {
     private static String token;
     private static String cookies;
+    private static String idValue;
     static BaseDataTest baseDataTest = new BaseDataTest();
     static Faker faker = new Faker(new Locale("ru"));
     private final static String nameOffice = faker.address().cityName();
@@ -64,6 +65,25 @@ public class SettingOfficesApiTest {
                 .statusCode(200);
     }
 
+    @DisplayName("Тест на чтение офиса по id через api")
+    @Test
+    public void readOfficeTest() {
+        OfficeIdBodyModel officeIdBody = new OfficeIdBodyModel();
+        officeIdBody.setId("a30aec13-67ad-48c6-a9e7-48328c449ff1");
+
+        given()
+                .log().all()
+                .header("authorization", "Bearer " + token)
+                .header("cookie", cookies)
+                .header("Content-Type", "application/json")
+                .body(officeIdBody)
+                .when()
+                .post("/office/read")
+                .then()
+                .spec(responseSpec)
+                .body("success", is(true)); // проверка тела ответа
+    }
+
     @DisplayName("Тест добавления нового офиса через api")
     @Test
     // throws JsonProcessingException для обработки исключений в методе objectMapper.readValue
@@ -75,12 +95,14 @@ public class SettingOfficesApiTest {
         SettingOfficesBodyModel officeRequestBody = objectMapper.readValue(json, SettingOfficesBodyModel.class); // Десериализация JSON в объект officeRequestBody
 
         officeRequestBody.setName(nameOffice);
+        officeRequestBody.setComment("Тест добавления нового офиса через api");
 
         Response response =
                 given()
-                        .log().all()
+                        .log().body()
                         .header("authorization", "Bearer " + token)
                         .header("cookie", cookies)
+                        .header("Content-Type", "application/json")
                         .body(officeRequestBody)
                         .when()
                         .post("/office/create")
@@ -89,27 +111,26 @@ public class SettingOfficesApiTest {
                         .body("response.id", notNullValue())
                         .extract().response();
 
-        String idValue = response.path("response.id"); // выдергиваем значение id из респонса
-        System.out.println("Значение ID из респонса: " + idValue);
+        idValue = response.path("response.id"); // выдергиваем значение id из респонса
     }
 
     @DisplayName("Тест на удаление офиса по id через api")
     @Test
     public void deleteOfficeTest() {
         OfficeIdBodyModel officeIdBody = new OfficeIdBodyModel();
-        officeIdBody.setId("9a66c660-0df5-4b6d-b64e-c0f85b6e95a8");
+        officeIdBody.setId("a30aec13-67ad-48c6-a9e7-48328c449ff1");
 
         given()
                 .log().all()
                 .header("authorization", "Bearer " + token)
                 .header("cookie", cookies)
+                .header("Content-Type", "application/json")
                 .body(officeIdBody)
                 .when()
                 .post("/office/delete")
                 .then()
                 .spec(responseSpec)
                 .body("success", is(true)); // проверка тела ответа
-
     }
 
     @Disabled("не готов")
@@ -130,6 +151,7 @@ public class SettingOfficesApiTest {
                 .log().all()
                 .header("authorization", "Bearer " + token)
                 .header("cookie", cookies)
+                .header("Content-Type", "application/json")
                 .body(officeRequestBody)
                 .when()
                 .post("/api/office/update")
