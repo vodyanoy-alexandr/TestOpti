@@ -2,7 +2,7 @@ package uiTest.testCase.manager.settings;
 
 import com.codeborne.selenide.Configuration;
 import com.github.javafaker.Faker;
-import dataTest.DataTest;
+import dataTest.BaseDataTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -19,7 +19,7 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 class SettingOfficesTest {
     static Faker faker = new Faker(new Locale("ru"));
     private final static String nameOffice = faker.address().cityName();
-    static DataTest dataTest = new DataTest();
+    static BaseDataTest dataTest = new BaseDataTest();
     SettingOfficePage settingOfficePage = new SettingOfficePage();
 
     @BeforeAll

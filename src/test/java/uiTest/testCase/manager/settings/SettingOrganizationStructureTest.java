@@ -1,7 +1,7 @@
 package uiTest.testCase.manager.settings;
 
 import com.codeborne.selenide.Configuration;
-import dataTest.DataTest;
+import dataTest.BaseDataTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -14,7 +14,7 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 class SettingOrganizationStructureTest {
 
-    static DataTest dataTest = new DataTest();
+    static BaseDataTest dataTest = new BaseDataTest();
     SettingOrganizationStructurePage settingOrganizationStructurePage = new SettingOrganizationStructurePage();
 
     @BeforeAll

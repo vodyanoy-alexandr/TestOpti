@@ -2,7 +2,7 @@ package uiTest.testCase.login;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import dataTest.DataTest;
+import dataTest.BaseDataTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -14,7 +14,7 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 class FrontLoginTest {
     AuthPage authPage = new AuthPage();
-    static DataTest dataTest = new DataTest();
+    static BaseDataTest dataTest = new BaseDataTest();
 
     @BeforeAll
     static void beforeAll() {

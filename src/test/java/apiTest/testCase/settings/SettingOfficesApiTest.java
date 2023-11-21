@@ -5,7 +5,7 @@ import apiTest.model.settings.office.SettingOfficesBodyModel;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
-import dataTest.DataTest;
+import dataTest.BaseDataTest;
 import dataTest.office.OfficeDataTest;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -16,34 +16,52 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
 
-import static apiTest.specs.Spec.requestSpec;
 import static apiTest.specs.Spec.responseSpec;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class SettingOfficesApiTest {
-    static DataTest dataTest = new DataTest();
+    private static String token;
+    private static String cookies;
+    static BaseDataTest baseDataTest = new BaseDataTest();
     static Faker faker = new Faker(new Locale("ru"));
     private final static String nameOffice = faker.address().cityName();
 
 
     @BeforeAll
     public static void setup() {
-        RestAssured.baseURI = dataTest.getUrlStand();
+        RestAssured.baseURI = baseDataTest.getUrlStand();
         RestAssured.basePath = "/api";
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        String body = "grant_type=password&username=" + baseDataTest.getLoginManager() + "&password=" + baseDataTest.getPassManager() + "&client_id=wfm-frontend";
+        //запрос на авторизацию менеджера
+        Response response = given()
+                .header("Content-Type", "application/x-www-form-urlencoded")
+                .body(body)
+                .when()
+                .post("https://kc.dc.oswfm.ru/realms/os_master/protocol/openid-connect/token")
+                .then()
+                .statusCode(200)
+                .extract().response();
+
+        token = response.jsonPath().getString("access_token");
+        cookies = response.getDetailedCookies().toString();
     }
 
     @DisplayName("Тест на чтение всех офисов в системе через api ")
     @Test
     public void readAllOfficesTest() {
         given()
-                .spec(requestSpec)
+                .log().all()
+                .header("authorization", "Bearer " + token)
+                .header("cookie", cookies)
+                .header("Content-Type", "application/json")
                 .when()
                 .post("/office/read-all")
                 .then()
-                .spec(responseSpec);
+                .log().all()
+                .statusCode(200);
     }
 
     @DisplayName("Тест добавления нового офиса через api")
@@ -52,17 +70,17 @@ public class SettingOfficesApiTest {
     public void createOfficeTest() throws JsonProcessingException {
         String json = OfficeDataTest.OFFICE_JASON;
 
-        // Инициализация ObjectMapper (Jackson)
-        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper objectMapper = new ObjectMapper(); // Инициализация ObjectMapper (Jackson)
 
-        // Десериализация JSON в объект officeRequestBody
-        SettingOfficesBodyModel officeRequestBody = objectMapper.readValue(json, SettingOfficesBodyModel.class);
+        SettingOfficesBodyModel officeRequestBody = objectMapper.readValue(json, SettingOfficesBodyModel.class); // Десериализация JSON в объект officeRequestBody
 
         officeRequestBody.setName(nameOffice);
 
         Response response =
                 given()
-                        .spec(requestSpec)
+                        .log().all()
+                        .header("authorization", "Bearer " + token)
+                        .header("cookie", cookies)
                         .body(officeRequestBody)
                         .when()
                         .post("/office/create")
@@ -82,7 +100,9 @@ public class SettingOfficesApiTest {
         officeIdBody.setId("9a66c660-0df5-4b6d-b64e-c0f85b6e95a8");
 
         given()
-                .spec(requestSpec)
+                .log().all()
+                .header("authorization", "Bearer " + token)
+                .header("cookie", cookies)
                 .body(officeIdBody)
                 .when()
                 .post("/office/delete")
@@ -107,7 +127,9 @@ public class SettingOfficesApiTest {
         officeRequestBody.setName(nameOffice);
 
         given()
-                .spec(requestSpec)
+                .log().all()
+                .header("authorization", "Bearer " + token)
+                .header("cookie", cookies)
                 .body(officeRequestBody)
                 .when()
                 .post("/api/office/update")

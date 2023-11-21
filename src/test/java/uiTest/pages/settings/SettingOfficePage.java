@@ -1,7 +1,7 @@
 package uiTest.pages.settings;
 
 import com.codeborne.selenide.SelenideElement;
-import dataTest.DataTest;
+import dataTest.BaseDataTest;
 import uiTest.componets.Notifications;
 import uiTest.componets.TimeZoneComponents;
 import uiTest.pages.autorization.AuthPage;
@@ -22,7 +22,7 @@ public class SettingOfficePage {
     public static final String SATURDAY = "Сб.";
     public static final String SUNDAY = "Вс.";
     AuthPage authPage = new AuthPage();
-    static DataTest dataTest = new DataTest();
+    static BaseDataTest dataTest = new BaseDataTest();
     TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
     Notifications notifications = new Notifications();
 

@@ -1,7 +1,7 @@
 package dataTest;
 
 // класс с базовыми данными
-public class DataTest {
+public class BaseDataTest {
 
     private static final String LOGIN_MANAGER = "manager";
     private static final String PASS_MANAGER = "manager";
@@ -25,7 +25,6 @@ public class DataTest {
     }
 
     public String getUrlStand() {
-        // базовый url
         return URL_STAND;
     }
 }

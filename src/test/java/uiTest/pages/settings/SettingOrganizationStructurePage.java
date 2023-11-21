@@ -1,13 +1,13 @@
 package uiTest.pages.settings;
 
-import dataTest.DataTest;
+import dataTest.BaseDataTest;
 import uiTest.pages.autorization.AuthPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
 public class SettingOrganizationStructurePage {
     AuthPage authPage = new AuthPage();
-    static DataTest dataTest = new DataTest();
+    static BaseDataTest dataTest = new BaseDataTest();
 
     public void openPage() {
         // открытие страницы настроек офиса
