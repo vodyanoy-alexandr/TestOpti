@@ -23,7 +23,6 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class SettingOfficesApiTest {
     private static String token;
-    private static String cookies;
     private static String idValue;
     static BaseDataTest baseDataTest = new BaseDataTest();
     static Faker faker = new Faker(new Locale("ru"));
@@ -72,7 +71,6 @@ public class SettingOfficesApiTest {
         given()
                 .log().all()
                 .header("authorization", "Bearer " + token)
-                .header("cookie", cookies)
                 .header("Content-Type", "application/json")
                 .body(officeIdBody)
                 .when()
@@ -99,7 +97,6 @@ public class SettingOfficesApiTest {
                 given()
                         .log().body()
                         .header("authorization", "Bearer " + token)
-                        .header("cookie", cookies)
                         .header("Content-Type", "application/json")
                         .body(officeRequestBody)
                         .when()
@@ -121,7 +118,6 @@ public class SettingOfficesApiTest {
         given()
                 .log().all()
                 .header("authorization", "Bearer " + token)
-                .header("cookie", cookies)
                 .header("Content-Type", "application/json")
                 .body(officeIdBody)
                 .when()
@@ -148,7 +144,6 @@ public class SettingOfficesApiTest {
         given()
                 .log().all()
                 .header("authorization", "Bearer " + token)
-                .header("cookie", cookies)
                 .header("Content-Type", "application/json")
                 .body(officeRequestBody)
                 .when()
