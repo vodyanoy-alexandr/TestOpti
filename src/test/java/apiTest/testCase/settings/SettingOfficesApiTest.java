@@ -16,6 +16,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
 
+import static apiTest.specs.Spec.requestSpec;
 import static apiTest.specs.Spec.responseSpec;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
@@ -23,7 +24,6 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class SettingOfficesApiTest {
     private static String token;
-    private static String idValue;
     static BaseDataTest baseDataTest = new BaseDataTest();
     static Faker faker = new Faker(new Locale("ru"));
     private final static String nameOffice = faker.address().cityName();
@@ -52,14 +52,13 @@ public class SettingOfficesApiTest {
     @Test
     public void readAllOfficesTest() {
         given()
-                .log().all()
+                .spec(requestSpec)
                 .header("authorization", "Bearer " + token)
                 .header("Content-Type", "application/json")
                 .when()
                 .post("/office/read-all")
                 .then()
-                .log().all()
-                .statusCode(200);
+                .spec(responseSpec);
     }
 
     @DisplayName("Тест на чтение офиса по id через api")
@@ -106,7 +105,7 @@ public class SettingOfficesApiTest {
                         .body("response.id", notNullValue())
                         .extract().response();
 
-        idValue = response.path("response.id"); // выдергиваем значение id из респонса
+        String idValue = response.path("response.id"); // выдергиваем значение id из респонса
     }
 
     @DisplayName("Тест на удаление офиса по id через api")

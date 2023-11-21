@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="доработал тесты, добавил тест на чтение одного офиса">
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="избавился от использования куки в запросах">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/login/LoginKeycloakApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/login/LoginKeycloakApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/specs/Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/specs/Spec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +128,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.LoginKeycloakApiTest.authManagerTest">
+  <component name="RunManager" selected="Gradle.SettingOfficesApiTest.readAllOfficesTest">
     <configuration name="LoginKeycloakApiTest.authManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -251,8 +251,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginKeycloakApiTest.authManagerTest" />
         <item itemvalue="Gradle.SettingOfficesApiTest.readAllOfficesTest" />
+        <item itemvalue="Gradle.LoginKeycloakApiTest.authManagerTest" />
         <item itemvalue="Gradle.SettingOfficesApiTest.deleteOfficeTest" />
         <item itemvalue="Gradle.SettingOfficesApiTest.readOfficeTest" />
         <item itemvalue="Gradle.SettingOfficesApiTest.updateOfficeTest" />
@@ -286,7 +286,7 @@
       <workItem from="1699972653555" duration="203000" />
       <workItem from="1700028973978" duration="23958000" />
       <workItem from="1700211412256" duration="614000" />
-      <workItem from="1700391953892" duration="27889000" />
+      <workItem from="1700391953892" duration="30223000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -584,7 +584,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700570800837</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="обновил тесты на авторизацию в кейклоке, убрал лишнее">
+      <option name="closed" value="true" />
+      <created>1700571153285</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1700571153285</updated>
+    </task>
+    <task id="LOCAL-00039" summary="избавился от использования куки в запросах">
+      <option name="closed" value="true" />
+      <created>1700571303559</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1700571303559</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,8 +660,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" add metod @AfterEach closeWindowAfterTest" />
-    <MESSAGE value=" add method main with config" />
     <MESSAGE value=" improved code" />
     <MESSAGE value="change config" />
     <MESSAGE value="change gitignore" />
@@ -669,7 +683,9 @@
     <MESSAGE value="добавил новый тест на редактирование офиса" />
     <MESSAGE value="переделал тест на авторизацию в кейклок, добавил предавторизацию в тесты офисов" />
     <MESSAGE value="доработал тесты, добавил тест на чтение одного офиса" />
-    <option name="LAST_COMMIT_MESSAGE" value="доработал тесты, добавил тест на чтение одного офиса" />
+    <MESSAGE value="обновил тесты на авторизацию в кейклоке, убрал лишнее" />
+    <MESSAGE value="избавился от использования куки в запросах" />
+    <option name="LAST_COMMIT_MESSAGE" value="избавился от использования куки в запросах" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
