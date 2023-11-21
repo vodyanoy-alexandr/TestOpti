@@ -47,7 +47,6 @@ public class SettingOfficesApiTest {
                 .extract().response();
 
         token = response.jsonPath().getString("access_token");
-        cookies = response.getDetailedCookies().toString();
     }
 
     @DisplayName("Тест на чтение всех офисов в системе через api ")
@@ -56,7 +55,6 @@ public class SettingOfficesApiTest {
         given()
                 .log().all()
                 .header("authorization", "Bearer " + token)
-                .header("cookie", cookies)
                 .header("Content-Type", "application/json")
                 .when()
                 .post("/office/read-all")
