@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+// класс с базовыми данными
 public class BaseDataTest {
 
     private static final Properties properties = new Properties();
