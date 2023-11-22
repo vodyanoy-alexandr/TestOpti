@@ -105,7 +105,7 @@ public class SettingOfficesApiTest {
                         .body("response.id", notNullValue())
                         .extract().response();
 
-        String idValue = response.path("response.id"); // выдергиваем значение id из респонса
+        String idValue = response.path("response.id"); // выдергиваем значение id из респонса пригодится для других тестов
     }
 
     @DisplayName("Тест на удаление офиса по id через api")

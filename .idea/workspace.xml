@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="избавился от использования куки в запросах">
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/specs/Spec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/specs/Spec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/SettingOfficesBodyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/SettingOfficesBodyModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/model/settings/office/WorkTimeOfficesBodyModel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dataTest/office/OfficeDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataTest/office/OfficeDataTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +65,8 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" root0="FORCE_HIGHLIGHTING" />
@@ -84,51 +88,51 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.BackendLoginTest.authToken (1).executor": "Run",
-    "Gradle.BackendLoginTest.authToken.executor": "Run",
-    "Gradle.BackendSettingOffices.createNewOfficeTest.executor": "Run",
-    "Gradle.BackendSettingOffices.createOfficeTest.executor": "Run",
-    "Gradle.BackendSettingOffices.executor": "Run",
-    "Gradle.FrontLoginTest.executor": "Run",
-    "Gradle.LoginActionsTest.authenticateTest.executor": "Run",
-    "Gradle.LoginActionsTest.executor": "Run",
-    "Gradle.LoginApiTest.retrieveTokenTest.executor": "Run",
-    "Gradle.LoginKeycloakApiTest.authManagerTest.executor": "Run",
-    "Gradle.LoginKeycloakApiTest.authenticationTest.executor": "Run",
-    "Gradle.LoginKeycloakApiTest.executor": "Run",
-    "Gradle.LoginKeycloakTest.authenticateTest.executor": "Run",
-    "Gradle.LoginKeycloakTest.authenticationTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.createOfficeTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.deleteOfficeTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.readAllOfficesTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.readOfficeTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.updateOfficeTest.executor": "Run",
-    "Gradle.SettingOfficesTest.editOffice.executor": "Run",
-    "Gradle.SettingOfficesTest.executor": "Run",
-    "Gradle.SettingOfficesTest.openPageSetOffice.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "add-rest-api-test",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "selenium.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.BackendLoginTest.authToken (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendLoginTest.authToken.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendSettingOffices.createNewOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendSettingOffices.createOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendSettingOffices.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FrontLoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginActionsTest.authenticateTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginActionsTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginApiTest.retrieveTokenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakApiTest.authManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakApiTest.authenticationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakTest.authenticateTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakTest.authenticationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.createOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.deleteOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.readAllOfficesTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.readOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.updateOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.editOffice.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.openPageSetOffice.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;add-rest-api-test&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;selenium.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.SettingOfficesApiTest.readAllOfficesTest">
+}</component>
+  <component name="RunManager" selected="Gradle.SettingOfficesApiTest.createOfficeTest">
     <configuration name="LoginKeycloakApiTest.authManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -143,6 +147,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;apiTest.testCase.login.LoginKeycloakApiTest.authManagerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SettingOfficesApiTest.createOfficeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;apiTest.testCase.settings.SettingOfficesApiTest.createOfficeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -225,37 +253,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesApiTest.updateOfficeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;apiTest.testCase.settings.SettingOfficesApiTest.updateOfficeTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SettingOfficesApiTest.createOfficeTest" />
         <item itemvalue="Gradle.SettingOfficesApiTest.readAllOfficesTest" />
         <item itemvalue="Gradle.LoginKeycloakApiTest.authManagerTest" />
         <item itemvalue="Gradle.SettingOfficesApiTest.deleteOfficeTest" />
         <item itemvalue="Gradle.SettingOfficesApiTest.readOfficeTest" />
-        <item itemvalue="Gradle.SettingOfficesApiTest.updateOfficeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -286,7 +290,7 @@
       <workItem from="1699972653555" duration="203000" />
       <workItem from="1700028973978" duration="23958000" />
       <workItem from="1700211412256" duration="614000" />
-      <workItem from="1700391953892" duration="30223000" />
+      <workItem from="1700391953892" duration="38813000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -600,7 +604,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700571303559</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="update">
+      <option name="closed" value="true" />
+      <created>1700573517068</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1700573517068</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update">
+      <option name="closed" value="true" />
+      <created>1700580184422</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1700580184422</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,7 +642,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="add-rest-api-test" />
                       </list>
                     </value>
                   </entry>
@@ -676,7 +696,6 @@
     <MESSAGE value="вынес url логины и пароли в отдельный класс DataTest" />
     <MESSAGE value="обновил тесты, дописал тудушки" />
     <MESSAGE value="добавил боди модель на id офиса и обновил тест" />
-    <MESSAGE value="update" />
     <MESSAGE value="add RestAssured.basePath = &quot;/api&quot;" />
     <MESSAGE value="вынес в отдельный класс с данными jason запроса на создание офиса" />
     <MESSAGE value="добавил спецификации для api тестов офисов" />
@@ -685,7 +704,8 @@
     <MESSAGE value="доработал тесты, добавил тест на чтение одного офиса" />
     <MESSAGE value="обновил тесты на авторизацию в кейклоке, убрал лишнее" />
     <MESSAGE value="избавился от использования куки в запросах" />
-    <option name="LAST_COMMIT_MESSAGE" value="избавился от использования куки в запросах" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
