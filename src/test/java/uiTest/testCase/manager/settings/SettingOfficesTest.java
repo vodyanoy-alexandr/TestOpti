@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import uiTest.pages.settings.SettingOfficePage;
+import utils.AuthApiKeycloak;
 import utils.RandomUtils;
 
 import java.util.Locale;
@@ -16,15 +17,18 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
+@DisplayName("Тысты на страницу 'Настройка офисов' через UI")
 class SettingOfficesTest {
     static Faker faker = new Faker(new Locale("ru"));
     private final static String nameOffice = faker.address().cityName();
-    static BaseDataTest dataTest = new BaseDataTest();
+    static BaseDataTest baseDataTest = new BaseDataTest();
+    static AuthApiKeycloak authApiKeycloak = new AuthApiKeycloak();
     SettingOfficePage settingOfficePage = new SettingOfficePage();
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = dataTest.getUrlStand(); // базовый url
+
+        Configuration.baseUrl = baseDataTest.getUrlStand(); // базовый url
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = false; // оставлять окно браузера открытым
     }
@@ -79,7 +83,6 @@ class SettingOfficesTest {
         settingOfficePage.shouldHaveOffice(nameOffice);
         // удаление офиса todo перенести удаление тестовых данных на апи
         settingOfficePage.delOffice(nameOffice);
-
     }
 
     @DisplayName("Создание офиса с неуникальным именем")

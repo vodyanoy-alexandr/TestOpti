@@ -13,6 +13,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import utils.AuthApiKeycloak;
 
 import java.util.Locale;
 
@@ -24,28 +25,18 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class SettingOfficesApiTest {
     private static String token;
-    static BaseDataTest baseData = new BaseDataTest();
+    static BaseDataTest baseDataTest = new BaseDataTest();
+    static AuthApiKeycloak authApiKeycloak = new AuthApiKeycloak();
     static Faker faker = new Faker(new Locale("ru"));
     private final static String nameOffice = faker.address().cityName();
 
 
     @BeforeAll
     public static void setup() {
-        RestAssured.baseURI = baseData.getUrlStand();
+        RestAssured.baseURI = baseDataTest.getUrlStand();
         RestAssured.basePath = "/api";
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
-        String body = "grant_type=password&username=" + baseData.getLoginManager() + "&password=" + baseData.getPassManager() + "&client_id=wfm-frontend";
-        //запрос на авторизацию менеджера
-        Response response = given()
-                .header("Content-Type", "application/x-www-form-urlencoded")
-                .body(body)
-                .when()
-                .post("https://kc.dc.oswfm.ru/realms/os_master/protocol/openid-connect/token")
-                .then()
-                .statusCode(200)
-                .extract().response();
-
-        token = response.jsonPath().getString("access_token");
+        token = authApiKeycloak.getToken(baseDataTest.getLoginManager(),baseDataTest.getPassManager());
     }
 
     @DisplayName("Тест на чтение всех офисов в системе через api ")

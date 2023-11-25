@@ -20,7 +20,7 @@ public class LoginKeycloakApiTest {
 
     @DisplayName("Тест на авторизацию менеджером на стенде с кейклоком")
     @Test
-    public void authManagerTest() {
+    void authManagerApi() {
         String body = "grant_type=password&username=" + baseDataTest.getLoginManager() + "&password=" + baseDataTest.getPassManager() + "&client_id=wfm-frontend";
         given()
                 .log().all()
@@ -36,7 +36,7 @@ public class LoginKeycloakApiTest {
 
     @DisplayName("Тест на авторизацию оператором на стенде с кейклоком")
     @Test
-    public void authOperatorTest() {
+    void authOperatorApi() {
         given()
                 .log().all()
                 .header("Content-Type", "application/x-www-form-urlencoded")

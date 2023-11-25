@@ -2,6 +2,7 @@ package uiTest.testCase.login;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import dataTest.BaseDataTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -12,6 +13,7 @@ import uiTest.pages.autorization.AuthPage;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
+@DisplayName("Тесты на авторизацию на стенде с Keycloak через UI")
 class FrontLoginTest {
     AuthPage authPage = new AuthPage();
     static BaseDataTest dataTest = new BaseDataTest();
@@ -20,7 +22,7 @@ class FrontLoginTest {
     static void beforeAll() {
         Configuration.baseUrl = dataTest.getUrlStand(); // базовый url
         Configuration.browserSize = "1920x1080"; // размер окна браузера
-        Configuration.holdBrowserOpen = false; // оставлять окно браузера открытым
+        Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
         System.out.println("Start tests");
     }
 
@@ -29,7 +31,7 @@ class FrontLoginTest {
         clearBrowserCache();
         clearBrowserCookies();
         clearBrowserLocalStorage();
-        closeWindow();
+        Selenide.closeWindow();
     }
 
     @DisplayName("Открытие страницы авторизации")
