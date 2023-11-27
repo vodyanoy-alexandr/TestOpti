@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.notNullValue;
 
+@DisplayName("Тесты на авторизацию на стенде с Keycloak через Api")
 public class LoginKeycloakApiTest {
 
     BaseDataTest baseDataTest = new BaseDataTest();
