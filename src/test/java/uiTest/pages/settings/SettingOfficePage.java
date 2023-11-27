@@ -181,5 +181,4 @@ public class SettingOfficePage {
     private SelenideElement setField(int index) {
         return $(".form-table-row", index);
     }
-
 }
