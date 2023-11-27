@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dataTest/BaseDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataTest/BaseDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/pages/autorization/AuthPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/pages/autorization/AuthPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/testCase/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/login/FrontLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/AuthApiKeycloak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/AuthApiKeycloak.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +40,7 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="TestOpti" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
             <select />
@@ -66,7 +68,7 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/uiTest/testCase/login/FrontLoginTest.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
     <option name="groupByToolId" value="true" />
@@ -93,6 +95,8 @@
     "Gradle.BackendSettingOffices.createOfficeTest.executor": "Run",
     "Gradle.BackendSettingOffices.executor": "Run",
     "Gradle.FrontLoginTest.executor": "Run",
+    "Gradle.FrontLoginTest.loginAndLogoutOperator.executor": "Run",
+    "Gradle.FrontLoginTest.openPageAuthorization.executor": "Run",
     "Gradle.LoginActionsTest.authenticateTest.executor": "Run",
     "Gradle.LoginActionsTest.executor": "Run",
     "Gradle.LoginApiTest.retrieveTokenTest.executor": "Run",
@@ -110,6 +114,7 @@
     "Gradle.SettingOfficesTest.editOffice.executor": "Run",
     "Gradle.SettingOfficesTest.executor": "Run",
     "Gradle.SettingOfficesTest.openPageSetOffice.executor": "Run",
+    "Gradle.TestOpti [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -135,8 +140,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginKeycloakApiTest.authManagerTest">
-    <configuration name="LoginKeycloakApiTest.authManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.FrontLoginTest">
+    <configuration name="FrontLoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -149,7 +154,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;apiTest.testCase.login.LoginKeycloakApiTest.authManagerTest&quot;" />
+            <option value="&quot;uiTest.testCase.login.FrontLoginTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -160,7 +165,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginKeycloakApiTest.authOperatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FrontLoginTest.loginAndLogoutOperator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -173,7 +178,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;apiTest.testCase.login.LoginKeycloakApiTest.authOperatorTest&quot;" />
+            <option value="&quot;uiTest.testCase.login.FrontLoginTest.loginAndLogoutOperator&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -184,7 +189,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesApiTest.createOfficeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FrontLoginTest.openPageAuthorization" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -197,7 +202,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;apiTest.testCase.settings.SettingOfficesApiTest.createOfficeTest&quot;" />
+            <option value="&quot;uiTest.testCase.login.FrontLoginTest.openPageAuthorization&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -208,7 +213,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesApiTest.deleteOfficeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOfficesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -221,7 +226,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;apiTest.testCase.settings.SettingOfficesApiTest.deleteOfficeTest&quot;" />
+            <option value="&quot;uiTest.testCase.manager.settings.SettingOfficesTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -232,44 +237,42 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesApiTest.readAllOfficesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestOpti [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;apiTest.testCase.settings.SettingOfficesApiTest.readAllOfficesTest&quot;" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginKeycloakApiTest.authManagerTest" />
-        <item itemvalue="Gradle.LoginKeycloakApiTest.authOperatorTest" />
-        <item itemvalue="Gradle.SettingOfficesApiTest.readAllOfficesTest" />
-        <item itemvalue="Gradle.SettingOfficesApiTest.createOfficeTest" />
-        <item itemvalue="Gradle.SettingOfficesApiTest.deleteOfficeTest" />
+        <item itemvalue="Gradle.FrontLoginTest" />
+        <item itemvalue="Gradle.FrontLoginTest.loginAndLogoutOperator" />
+        <item itemvalue="Gradle.FrontLoginTest.openPageAuthorization" />
+        <item itemvalue="Gradle.TestOpti [test]" />
+        <item itemvalue="Gradle.SettingOfficesTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
     <option name="lastFrameworkName" value="Selenide" />
     <option name="lastLanguageId" value="JAVA" />
-    <option name="lastUrl" value="https://release36.dc.oswfm.ru/login/" />
+    <option name="lastUrl" value="https://kc.dc.oswfm.ru/realms/os_master/login-actions/authenticate?client_id=wfm-frontend&amp;tab_id=ksEuOFj5TfQ&amp;execution=d523701f-0379-4dd1-9645-766a80693151&amp;kc_locale=ru" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -293,7 +296,8 @@
       <workItem from="1699972653555" duration="203000" />
       <workItem from="1700028973978" duration="23958000" />
       <workItem from="1700211412256" duration="614000" />
-      <workItem from="1700391953892" duration="40563000" />
+      <workItem from="1700391953892" duration="67474000" />
+      <workItem from="1700912413018" duration="13339000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -639,7 +643,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700637026127</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="вынес данные для авторизации в конфиг">
+      <option name="closed" value="true" />
+      <created>1700637572683</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1700637572683</updated>
+    </task>
+    <task id="LOCAL-00045" summary="update">
+      <option name="closed" value="true" />
+      <created>1700912053057</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1700912053057</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,7 +719,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" improved code" />
     <MESSAGE value="change config" />
     <MESSAGE value="change gitignore" />
     <MESSAGE value="update junit dependencies" />
@@ -723,6 +742,7 @@
     <MESSAGE value="доработал тесты, добавил тест на чтение одного офиса" />
     <MESSAGE value="обновил тесты на авторизацию в кейклоке, убрал лишнее" />
     <MESSAGE value="избавился от использования куки в запросах" />
+    <MESSAGE value="вынес данные для авторизации в конфиг" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>

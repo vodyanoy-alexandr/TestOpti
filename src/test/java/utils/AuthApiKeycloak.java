@@ -4,7 +4,7 @@ import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class AuthApiKeycloak {
+public class  AuthApiKeycloak {
     public String getToken(String login, String pass) {
         Response response = given()
                 .header("Content-Type", "application/x-www-form-urlencoded")

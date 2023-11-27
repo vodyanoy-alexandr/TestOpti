@@ -15,12 +15,12 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 @DisplayName("Тесты на авторизацию на стенде с Keycloak через UI")
 class FrontLoginTest {
-    AuthPage authPage = new AuthPage();
+    AuthPage authenticationPage = new AuthPage();
     static BaseDataTest dataTest = new BaseDataTest();
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = dataTest.getUrlStand(); // базовый url
+        Configuration.baseUrl = dataTest.getUrlStand(); // базовый URL
         Configuration.browserSize = "1920x1080"; // размер окна браузера
         Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
         System.out.println("Start tests");
@@ -38,19 +38,19 @@ class FrontLoginTest {
     @Test
     void openPageAuthorization() {
         // открытие страницы авторизации
-        open("/");
-        //проверка надписи "Вход в учетную запись"на странице авторизации
+        authenticationPage.openPage();
+        // проверка надписи "Вход в учетную запись" на странице авторизации
         element("#kc-page-title").shouldHave(Condition.text("Вход в учетную запись"));
     }
 
     @DisplayName("Авторизация невалидного менеджера")
     @Test
-    void InvalidLoginManager() {
+    void invalidLoginManager() {
         // открытие страницы авторизации
-        open("/");
+        authenticationPage.openPage();
         // вызов метода авторизации
-        authPage.loginInPageAuth(dataTest.getLoginManager() + "invalid", dataTest.getPassManager() + "invalid");
-        //проверка на предупреждение о невалидном логине или пароле
+        authenticationPage.loginInPageAuth(dataTest.getLoginManager() + "invalid", dataTest.getPassManager() + "invalid");
+        // проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
 
@@ -58,35 +58,39 @@ class FrontLoginTest {
     @Test
     void loginAndLogoutManager() {
         // открытие страницы авторизации
-        open("/");
+        authenticationPage.openPage();
         // вызов метода авторизации менеджера
-        authPage.loginInPageAuth(dataTest.getLoginManager(), dataTest.getPassManager());
-        //проверка на открытой странице расписания раздела "Расписание" после авторизации
+        authenticationPage.loginInPageAuth(dataTest.getLoginManager(), dataTest.getPassManager());
+        // проверка на открытой странице расписания раздела "Расписание" после авторизации
         element(".admin-menu").shouldHave(Condition.text("Расписание"));
-        // проверка разлогина менеджера
-        element("[title=Выйти]").click();
+        // разлогин менеджера
+        authenticationPage.logoutUser();
+        // проверка надписи "Вход в учетную запись" на странице авторизации
+        element("#kc-page-title").shouldHave(Condition.text("Вход в учетную запись"));
     }
 
     @DisplayName("Авторизация невалидного оператора")
     @Test
-    void InvalidLoginOperator() {
+    void invalidLoginOperator() {
         // открытие страницы авторизации
-        open("/");
+        authenticationPage.openPage();
         // вызов метода авторизации оператора
-        authPage.loginInPageAuth(dataTest.getLoginOperator() + "invalid", dataTest.getPassOperator() + "invalid");
-        //проверка на предупреждение о невалидном логине или пароле
+        authenticationPage.loginInPageAuth(dataTest.getLoginOperator() + "invalid", dataTest.getPassOperator() + "invalid");
+        // проверка на предупреждение о невалидном логине или пароле
         element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
     }
 
     @DisplayName("Авторизация оператора")
     @Test
     void loginAndLogoutOperator() {
-        open("/");
+        authenticationPage.openPage();
         // вызов метода авторизации оператора
-        authPage.loginInPageAuth(dataTest.getLoginOperator(), dataTest.getPassOperator());
-        //проверка на открытой странице расписания раздела "Рабочие смены" после авторизации оператора
+        authenticationPage.loginInPageAuth(dataTest.getLoginOperator(), dataTest.getPassOperator());
+        // проверка на открытой странице расписания раздела "Рабочие смены" после авторизации оператора
         element(".main-menu").shouldHave(Condition.text("Рабочие смены"));
-        // проверка разлогина operator
-        element("[title=Выйти]").click();
+        // проверка разлогина оператора
+        authenticationPage.logoutUser();
+        // проверка надписи "Вход в учетную запись" на странице авторизации
+        element("#kc-page-title").shouldHave(Condition.text("Вход в учетную запись"));
     }
 }
