@@ -8,7 +8,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import uiTest.pages.settings.SettingOfficePage;
-import utils.AuthApiKeycloak;
 import utils.RandomUtils;
 
 import java.util.Locale;
@@ -17,12 +16,11 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
-@DisplayName("Тысты на страницу 'Настройка офисов' через UI")
+@DisplayName("Тесты на страницу 'Настройка офисов' через UI")
 class SettingOfficesTest {
     static Faker faker = new Faker(new Locale("ru"));
     private final static String nameOffice = faker.address().cityName();
     static BaseDataTest baseDataTest = new BaseDataTest();
-    static AuthApiKeycloak authApiKeycloak = new AuthApiKeycloak();
     SettingOfficePage settingOfficePage = new SettingOfficePage();
 
     @BeforeAll
@@ -30,7 +28,8 @@ class SettingOfficesTest {
 
         Configuration.baseUrl = baseDataTest.getUrlStand(); // базовый url
         Configuration.browserSize = "1920x1080"; // размер окна браузера
-        Configuration.holdBrowserOpen = false; // оставлять окно браузера открытым
+        Configuration.holdBrowserOpen = true; // оставлять окно браузера открытым
+        Configuration.timeout = 5000; // таймаут ожидаия загрузки (появления элемента на странице), полезно когда стенд работает медленно
     }
 
     @AfterEach
@@ -46,14 +45,14 @@ class SettingOfficesTest {
     void openPageSetOffice() {
         settingOfficePage.openPage();
         // проверка открытия страницы "Настройка офисов"
-        $(".offices").shouldHave(text("Настройка офисов"));
+        settingOfficePage.getPageTitle().shouldHave(text("Настройка офисов"));
     }
 
     @DisplayName("Добавление нового офиса и удаление")
     @Test
     void addNewOffice() {
 
-        String comment = "Офис создан в рамках автотеста на Selenide";
+        String comment = "Офис создан в рамках автотестов ui";
 
         // открытие страницы настроек офиса через вызов метода из класса SetOfficePage
         settingOfficePage.openPage();
@@ -119,7 +118,7 @@ class SettingOfficesTest {
     @Test
     void editOffice() {
 
-        String comment = "Офис создан в рамках автотеста на Selenide";
+        String comment = "Офис создан в рамках автотестов ui";
 
         // открытие страницы настроек офиса через вызов метода из класса SetOfficePage
         settingOfficePage.openPage();

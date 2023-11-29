@@ -21,6 +21,7 @@ public class SettingOfficePage {
     public static final String FRIDAY = "Пт.";
     public static final String SATURDAY = "Сб.";
     public static final String SUNDAY = "Вс.";
+    private final SelenideElement pageTitle = $(".offices");
     AuthPage authPage = new AuthPage();
     static BaseDataTest dataTest = new BaseDataTest();
     TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
@@ -54,7 +55,10 @@ public class SettingOfficePage {
         return SUNDAY;
     }
 
-    // метод открывает страницу настроек офисов
+    public SelenideElement getPageTitle() {
+        return pageTitle;
+    }// метод открывает страницу настроек офисов
+
     public void openPage() {
         // открытие страницы настроек офиса
         open("/settings/offices");
