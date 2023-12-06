@@ -1,15 +1,17 @@
-package pages.settings;
+package uiTest.pages.settings;
 
 import com.codeborne.selenide.SelenideElement;
-import uiTests.componets.Notifications;
-import uiTests.componets.TimeZoneComponents;
-import pages.autorization.AuthPage;
+import dataTest.BaseDataTest;
+import uiTest.componets.Notifications;
+import uiTest.componets.TimeZoneComponents;
+import uiTest.pages.autorization.AuthPage;
 
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class SettingOfficePage {
     public static final String MONDAY = "Пн.";
@@ -19,6 +21,11 @@ public class SettingOfficePage {
     public static final String FRIDAY = "Пт.";
     public static final String SATURDAY = "Сб.";
     public static final String SUNDAY = "Вс.";
+    private final SelenideElement pageTitle = $(".offices");
+    AuthPage authPage = new AuthPage();
+    static BaseDataTest dataTest = new BaseDataTest();
+    TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
+    Notifications notifications = new Notifications();
 
     public String getMonday() {
         return MONDAY;
@@ -48,17 +55,15 @@ public class SettingOfficePage {
         return SUNDAY;
     }
 
-    AuthPage authPage = new AuthPage();
+    public SelenideElement getPageTitle() {
+        return pageTitle;
+    }// метод открывает страницу настроек офисов
 
-    TimeZoneComponents timeZoneComponents = new TimeZoneComponents();
-    Notifications notifications = new Notifications();
-
-    // метод открывает страницу настроек офисов
     public void openPage() {
         // открытие страницы настроек офиса
         open("/settings/offices");
         // вызов метода авторизации на странице из класс AuthPage
-        authPage.loginInPageAuth(authPage.getLoginManager(), authPage.getPassManager());
+        authPage.loginInPageAuth(dataTest.getLoginManager(), dataTest.getPassManager());
     }
 
     // метод открывает шторку добавления нового офиса
@@ -180,5 +185,4 @@ public class SettingOfficePage {
     private SelenideElement setField(int index) {
         return $(".form-table-row", index);
     }
-
 }

@@ -4,18 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="добавил общий компонент выбор таймзоны в выпадашке">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/backend/login/BackendLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Results - BackendLoginTest_authToken.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Results - FrontLoginTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Results - SetOfficesTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOfficePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOrganizationStructurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOrgStructurePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOfficesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOrganizationStructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOrgStructureTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" openResultsInEditor="true" userTempatePath="" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -37,7 +45,7 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="TestOpti" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
             <select />
@@ -49,6 +57,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package.json" />
         <option value="Class" />
       </list>
     </option>
@@ -60,9 +69,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/test/java/uiTests/manager/settings/SettingOfficesTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/apiTest/testCase/login/LoginKeycloakApiTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOrgStructurePage.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/uiTest/testCase/login/FrontLoginTest.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
     <option name="groupByToolId" value="true" />
@@ -81,82 +94,68 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.BackendLoginTest.authToken.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.FrontLoginTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesTest.editOffice.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SettingOfficesTest.openPageSetOffice.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;set-office-test&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;selenium.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.BackendLoginTest.authToken (1).executor": "Run",
+    "Gradle.BackendLoginTest.authToken.executor": "Run",
+    "Gradle.BackendSettingOffices.createNewOfficeTest.executor": "Run",
+    "Gradle.BackendSettingOffices.createOfficeTest.executor": "Run",
+    "Gradle.BackendSettingOffices.executor": "Run",
+    "Gradle.FrontLoginTest.executor": "Run",
+    "Gradle.FrontLoginTest.loginAndLogoutOperator.executor": "Run",
+    "Gradle.FrontLoginTest.openPageAuthorization.executor": "Run",
+    "Gradle.LoginActionsTest.authenticateTest.executor": "Run",
+    "Gradle.LoginActionsTest.executor": "Run",
+    "Gradle.LoginApiTest.executor": "Run",
+    "Gradle.LoginApiTest.retrieveTokenTest.executor": "Run",
+    "Gradle.LoginKeycloakApiTest.authManagerTest.executor": "Run",
+    "Gradle.LoginKeycloakApiTest.authOperatorTest.executor": "Run",
+    "Gradle.LoginKeycloakApiTest.authenticationTest.executor": "Run",
+    "Gradle.LoginKeycloakApiTest.executor": "Run",
+    "Gradle.LoginKeycloakTest.authenticateTest.executor": "Run",
+    "Gradle.LoginKeycloakTest.authenticationTest.executor": "Run",
+    "Gradle.SettingOfficesApiTest.createOfficeTest.executor": "Run",
+    "Gradle.SettingOfficesApiTest.deleteOfficeTest.executor": "Run",
+    "Gradle.SettingOfficesApiTest.readAllOfficesTest.executor": "Run",
+    "Gradle.SettingOfficesApiTest.readOfficeTest.executor": "Run",
+    "Gradle.SettingOfficesApiTest.updateOfficeTest.executor": "Run",
+    "Gradle.SettingOfficesTest.addNewOffice.executor": "Run",
+    "Gradle.SettingOfficesTest.addNewOfficeWithInvalidName.executor": "Run",
+    "Gradle.SettingOfficesTest.editOffice.executor": "Run",
+    "Gradle.SettingOfficesTest.executor": "Run",
+    "Gradle.SettingOfficesTest.importOffice.executor": "Run",
+    "Gradle.SettingOfficesTest.openPageSetOffice.executor": "Run",
+    "Gradle.SettingOrgStructureTest.openPageSetOffice.executor": "Run",
+    "Gradle.SettingOrganizationStructureTest.openPageSetOffice.executor": "Run",
+    "Gradle.TestOpti [test].executor": "Run",
+    "Gradle.Tests in 'TestOpti.test'.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "auto.test.manager.delay": "5000",
+    "git-widget-placeholder": "add-rest-api-test",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "selenium.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.SettingOfficesTest">
-    <configuration name="BackendLoginTest.authToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;backend.login.BackendLoginTest.authToken&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="FrontLoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;uiTests.login.FrontLoginTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.SettingOfficesTest.openPageSetOffice">
     <configuration name="SettingOfficesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -170,7 +169,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;uiTests.manager.settings.SettingOfficesTest&quot;" />
+            <option value="&quot;uiTest.testCase.manager.settings.SettingOfficesTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -181,7 +180,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesTest.editOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOfficesTest.addNewOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -194,7 +193,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.editOffice&quot;" />
+            <option value="&quot;uiTest.testCase.manager.settings.SettingOfficesTest.addNewOffice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -218,7 +217,55 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;uiTests.manager.settings.SettingOfficesTest.openPageSetOffice&quot;" />
+            <option value="&quot;uiTest.testCase.manager.settings.SettingOfficesTest.openPageSetOffice&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SettingOrgStructureTest.openPageSetOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;uiTest.testCase.manager.settings.SettingOrgStructureTest.openPageSetOffice&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SettingOrganizationStructureTest.openPageSetOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;uiTest.testCase.manager.settings.SettingOrganizationStructureTest.openPageSetOffice&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -231,16 +278,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SettingOfficesTest" />
         <item itemvalue="Gradle.SettingOfficesTest.openPageSetOffice" />
-        <item itemvalue="Gradle.FrontLoginTest" />
-        <item itemvalue="Gradle.BackendLoginTest.authToken" />
-        <item itemvalue="Gradle.SettingOfficesTest.editOffice" />
+        <item itemvalue="Gradle.SettingOfficesTest" />
+        <item itemvalue="Gradle.SettingOrgStructureTest.openPageSetOffice" />
+        <item itemvalue="Gradle.SettingOrganizationStructureTest.openPageSetOffice" />
+        <item itemvalue="Gradle.SettingOfficesTest.addNewOffice" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
-    <option name="lastFrameworkName" value="FluentLenium" />
+    <option name="lastFrameworkName" value="Selenide" />
     <option name="lastLanguageId" value="JAVA" />
     <option name="lastUrl" value="https://master.dc.oswfm.ru/settings/offices" />
   </component>
@@ -263,6 +310,15 @@
       <workItem from="1697733826043" duration="402000" />
       <workItem from="1699509143695" duration="12000" />
       <workItem from="1699521739313" duration="339000" />
+      <workItem from="1699972653555" duration="203000" />
+      <workItem from="1700028973978" duration="23958000" />
+      <workItem from="1700211412256" duration="614000" />
+      <workItem from="1700391953892" duration="67474000" />
+      <workItem from="1700912413018" duration="17708000" />
+      <workItem from="1701113992859" duration="145000" />
+      <workItem from="1701114235757" duration="5000" />
+      <workItem from="1701116279195" duration="80000" />
+      <workItem from="1701116381049" duration="17989000" />
     </task>
     <task id="LOCAL-00001" summary="добавил отдельный класс с данными">
       <option name="closed" value="true" />
@@ -416,7 +472,239 @@
       <option name="project" value="LOCAL" />
       <updated>1697120598950</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="добавил проверку что возвращается токен в ответе на запрос в методе authToken">
+      <option name="closed" value="true" />
+      <created>1699894604524</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699894604524</updated>
+    </task>
+    <task id="LOCAL-00021" summary="переделал структуру проекта, переименовал папки">
+      <option name="closed" value="true" />
+      <created>1699947679676</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699947679676</updated>
+    </task>
+    <task id="LOCAL-00022" summary="добавлены тесты api в настройки офисов">
+      <option name="closed" value="true" />
+      <created>1699957472068</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699957472068</updated>
+    </task>
+    <task id="LOCAL-00023" summary="обновление тестов api в настройки офисов">
+      <option name="closed" value="true" />
+      <created>1699972729962</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699972729962</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update">
+      <option name="closed" value="true" />
+      <created>1699972830902</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699972830902</updated>
+    </task>
+    <task id="LOCAL-00025" summary="обновлены api тесты для настроек офиса, тело запроса на создание нового офиса вынесено в модель">
+      <option name="closed" value="true" />
+      <created>1700126636611</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1700126636612</updated>
+    </task>
+    <task id="LOCAL-00026" summary="вынес url логины и пароли в отдельный класс DataTest">
+      <option name="closed" value="true" />
+      <created>1700131884810</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1700131884810</updated>
+    </task>
+    <task id="LOCAL-00027" summary="обновил тесты, дописал тудушки">
+      <option name="closed" value="true" />
+      <created>1700132945148</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1700132945148</updated>
+    </task>
+    <task id="LOCAL-00028" summary="добавил боди модель на id офиса и обновил тест">
+      <option name="closed" value="true" />
+      <created>1700137949526</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1700137949526</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update">
+      <option name="closed" value="true" />
+      <created>1700138020391</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1700138020391</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update">
+      <option name="closed" value="true" />
+      <created>1700142798834</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1700142798835</updated>
+    </task>
+    <task id="LOCAL-00031" summary="update">
+      <option name="closed" value="true" />
+      <created>1700143525263</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1700143525263</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add RestAssured.basePath = &quot;/api&quot;">
+      <option name="closed" value="true" />
+      <created>1700392249680</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1700392249680</updated>
+    </task>
+    <task id="LOCAL-00033" summary="вынес в отдельный класс с данными jason запроса на создание офиса">
+      <option name="closed" value="true" />
+      <created>1700466121301</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1700466121301</updated>
+    </task>
+    <task id="LOCAL-00034" summary="добавил спецификации для api тестов офисов">
+      <option name="closed" value="true" />
+      <created>1700487653664</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1700487653664</updated>
+    </task>
+    <task id="LOCAL-00035" summary="добавил новый тест на редактирование офиса">
+      <option name="closed" value="true" />
+      <created>1700494029659</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1700494029659</updated>
+    </task>
+    <task id="LOCAL-00036" summary="переделал тест на авторизацию в кейклок, добавил предавторизацию в тесты офисов">
+      <option name="closed" value="true" />
+      <created>1700566308791</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1700566308791</updated>
+    </task>
+    <task id="LOCAL-00037" summary="доработал тесты, добавил тест на чтение одного офиса">
+      <option name="closed" value="true" />
+      <created>1700570800837</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1700570800837</updated>
+    </task>
+    <task id="LOCAL-00038" summary="обновил тесты на авторизацию в кейклоке, убрал лишнее">
+      <option name="closed" value="true" />
+      <created>1700571153285</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1700571153285</updated>
+    </task>
+    <task id="LOCAL-00039" summary="избавился от использования куки в запросах">
+      <option name="closed" value="true" />
+      <created>1700571303559</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1700571303559</updated>
+    </task>
+    <task id="LOCAL-00040" summary="update">
+      <option name="closed" value="true" />
+      <created>1700573517068</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1700573517068</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update">
+      <option name="closed" value="true" />
+      <created>1700580184422</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1700580184422</updated>
+    </task>
+    <task id="LOCAL-00042" summary="update">
+      <option name="closed" value="true" />
+      <created>1700635790319</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1700635790320</updated>
+    </task>
+    <task id="LOCAL-00043" summary="update">
+      <option name="closed" value="true" />
+      <created>1700637026127</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1700637026127</updated>
+    </task>
+    <task id="LOCAL-00044" summary="вынес данные для авторизации в конфиг">
+      <option name="closed" value="true" />
+      <created>1700637572683</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1700637572683</updated>
+    </task>
+    <task id="LOCAL-00045" summary="update">
+      <option name="closed" value="true" />
+      <created>1700912053057</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1700912053057</updated>
+    </task>
+    <task id="LOCAL-00046" summary="доработал page object для страницы авторизации">
+      <option name="closed" value="true" />
+      <created>1701098027921</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1701098027921</updated>
+    </task>
+    <task id="LOCAL-00047" summary="update">
+      <option name="closed" value="true" />
+      <created>1701102053260</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1701102053260</updated>
+    </task>
+    <task id="LOCAL-00048" summary="update">
+      <option name="closed" value="true" />
+      <created>1701114108855</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1701114108855</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +726,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="add-rest-api-test" />
                       </list>
                     </value>
                   </entry>
@@ -476,23 +764,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="добавил отдельный класс с данными" />
-    <MESSAGE value="изменил порядок проверки валидного и невалидного менеджера" />
-    <MESSAGE value="Добавил тест на логин валидного и невалидного оператора" />
-    <MESSAGE value="delete url in DataTest" />
-    <MESSAGE value="add comment in FrontLoginTest" />
-    <MESSAGE value="add test OfficesTest" />
-    <MESSAGE value=" add metod @AfterEach closeWindowAfterTest" />
-    <MESSAGE value=" add method main with config" />
-    <MESSAGE value=" improved code" />
-    <MESSAGE value="change config" />
     <MESSAGE value="change gitignore" />
     <MESSAGE value="update junit dependencies" />
     <MESSAGE value="rename method @BeforeAll and @AfterEach" />
     <MESSAGE value="update build.gradle.kts" />
     <MESSAGE value="update @BeforeAll in class FrontLoginTest and OfficesTest" />
     <MESSAGE value="добавил общий компонент выбор таймзоны в выпадашке" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил общий компонент выбор таймзоны в выпадашке" />
+    <MESSAGE value="добавил проверку что возвращается токен в ответе на запрос в методе authToken" />
+    <MESSAGE value="переделал структуру проекта, переименовал папки" />
+    <MESSAGE value="добавлены тесты api в настройки офисов" />
+    <MESSAGE value="обновление тестов api в настройки офисов" />
+    <MESSAGE value="обновлены api тесты для настроек офиса, тело запроса на создание нового офиса вынесено в модель" />
+    <MESSAGE value="вынес url логины и пароли в отдельный класс DataTest" />
+    <MESSAGE value="обновил тесты, дописал тудушки" />
+    <MESSAGE value="добавил боди модель на id офиса и обновил тест" />
+    <MESSAGE value="add RestAssured.basePath = &quot;/api&quot;" />
+    <MESSAGE value="вынес в отдельный класс с данными jason запроса на создание офиса" />
+    <MESSAGE value="добавил спецификации для api тестов офисов" />
+    <MESSAGE value="добавил новый тест на редактирование офиса" />
+    <MESSAGE value="переделал тест на авторизацию в кейклок, добавил предавторизацию в тесты офисов" />
+    <MESSAGE value="доработал тесты, добавил тест на чтение одного офиса" />
+    <MESSAGE value="обновил тесты на авторизацию в кейклоке, убрал лишнее" />
+    <MESSAGE value="избавился от использования куки в запросах" />
+    <MESSAGE value="вынес данные для авторизации в конфиг" />
+    <MESSAGE value="доработал page object для страницы авторизации" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
