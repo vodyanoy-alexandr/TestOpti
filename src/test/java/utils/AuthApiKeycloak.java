@@ -13,7 +13,7 @@ public class  AuthApiKeycloak {
                 .formParam("username", login)
                 .formParam("password", pass)
                 .when()
-                .post("https://kc.dc.oswfm.ru/realms/os_master/protocol/openid-connect/token")
+                .post("https://kc25.dc.oswfm.ru/realms/os_master/protocol/openid-connect/token")
                 .then()
                 .statusCode(200)
                 .extract()

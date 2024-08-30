@@ -40,7 +40,7 @@ class FrontLoginTest {
         // открытие страницы авторизации
         authenticationPage.openPage();
         // проверка надписи "Вход в учетную запись" на странице авторизации
-        element("#kc-page-title").shouldHave(Condition.text("Вход в учетную запись"));
+        element("#kc-page-title").shouldHave(Condition.text("Войдите в аккаунт"));
     }
 
     @DisplayName("Авторизация невалидного менеджера")
@@ -51,7 +51,7 @@ class FrontLoginTest {
         // вызов метода авторизации
         authenticationPage.loginInPageAuth(dataTest.getLoginManager() + "invalid", dataTest.getPassManager() + "invalid");
         // проверка на предупреждение о невалидном логине или пароле
-        element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
+        element("#input-error").shouldHave(Condition.text("Неверный логин или пароль"));
     }
 
     @DisplayName("Авторизация менеджера")
@@ -66,7 +66,7 @@ class FrontLoginTest {
         // разлогин менеджера
         authenticationPage.logoutUser();
         // проверка надписи "Вход в учетную запись" на странице авторизации
-        element("#kc-page-title").shouldHave(Condition.text("Вход в учетную запись"));
+        element("#kc-page-title").shouldHave(Condition.text("Войдите в аккаунт"));
     }
 
     @DisplayName("Авторизация невалидного оператора")
@@ -77,7 +77,7 @@ class FrontLoginTest {
         // вызов метода авторизации оператора
         authenticationPage.loginInPageAuth(dataTest.getLoginOperator() + "invalid", dataTest.getPassOperator() + "invalid");
         // проверка на предупреждение о невалидном логине или пароле
-        element("#input-error").shouldHave(Condition.text("Неправильное имя пользователя или пароль."));
+        element("#input-error").shouldHave(Condition.text("Неверный логин или пароль"));
     }
 
     @DisplayName("Авторизация оператора")
@@ -91,6 +91,6 @@ class FrontLoginTest {
         // проверка разлогина оператора
         authenticationPage.logoutUser();
         // проверка надписи "Вход в учетную запись" на странице авторизации
-        element("#kc-page-title").shouldHave(Condition.text("Вход в учетную запись"));
+        element("#kc-page-title").shouldHave(Condition.text("Войдите в аккаунт"));
     }
 }

@@ -16,7 +16,7 @@ public class LoginKeycloakApiTest {
 
     @BeforeEach
     public void setup() {
-        RestAssured.baseURI = "https://kc.dc.oswfm.ru";
+        RestAssured.baseURI = baseDataTest.getUrlKC();
     }
 
     @DisplayName("Тест на авторизацию менеджером на стенде с кейклоком")

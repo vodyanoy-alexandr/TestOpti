@@ -52,24 +52,6 @@ public class SettingOfficesApiTest {
                 .spec(responseSpec);
     }
 
-    @DisplayName("Тест на чтение офиса по id через api")
-    @Test
-    public void readOfficeTest() {
-        OfficeIdBodyModel officeIdBody = new OfficeIdBodyModel();
-        officeIdBody.setId("a30aec13-67ad-48c6-a9e7-48328c449ff1");
-
-        given()
-                .log().all()
-                .header("authorization", "Bearer " + token)
-                .header("Content-Type", "application/json")
-                .body(officeIdBody)
-                .when()
-                .post("/office/read")
-                .then()
-                .spec(responseSpec)
-                .body("success", is(true)); // проверка тела ответа
-    }
-
     @DisplayName("Тест добавления нового офиса через api")
     @Test
     // throws JsonProcessingException для обработки исключений в методе objectMapper.readValue

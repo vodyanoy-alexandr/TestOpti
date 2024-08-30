@@ -23,6 +23,7 @@ public class BaseDataTest {
     private static final String LOGIN_OPERATOR = properties.getProperty("LOGIN_OPERATOR");
     private static final String PASS_OPERATOR = properties.getProperty("PASS_OPERATOR");
     private static final String URL_STAND = properties.getProperty("URL_STAND");
+    private static final String URL_KC = properties.getProperty("URL_KC");
 
     public String getLoginManager() {
         return LOGIN_MANAGER;
@@ -42,6 +43,10 @@ public class BaseDataTest {
 
     public String getUrlStand() {
         return URL_STAND;
+    }
+
+    public String getUrlKC() {
+        return URL_KC;
     }
 }
 
