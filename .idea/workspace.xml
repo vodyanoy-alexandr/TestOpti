@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="update">
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="Пробую добавить запуск тестов в гите">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/nightly-test-run.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Results - BackendLoginTest_authToken.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Results - FrontLoginTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Results - SetOfficesTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOfficePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOfficePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOrganizationStructurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOrgStructurePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiTest/testCase/settings/SettingOfficesApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOrgStructurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/pages/settings/SettingOrgStructurePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/testCase/login/FrontLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/login/FrontLoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOfficesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOfficesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOrganizationStructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOrgStructureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOrgStructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTest/testCase/manager/settings/SettingOrgStructureTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +40,17 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="TestOpti" type="f1a62948:ProjectNode" />
+                <item name="QAAWFM" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="TestOpti" type="f1a62948:ProjectNode" />
+                <item name="QAAWFM" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="QAAWFM" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -94,68 +99,143 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.BackendLoginTest.authToken (1).executor": "Run",
-    "Gradle.BackendLoginTest.authToken.executor": "Run",
-    "Gradle.BackendSettingOffices.createNewOfficeTest.executor": "Run",
-    "Gradle.BackendSettingOffices.createOfficeTest.executor": "Run",
-    "Gradle.BackendSettingOffices.executor": "Run",
-    "Gradle.FrontLoginTest.executor": "Run",
-    "Gradle.FrontLoginTest.loginAndLogoutOperator.executor": "Run",
-    "Gradle.FrontLoginTest.openPageAuthorization.executor": "Run",
-    "Gradle.LoginActionsTest.authenticateTest.executor": "Run",
-    "Gradle.LoginActionsTest.executor": "Run",
-    "Gradle.LoginApiTest.executor": "Run",
-    "Gradle.LoginApiTest.retrieveTokenTest.executor": "Run",
-    "Gradle.LoginKeycloakApiTest.authManagerTest.executor": "Run",
-    "Gradle.LoginKeycloakApiTest.authOperatorTest.executor": "Run",
-    "Gradle.LoginKeycloakApiTest.authenticationTest.executor": "Run",
-    "Gradle.LoginKeycloakApiTest.executor": "Run",
-    "Gradle.LoginKeycloakTest.authenticateTest.executor": "Run",
-    "Gradle.LoginKeycloakTest.authenticationTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.createOfficeTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.deleteOfficeTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.readAllOfficesTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.readOfficeTest.executor": "Run",
-    "Gradle.SettingOfficesApiTest.updateOfficeTest.executor": "Run",
-    "Gradle.SettingOfficesTest.addNewOffice.executor": "Run",
-    "Gradle.SettingOfficesTest.addNewOfficeWithInvalidName.executor": "Run",
-    "Gradle.SettingOfficesTest.editOffice.executor": "Run",
-    "Gradle.SettingOfficesTest.executor": "Run",
-    "Gradle.SettingOfficesTest.importOffice.executor": "Run",
-    "Gradle.SettingOfficesTest.openPageSetOffice.executor": "Run",
-    "Gradle.SettingOrgStructureTest.openPageSetOffice.executor": "Run",
-    "Gradle.SettingOrganizationStructureTest.openPageSetOffice.executor": "Run",
-    "Gradle.TestOpti [test].executor": "Run",
-    "Gradle.Tests in 'TestOpti.test'.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "auto.test.manager.delay": "5000",
-    "git-widget-placeholder": "add-rest-api-test",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "selenium.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.BackendLoginTest.authToken (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendLoginTest.authToken.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendSettingOffices.createNewOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendSettingOffices.createOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BackendSettingOffices.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FrontLoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FrontLoginTest.loginAndLogoutOperator.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FrontLoginTest.openPageAuthorization.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginActionsTest.authenticateTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginActionsTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginApiTest.retrieveTokenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakApiTest.authManagerApi.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakApiTest.authManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakApiTest.authOperatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakApiTest.authenticationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakTest.authenticateTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginKeycloakTest.authenticationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.createOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.deleteOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.readAllOfficesTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.readOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesApiTest.updateOfficeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.addNewOffice.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.addNewOfficeWithInvalidName.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.editOffice.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.importOffice.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOfficesTest.openPageSetOffice.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOrgStructureTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOrgStructureTest.openPageSetOffice.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SettingOrganizationStructureTest.openPageSetOffice.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestOpti [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'TestOpti.test'.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;auto.test.manager.delay&quot;: &quot;5000&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/Alexander/IdeaProjects/OptiTest/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SettingOfficesTest.openPageSetOffice">
+  <component name="RunManager" selected="Gradle.FrontLoginTest">
+    <configuration name="FrontLoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;uiTest.testCase.login.FrontLoginTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="FrontLoginTest.openPageAuthorization" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;uiTest.testCase.login.FrontLoginTest.openPageAuthorization&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SettingOfficesApiTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;apiTest.testCase.settings.SettingOfficesApiTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="SettingOfficesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -180,7 +260,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SettingOfficesTest.addNewOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingOrgStructureTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,79 +273,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;uiTest.testCase.manager.settings.SettingOfficesTest.addNewOffice&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="SettingOfficesTest.openPageSetOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;uiTest.testCase.manager.settings.SettingOfficesTest.openPageSetOffice&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="SettingOrgStructureTest.openPageSetOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;uiTest.testCase.manager.settings.SettingOrgStructureTest.openPageSetOffice&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="SettingOrganizationStructureTest.openPageSetOffice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;uiTest.testCase.manager.settings.SettingOrganizationStructureTest.openPageSetOffice&quot;" />
+            <option value="&quot;uiTest.testCase.manager.settings.SettingOrgStructureTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -278,18 +286,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SettingOfficesTest.openPageSetOffice" />
+        <item itemvalue="Gradle.FrontLoginTest" />
+        <item itemvalue="Gradle.FrontLoginTest.openPageAuthorization" />
+        <item itemvalue="Gradle.SettingOrgStructureTest" />
         <item itemvalue="Gradle.SettingOfficesTest" />
-        <item itemvalue="Gradle.SettingOrgStructureTest.openPageSetOffice" />
-        <item itemvalue="Gradle.SettingOrganizationStructureTest.openPageSetOffice" />
-        <item itemvalue="Gradle.SettingOfficesTest.addNewOffice" />
+        <item itemvalue="Gradle.SettingOfficesApiTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
     <option name="lastFrameworkName" value="Selenide" />
     <option name="lastLanguageId" value="JAVA" />
-    <option name="lastUrl" value="https://master.dc.oswfm.ru/settings/offices" />
+    <option name="lastUrl" value="https://kc25.dc.oswfm.ru/realms/os_master/protocol/openid-connect/auth?client_id=wfm-frontend&amp;redirect_uri=https%3A%2F%2Fmaster.dc.oswfm.ru&amp;state=411977d4-efff-4b7e-b68a-20f12a64ca45&amp;response_mode=fragment&amp;response_type=code&amp;scope=openid&amp;nonce=edbe78d6-5a72-4f94-b1d8-c37cb22cad83&amp;code_challenge=UHJqltkFWd7Kp38VDUKi_y0b3NWoEh3OOE0Tn7moFJY&amp;code_challenge_method=S256" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -704,7 +712,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701114108855</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="update  30.08.2024 &#10;поправил данные для страницы авторизации в кк, поменял url">
+      <option name="closed" value="true" />
+      <created>1725021236395</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1725021236395</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,8 +780,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change gitignore" />
-    <MESSAGE value="update junit dependencies" />
     <MESSAGE value="rename method @BeforeAll and @AfterEach" />
     <MESSAGE value="update build.gradle.kts" />
     <MESSAGE value="update @BeforeAll in class FrontLoginTest and OfficesTest" />
@@ -789,7 +803,9 @@
     <MESSAGE value="вынес данные для авторизации в конфиг" />
     <MESSAGE value="доработал page object для страницы авторизации" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update  30.08.2024 &#10;поправил данные для страницы авторизации в кк, поменял url" />
+    <MESSAGE value="Пробую добавить запуск тестов в гите" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пробую добавить запуск тестов в гите" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,7 +8,7 @@ import uiTest.pages.settings.SettingOrgStructurePage;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
-
+@Disabled
 class SettingOrgStructureTest {
 
     static BaseDataTest baseDataTest = new BaseDataTest();

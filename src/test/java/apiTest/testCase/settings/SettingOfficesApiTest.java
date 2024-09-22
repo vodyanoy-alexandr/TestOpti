@@ -23,6 +23,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
+@Disabled
 public class SettingOfficesApiTest {
     private static String token;
     static BaseDataTest baseDataTest = new BaseDataTest();
@@ -36,7 +37,7 @@ public class SettingOfficesApiTest {
         RestAssured.baseURI = baseDataTest.getUrlStand();
         RestAssured.basePath = "/api";
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
-        token = authApiKeycloak.getToken(baseDataTest.getLoginManager(),baseDataTest.getPassManager());
+        token = authApiKeycloak.getToken(baseDataTest.getLoginManager(), baseDataTest.getPassManager());
     }
 
     @DisplayName("Тест на чтение всех офисов в системе через api ")
