@@ -36,7 +36,8 @@ jobs:
 
       - name: Install latest ChromeDriver
         run: |
-          CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE_128)  # Обновите на актуальную версию для Chrome 128
+          CHROME_VERSION=$(google-chrome --version | grep -oP '[\d\.]+')
+          CHROMEDRIVER_VERSION=$(curl -sS "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
           wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip -d $HOME/bin
           rm chromedriver_linux64.zip
