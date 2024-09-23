@@ -47,10 +47,13 @@ jobs:
           chromedriver --version
 
       - name: Set up environment variables
-        run: echo "export ENV_VAR=value" >> $GITHUB_ENV  # Добавьте здесь ваши переменные окружения
+        run: echo "export ENV_VAR=value" >> $GITHUB_ENV
 
       - name: Build and test with Gradle
-        run: ./gradlew test --no-daemon
+        run: |
+          ./gradlew test --no-daemon
+        env:
+          DISPLAY: :99.0
 
       - name: Publish test results
         if: always()  # Это позволит выполнить шаг даже если тесты не прошли
