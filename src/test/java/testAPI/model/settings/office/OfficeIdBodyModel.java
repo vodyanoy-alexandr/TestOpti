@@ -1,4 +1,4 @@
-package apiTest.model.settings.office;
+package testAPI.model.settings.office;
 
 public class OfficeIdBodyModel {
 

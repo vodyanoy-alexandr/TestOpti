@@ -1,4 +1,4 @@
-package apiTest.testCase.login;
+package testAPI.testCase.login;
 
 import dataTest.BaseDataTest;
 import io.restassured.RestAssured;

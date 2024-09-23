@@ -1,7 +1,7 @@
-package apiTest.testCase.settings;
+package testAPI.testCase.settings;
 
-import apiTest.model.settings.office.OfficeIdBodyModel;
-import apiTest.model.settings.office.SettingOfficesBodyModel;
+import testAPI.model.settings.office.OfficeIdBodyModel;
+import testAPI.model.settings.office.SettingOfficesBodyModel;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
@@ -17,8 +17,8 @@ import utils.AuthApiKeycloak;
 
 import java.util.Locale;
 
-import static apiTest.specs.Spec.requestSpec;
-import static apiTest.specs.Spec.responseSpec;
+import static testAPI.specs.Spec.requestSpec;
+import static testAPI.specs.Spec.responseSpec;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;

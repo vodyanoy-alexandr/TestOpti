@@ -1,8 +1,8 @@
-package uiTest.pages.settings;
+package testUI.pages.settings;
 
 import com.codeborne.selenide.SelenideElement;
 import dataTest.BaseDataTest;
-import uiTest.pages.autorization.AuthPage;
+import testUI.pages.autorization.AuthPage;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;

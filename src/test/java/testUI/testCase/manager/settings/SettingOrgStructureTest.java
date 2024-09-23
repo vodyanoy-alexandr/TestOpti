@@ -1,9 +1,9 @@
-package uiTest.testCase.manager.settings;
+package testUI.testCase.manager.settings;
 
 import com.codeborne.selenide.Configuration;
 import dataTest.BaseDataTest;
 import org.junit.jupiter.api.*;
-import uiTest.pages.settings.SettingOrgStructurePage;
+import testUI.pages.settings.SettingOrgStructurePage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;

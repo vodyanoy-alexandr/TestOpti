@@ -1,10 +1,10 @@
-package uiTest.pages.settings;
+package testUI.pages.settings;
 
 import com.codeborne.selenide.SelenideElement;
 import dataTest.BaseDataTest;
-import uiTest.componets.Notifications;
-import uiTest.componets.TimeZoneComponents;
-import uiTest.pages.autorization.AuthPage;
+import testUI.componets.Notifications;
+import testUI.componets.TimeZoneComponents;
+import testUI.pages.autorization.AuthPage;
 
 import java.io.File;
 

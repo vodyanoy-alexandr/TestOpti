@@ -1,4 +1,4 @@
-package uiTest.pages.autorization;
+package testUI.pages.autorization;
 
 import com.codeborne.selenide.SelenideElement;
 

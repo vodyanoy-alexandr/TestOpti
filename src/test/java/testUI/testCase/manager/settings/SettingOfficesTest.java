@@ -1,10 +1,10 @@
-package uiTest.testCase.manager.settings;
+package testUI.testCase.manager.settings;
 
 import com.codeborne.selenide.Configuration;
 import com.github.javafaker.Faker;
 import dataTest.BaseDataTest;
 import org.junit.jupiter.api.*;
-import uiTest.pages.settings.SettingOfficePage;
+import testUI.pages.settings.SettingOfficePage;
 import utils.RandomUtils;
 
 import java.util.Locale;
