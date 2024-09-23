@@ -2,7 +2,7 @@ name: Nightly Test Run
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Запуск каждый день в полночь (UTC)
+    - cron: '*/15 * * * *' # Запуск каждые 15 минут
   workflow_dispatch: # Возможность запуска вручную через интерфейс GitHub
 
 jobs:
