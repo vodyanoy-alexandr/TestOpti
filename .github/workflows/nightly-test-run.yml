@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'adopt'
-          java-version: '22'
+          java-version: '11'
 
       - name: Cache Gradle packages
         uses: actions/cache@v3
@@ -33,35 +33,21 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-      - name: Install ChromeDriver
+      - name: Install latest ChromeDriver
         run: |
-          # Получение версии Google Chrome
-          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-          echo "Detected Chrome version: $CHROME_VERSION"
-
-          # Проверка, что версия Chrome была найдена
-          if [ -z "$CHROME_VERSION" ]; then
-            echo "Error: Could not determine Chrome version."
-            exit 1
-          fi
-
-          # Получение версии ChromeDriver, соответствующей версии Chrome
-          CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
-          echo "Detected ChromeDriver version: $CHROMEDRIVER_VERSION"
-
-          # Проверка, что версия ChromeDriver была найдена
-          if [ -z "$CHROMEDRIVER_VERSION" ]; then
-            echo "Error: Could not determine ChromeDriver version for Chrome version $CHROME_VERSION."
-            exit 1
-          fi
-
-          # Скачивание и установка ChromeDriver
+          # Скачиваем последнюю версию ChromeDriver
+          CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
           wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip -d $HOME/bin
           rm chromedriver_linux64.zip
 
-          # Добавление пути к ChromeDriver в переменную PATH
+          # Добавляем ChromeDriver в PATH
           echo "$HOME/bin" >> $GITHUB_PATH
+
+      - name: Verify Chrome and ChromeDriver
+        run: |
+          google-chrome --version
+          chromedriver --version
 
       - name: Build and test with Gradle
         run: ./gradlew test --no-daemon
