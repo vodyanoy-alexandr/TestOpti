@@ -53,7 +53,9 @@ jobs:
 
       - name: Verify Chrome and ChromeDriver
         run: |
+          echo "Chrome version:"
           google-chrome --version
+          echo "ChromeDriver version:"
           chromedriver --version
 
       - name: Set up environment variables
