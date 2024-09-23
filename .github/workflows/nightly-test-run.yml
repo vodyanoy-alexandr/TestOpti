@@ -4,7 +4,6 @@ on:
   schedule:
     - cron: '*/15 * * * *' # Запуск каждые 15 минут
   workflow_dispatch: # Возможность запуска вручную через интерфейс GitHub
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,18 +18,6 @@ jobs:
           distribution: 'adopt'
           java-version: '22'
 
-      - name: Install Chrome
-        run: sudo apt-get update && sudo apt-get install -y google-chrome-stable
-
-      - name: Install ChromeDriver
-        run: |
-          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-          CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
-          wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip -d $HOME/bin
-          rm chromedriver_linux64.zip
-          echo "$HOME/bin" >> $GITHUB_PATH
-
       - name: Cache Gradle packages
         uses: actions/cache@v3
         with:
@@ -41,10 +28,40 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Set up Selenide environment
+      - name: Install Google Chrome
         run: |
-          echo "selenide.browser=chrome" >> src/test/resources/selenide.properties
-          echo "webdriver.chrome.driver=$HOME/bin/chromedriver" >> src/test/resources/selenide.properties
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Install ChromeDriver
+        run: |
+          # Получение версии Google Chrome
+          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
+          echo "Detected Chrome version: $CHROME_VERSION"
+
+          # Проверка, что версия Chrome была найдена
+          if [ -z "$CHROME_VERSION" ]; then
+            echo "Error: Could not determine Chrome version."
+            exit 1
+          fi
+
+          # Получение версии ChromeDriver, соответствующей версии Chrome
+          CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
+          echo "Detected ChromeDriver version: $CHROMEDRIVER_VERSION"
+
+          # Проверка, что версия ChromeDriver была найдена
+          if [ -z "$CHROMEDRIVER_VERSION" ]; then
+            echo "Error: Could not determine ChromeDriver version for Chrome version $CHROME_VERSION."
+            exit 1
+          fi
+
+          # Скачивание и установка ChromeDriver
+          wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip -d $HOME/bin
+          rm chromedriver_linux64.zip
+
+          # Добавление пути к ChromeDriver в переменную PATH
+          echo "$HOME/bin" >> $GITHUB_PATH
 
       - name: Build and test with Gradle
         run: ./gradlew test --no-daemon
