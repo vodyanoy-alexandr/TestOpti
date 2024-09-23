@@ -35,13 +35,10 @@ jobs:
 
       - name: Install latest ChromeDriver
         run: |
-          # Скачиваем последнюю версию ChromeDriver
           CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
           wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip -d $HOME/bin
           rm chromedriver_linux64.zip
-
-          # Добавляем ChromeDriver в PATH
           echo "$HOME/bin" >> $GITHUB_PATH
 
       - name: Verify Chrome and ChromeDriver
@@ -49,5 +46,14 @@ jobs:
           google-chrome --version
           chromedriver --version
 
+      - name: Set up environment variables
+        run: echo "export ENV_VAR=value" >> $GITHUB_ENV  # Добавьте здесь ваши переменные окружения
+
       - name: Build and test with Gradle
         run: ./gradlew test --no-daemon
+
+      - name: Publish test results
+        if: always()  # Это позволит выполнить шаг даже если тесты не прошли
+        run: |
+          echo "Test results:"
+          cat build/reports/tests/test/index.html  # Вывод отчета о тестах

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="Пробую добавить запуск тестов в гите" />
+    <list default="true" id="62e66551-7af4-4e2a-a0cb-523ac424f2e0" name="Changes" comment="Пробую добавить запуск тестов в гите">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -320,22 +322,6 @@
       <workItem from="1701114235757" duration="5000" />
       <workItem from="1701116279195" duration="80000" />
       <workItem from="1701116381049" duration="17989000" />
-    </task>
-    <task id="LOCAL-00004" summary="Добавил тест на логин валидного и невалидного оператора">
-      <option name="closed" value="true" />
-      <created>1696684054004</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1696684054004</updated>
-    </task>
-    <task id="LOCAL-00005" summary="delete url in DataTest">
-      <option name="closed" value="true" />
-      <created>1696693322238</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1696693322238</updated>
     </task>
     <task id="LOCAL-00006" summary="add comment in FrontLoginTest">
       <option name="closed" value="true" />
@@ -713,7 +699,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727077818607</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Пробую добавить запуск тестов в гите">
+      <option name="closed" value="true" />
+      <created>1727077907558</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1727077907558</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Пробую добавить запуск тестов в гите">
+      <option name="closed" value="true" />
+      <created>1727078253493</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1727078253493</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
