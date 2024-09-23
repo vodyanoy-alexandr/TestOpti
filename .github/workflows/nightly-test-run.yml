@@ -17,7 +17,19 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '22'
+
+      - name: Install Chrome
+        run: sudo apt-get update && sudo apt-get install -y google-chrome-stable
+
+      - name: Install ChromeDriver
+        run: |
+          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
+          CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
+          wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip -d $HOME/bin
+          rm chromedriver_linux64.zip
+          echo "$HOME/bin" >> $GITHUB_PATH
 
       - name: Cache Gradle packages
         uses: actions/cache@v3
@@ -28,6 +40,11 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
+
+      - name: Set up Selenide environment
+        run: |
+          echo "selenide.browser=chrome" >> src/test/resources/selenide.properties
+          echo "webdriver.chrome.driver=$HOME/bin/chromedriver" >> src/test/resources/selenide.properties
 
       - name: Build and test with Gradle
         run: ./gradlew test --no-daemon
